@@ -1,0 +1,76 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "3 2",
+    "file": "msm.cpp",
+    "fileloc": 155,
+    "instructions": 39,
+    "loads": {
+      "L": 2,
+      "T": 5
+    },
+    "name": "msm",
+    "stores": {
+      "L": 2,
+      "T": 2
+    },
+    "total_instructions": 62122
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "4",
+    "file": "msm.cpp",
+    "fileloc": 56,
+    "instructions": 69,
+    "loads": {
+      "L": 1
+    },
+    "name": "point_doubling",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 102
+  },
+  "2": {
+    "basicblocks": 9,
+    "calls": "4",
+    "file": "msm.cpp",
+    "fileloc": 93,
+    "instructions": 82,
+    "loads": {
+      "L": 2
+    },
+    "name": "point_addition",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 115
+  },
+  "3": {
+    "basicblocks": 516,
+    "calls": "2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1",
+    "file": "msm.cpp",
+    "fileloc": 127,
+    "instructions": 6416,
+    "loads": {
+      "L": 1534
+    },
+    "name": "scalar_mult_single",
+    "stores": {
+      "L": 1538
+    },
+    "total_instructions": 61968
+  },
+  "4": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 14,
+    "instructions": 33,
+    "name": "modInverse",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 33
+  }
+}

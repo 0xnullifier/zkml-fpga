@@ -1,0 +1,40 @@
+../src/msm.cpp:129:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scalar_mult_single_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE off
+        ^
+../src/msm.cpp:138:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scalar_mult_single_XLX_SEP_ PragmaOptions=II = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II = 1
+        ^
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/vitis.tcl:13:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=msm_XLX_SEP_ PragmaOptions=name=msm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=msm
+        ^
+../src/msm.cpp:163:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=msm_XLX_SEP_ PragmaOptions=m_axi depth = MAX_DEGREE offset = slave port = x_array bundle = x_array_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = MAX_DEGREE offset = slave port = x_array bundle = x_array
+        ^
+../src/msm.cpp:164:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=msm_XLX_SEP_ PragmaOptions=m_axi depth = MAX_DEGREE offset = slave port = y_array bundle = y_array_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = MAX_DEGREE offset = slave port = y_array bundle = y_array
+        ^
+../src/msm.cpp:165:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=msm_XLX_SEP_ PragmaOptions=m_axi depth = MAX_DEGREE offset = slave port = scalar_array bundle = scalar_array_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = MAX_DEGREE offset = slave port = scalar_array bundle = scalar_array
+        ^
+../src/msm.cpp:166:61: warning: Unsupported interface port data type in '#pragma HLS interface m_axi' [-Wignored-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = 3 offset = slave port = result_x bundle = result_x
+                                                            ^
+../src/msm.cpp:166:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=0_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=msm_XLX_SEP_ PragmaOptions=m_axi depth = 3 offset = slave port = result_x bundle = result_x_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = 3 offset = slave port = result_x bundle = result_x
+        ^
+../src/msm.cpp:167:61: warning: Unsupported interface port data type in '#pragma HLS interface m_axi' [-Wignored-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = 3 offset = slave port = result_y bundle = result_y
+                                                            ^
+../src/msm.cpp:167:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=0_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=msm_XLX_SEP_ PragmaOptions=m_axi depth = 3 offset = slave port = result_y bundle = result_y_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = 3 offset = slave port = result_y bundle = result_y
+        ^
+../src/msm.cpp:168:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=msm_XLX_SEP_ PragmaOptions=s_axilite port = degree_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port = degree
+        ^
+../src/msm.cpp:169:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=msm_XLX_SEP_ PragmaOptions=s_axilite register port = return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port = return
+        ^
+../src/msm.cpp:180:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=msm_XLX_SEP_ PragmaOptions=II = 2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II = 2
+        ^
+13 warnings generated.

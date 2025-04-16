@@ -1,0 +1,78 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5572" msg_severity="WARNING" msg_loc="../src/msm.cpp:166:61" msg_body="Unsupported interface port data type in '#pragma HLS interface m_axi'">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5572" msg_severity="WARNING" msg_loc="../src/msm.cpp:167:61" msg_body="Unsupported interface port data type in '#pragma HLS interface m_axi'">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/msm.cpp:129:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="scalar_mult_single" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/msm.cpp:138:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="scalar_mult_single" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/vitis.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="msm" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=msm" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/msm.cpp:163:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="msm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth = MAX_DEGREE offset = slave port = x_array bundle = x_array" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/msm.cpp:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="msm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth = MAX_DEGREE offset = slave port = y_array bundle = y_array" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/msm.cpp:165:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="msm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth = MAX_DEGREE offset = slave port = scalar_array bundle = scalar_array" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/msm.cpp:166:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="msm" ARG_PragmaIsValid="0" ARG_PragmaOptions="m_axi depth = 3 offset = slave port = result_x bundle = result_x" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/msm.cpp:167:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="msm" ARG_PragmaIsValid="0" ARG_PragmaOptions="m_axi depth = 3 offset = slave port = result_y bundle = result_y" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/msm.cpp:168:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="msm" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = degree" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/msm.cpp:169:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="msm" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port = return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/msm.cpp:180:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="msm" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/msm.cpp:136:3" msg_body="Loop 'SCALAR_MULT_LOOP' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="SCALAR_MULT_LOOP"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/msm.cpp:25:20" msg_body="Loop 'VITIS_LOOP_25_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_25_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/msm.cpp:128:0" msg_body="Unrolling loop 'SCALAR_MULT_LOOP' (../src/msm.cpp:136:3) in function 'scalar_mult_single' completely with a factor of 256">
+        <args Factor="256" LoopLoc="../src/msm.cpp:136:3" LoopName="SCALAR_MULT_LOOP"/>
+    </msg>
+    <msg msg_groups="PRAGMA_PIPELINE" msg_id="214-189" msg_severity="WARNING" msg_loc="../src/msm.cpp:128:0" msg_body="Pipeline directive for loop 'SCALAR_MULT_LOOP' (../src/msm.cpp:136:3) in function 'scalar_mult_single' has been removed because the loop is unrolled completely">
+        <args LoopLoc="../src/msm.cpp:136:3" LoopName="SCALAR_MULT_LOOP"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/msm.cpp:94:0" msg_body="Inlining function 'modInverse(ap_uint&lt;384&gt;, ap_uint&lt;384&gt;)' into 'point_addition(ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;)'">
+        <args Callee="modInverse(ap_uint&lt;384&gt;, ap_uint&lt;384&gt;)" Callee-DebugLoc="File ../src/msm.cpp Line 15 Column 0" Caller="point_addition(ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;)" Caller-DebugLoc="File ../src/msm.cpp Line 94 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/msm.cpp:57:0" msg_body="Inlining function 'modInverse(ap_uint&lt;384&gt;, ap_uint&lt;384&gt;)' into 'point_doubling(ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;)'">
+        <args Callee="modInverse(ap_uint&lt;384&gt;, ap_uint&lt;384&gt;)" Callee-DebugLoc="File ../src/msm.cpp Line 15 Column 0" Caller="point_doubling(ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;)" Caller-DebugLoc="File ../src/msm.cpp Line 57 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/msm.cpp:162:0" msg_body="Inlining function 'point_addition(ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;)' into 'msm(ap_uint&lt;384&gt;*, ap_uint&lt;384&gt;*, ap_uint&lt;384&gt;*, ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;&amp;, int)'">
+        <args Callee="point_addition(ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;, ap_uint&lt;384&gt;)" Callee-DebugLoc="File ../src/msm.cpp Line 94 Column 0" Caller="msm(ap_uint&lt;384&gt;*, ap_uint&lt;384&gt;*, ap_uint&lt;384&gt;*, ap_uint&lt;384&gt;&amp;, ap_uint&lt;384&gt;&amp;, int)" Caller-DebugLoc="File ../src/msm.cpp Line 162 Column 0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-437" msg_severity="INFO" msg_loc="../src/msm.cpp:178:3" msg_body="Automatically disabling loop flattening for loop 'COMPUTE_LOOP'.">
+        <args LoopName="COMPUTE_LOOP"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../src/msm.cpp:178:3" msg_body="loop_flatten 0 1 msm ../src/msm.cpp:178:3COMPUTE_LOOP ../src/msm.cpp:178:3">
+        <args LoopLoc="../src/msm.cpp:178:3" LoopLoc-DebugLoc="File ../src/msm.cpp Line 178 Column 3" LoopName="COMPUTE_LOOP" PragmaFunction="msm" PragmaIsAuto="1" PragmaOptions="0" PragmaSrcLoc="../src/msm.cpp:178:3" PragmaSrcLoc-DebugLoc="File ../src/msm.cpp Line 178 Column 3" PragmaType="loop_flatten"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-187" msg_severity="WARNING" msg_loc="../src/msm.cpp:25:20" msg_body="Cannot unroll loop 'VITIS_LOOP_25_1' (../src/msm.cpp:25:20) in function 'msm' as it has a variable trip count">
+        <args LoopLoc="../src/msm.cpp:25:20" LoopName="VITIS_LOOP_25_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-187" msg_severity="WARNING" msg_loc="../src/msm.cpp:25:20" msg_body="Cannot unroll loop 'VITIS_LOOP_25_1' (../src/msm.cpp:25:20) in function 'point_doubling' as it has a variable trip count">
+        <args LoopLoc="../src/msm.cpp:25:20" LoopName="VITIS_LOOP_25_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-187" msg_severity="WARNING" msg_loc="../src/msm.cpp:25:20" msg_body="Cannot unroll loop 'VITIS_LOOP_25_1' (../src/msm.cpp:25:20) in function 'point_addition' as it has a variable trip count">
+        <args LoopLoc="../src/msm.cpp:25:20" LoopName="VITIS_LOOP_25_1"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

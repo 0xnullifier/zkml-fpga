@@ -1,0 +1,856 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 118, Column: 30 }
+Function:        _Z14point_additionR7ap_uintILi384EES1_S0_S0_S0_S0_
+Args:            
+  - Callee:          'modInverse(ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'point_addition(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 94, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 77, Column: 31 }
+Function:        _Z14point_doublingR7ap_uintILi384EES1_S0_S0_
+Args:            
+  - Callee:          'modInverse(ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'point_doubling(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 57, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 149, Column: 5 }
+Function:        _Z18scalar_mult_singleR7ap_uintILi384EES1_S0_S0_S0_
+Args:            
+  - Callee:          'point_doubling(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 57, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'scalar_mult_single(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 128, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 143, Column: 7 }
+Function:        _Z18scalar_mult_singleR7ap_uintILi384EES1_S0_S0_S0_
+Args:            
+  - Callee:          'point_addition(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 94, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'scalar_mult_single(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 128, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 184, Column: 5 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - Callee:          'point_addition(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 94, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 181, Column: 2 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - Callee:          'scalar_mult_single(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 128, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 136, Column: 3 }
+Function:        _Z18scalar_mult_singleR7ap_uintILi384EES1_S0_S0_S0_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        SCALAR_MULT_LOOP
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z10modInverse7ap_uintILi384EES0_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 128, Column: 0 }
+Function:        _Z18scalar_mult_singleR7ap_uintILi384EES1_S0_S0_S0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        SCALAR_MULT_LOOP
+  - String:          ''' ('
+  - LoopLoc:         '../src/msm.cpp:136:3'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          scalar_mult_single
+  - String:          ''' completely with a factor of '
+  - Factor:          '256'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 128, Column: 0 }
+Function:        _Z18scalar_mult_singleR7ap_uintILi384EES1_S0_S0_S0_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        SCALAR_MULT_LOOP
+  - String:          ''' ('
+  - LoopLoc:         '../src/msm.cpp:136:3'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          scalar_mult_single
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 118, Column: 30 }
+Function:        _Z14point_additionR7ap_uintILi384EES1_S0_S0_S0_S0_
+Args:            
+  - Callee:          'modInverse(ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'point_addition(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 94, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 77, Column: 31 }
+Function:        _Z14point_doublingR7ap_uintILi384EES1_S0_S0_
+Args:            
+  - Callee:          'modInverse(ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'point_doubling(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 57, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 143, Column: 7 }
+Function:        _Z18scalar_mult_singleR7ap_uintILi384EES1_S0_S0_S0_
+Args:            
+  - Callee:          'point_addition(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 94, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'scalar_mult_single(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 128, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 149, Column: 5 }
+Function:        _Z18scalar_mult_singleR7ap_uintILi384EES1_S0_S0_S0_
+Args:            
+  - Callee:          'point_doubling(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 57, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'scalar_mult_single(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 128, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 181, Column: 2 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - Callee:          'scalar_mult_single(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 128, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 184, Column: 5 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - Callee:          'point_addition(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 94, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_msm_ir
+Args:            
+  - Callee:          'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_msm_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../src/msm.cpp, Line: 94, Column: 0 }
+Function:        _Z14point_additionR7ap_uintILi384EES1_S0_S0_S0_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'modInverse(ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 15, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'point_addition(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 94, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../src/msm.cpp, Line: 57, Column: 0 }
+Function:        _Z14point_doublingR7ap_uintILi384EES1_S0_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'modInverse(ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 15, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'point_doubling(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 57, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'point_addition(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 94, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z14point_doublingR7ap_uintILi384EES1_S0_S0_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:25:20'
+  - String:          ' '
+  - Function:        'point_doubling(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 57, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z14point_additionR7ap_uintILi384EES1_S0_S0_S0_S0_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:25:20'
+  - String:          ' '
+  - Function:        'point_addition(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        x_array4seq
+  - ArrayName:       x_array
+  - String:          ' '
+  - BundleName:      x_array
+  - String:          ' '
+  - LoopName:        COMPUTE_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:178:3'
+  - String:          ' '
+  - Function:        'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/msm.cpp, Line: 181, Column: 53 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        y_array5seq
+  - ArrayName:       y_array
+  - String:          ' '
+  - BundleName:      y_array
+  - String:          ' '
+  - LoopName:        COMPUTE_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:178:3'
+  - String:          ' '
+  - Function:        'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/msm.cpp, Line: 181, Column: 65 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.13
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scalar_array6seq
+  - ArrayName:       scalar_array
+  - String:          ' '
+  - BundleName:      scalar_array
+  - String:          ' '
+  - LoopName:        COMPUTE_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:178:3'
+  - String:          ' '
+  - Function:        'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/msm.cpp, Line: 181, Column: 77 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.18
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:25:20'
+  - String:          ' '
+  - Function:        'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            TypeAllocSizePaddingMemoryAccess
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - Type:            i384
+  - String:          ' allocated space contains padding. This is unsupported'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+  - OrigDirection:   read
+  - OrigID:          x_array4seq
+  - ArrayName:       x_array
+  - String:          ' '
+  - BundleName:      x_array
+  - String:          ' '
+  - Function:        'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            TypeAllocSizePaddingMemoryAccess
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - Type:            i384
+  - String:          ' allocated space contains padding. This is unsupported'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+  - OrigDirection:   read
+  - OrigID:          y_array5seq
+  - ArrayName:       y_array
+  - String:          ' '
+  - BundleName:      y_array
+  - String:          ' '
+  - Function:        'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            TypeAllocSizePaddingMemoryAccess
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - Type:            i384
+  - String:          ' allocated space contains padding. This is unsupported'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+  - OrigDirection:   read
+  - OrigID:          scalar_array6seq
+  - ArrayName:       scalar_array
+  - String:          ' '
+  - BundleName:      scalar_array
+  - String:          ' '
+  - Function:        'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z14point_doublingR7ap_uintILi384EES1_S0_S0_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:25:20'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z14point_additionR7ap_uintILi384EES1_S0_S0_S0_S0_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:25:20'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:25:20'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z14point_doublingR7ap_uintILi384EES1_S0_S0_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z14point_additionR7ap_uintILi384EES1_S0_S0_S0_S0_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z14point_doublingR7ap_uintILi384EES1_S0_S0_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z14point_additionR7ap_uintILi384EES1_S0_S0_S0_S0_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Automatically disabling loop flattening for loop '''
+  - LoopName:        COMPUTE_LOOP
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   off
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  msm
+  - String:          ' '
+  - PragmaSrcLoc:    '../src/msm.cpp:178:3'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+  - LoopName:        COMPUTE_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:178:3'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      x_array
+  - String:          ' '
+  - LoopName:        COMPUTE_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:178:3'
+  - String:          ' '
+  - Function:        'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        COMPUTE_LOOP
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:178:3'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      x_array
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      y_array
+  - String:          ' '
+  - LoopName:        COMPUTE_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:178:3'
+  - String:          ' '
+  - Function:        'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        COMPUTE_LOOP
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:178:3'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      y_array
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      scalar_array
+  - String:          ' '
+  - LoopName:        COMPUTE_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:178:3'
+  - String:          ' '
+  - Function:        'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 178, Column: 3 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        COMPUTE_LOOP
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:178:3'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      scalar_array
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z14point_doublingR7ap_uintILi384EES1_S0_S0_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z14point_additionR7ap_uintILi384EES1_S0_S0_S0_S0_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFailFullyUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - String:          'Cannot unroll loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' ('
+  - LoopLoc:         '../src/msm.cpp:25:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          msm
+  - String:          ''' as it has a variable trip count'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFailFullyUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z14point_doublingR7ap_uintILi384EES1_S0_S0_
+Args:            
+  - String:          'Cannot unroll loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' ('
+  - LoopLoc:         '../src/msm.cpp:25:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          point_doubling
+  - String:          ''' as it has a variable trip count'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFailFullyUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 25, Column: 20 }
+Function:        _Z14point_additionR7ap_uintILi384EES1_S0_S0_S0_S0_
+Args:            
+  - String:          'Cannot unroll loop '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ''' ('
+  - LoopLoc:         '../src/msm.cpp:25:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          point_addition
+  - String:          ''' as it has a variable trip count'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 143, Column: 7 }
+Function:        _Z18scalar_mult_singleR7ap_uintILi384EES1_S0_S0_S0_
+Args:            
+  - Callee:          'point_addition(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 94, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'scalar_mult_single(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 128, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 149, Column: 5 }
+Function:        _Z18scalar_mult_singleR7ap_uintILi384EES1_S0_S0_S0_
+Args:            
+  - Callee:          'point_doubling(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 57, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'scalar_mult_single(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 128, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 181, Column: 2 }
+Function:        _Z3msmP7ap_uintILi384EES1_S1_RS0_S2_i
+Args:            
+  - Callee:          'scalar_mult_single(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 128, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 162, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

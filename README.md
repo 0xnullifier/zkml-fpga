@@ -2,6 +2,20 @@
 
 The aim of the project is to implement a zkml framework on the fpga board and outperform the existing zkml frameworks running on cpu
 
+# Accelerator Design
+
+![Accelerator Design](image.png)
+To make the accelerator specially zkml we add a fixed number of points which are sort of compiled r1cs this might change to polynomial coffiecients in actual implmentations due to security reasons but if I can have a strong argument for hardcoded bases for msm it will be awesome
+with bases of the msm computations known before we can just fetch them as needed we remove the need for ntt operation saving us more time than other zk accelerator and targetting zkml
+
+## PE
+
+### msm
+
+We need to process ~2.5 Billion msm operation thus this is the core bottlneck that needs to fixed
+The current code implements a simple msm c but will move onto this design eventually
+![alt text](image-1.png)
+
 # Benchmarks
 
 ## Emprical Runs
@@ -64,40 +78,7 @@ The current plan is to implement the primitives of bn254 curve for a polynomial 
 - [x] Implement finite field (FF) operations with faster Montgomery reduction
 - [x] Implement elliptic curve cryptography (ECC) and multi-scalar multiplication with Pippenger's algorithm
 - [x] Implement fast Number Theoretic Transform (NTT) for polynomial operations
-- [ ] Implement hyperKZG polynomial commitment scheme
-- [ ] Develop circuit-backed R1CS (Rank-1 Constraint System)
-- [ ] Implement a general prover framework based on sumcheck protocol
-- [ ] Port the implementation to FPGA with custom optimizations
-- [ ] Benchmark FPGA implementation against CPU implementations
 
 ## FPGA Implementation Goals
 
-Our FPGA implementation aims to achieve:
-
-1. 10-100x speedup for prover operations compared to CPU implementations
-2. Reduced power consumption for ZK proof generation
-3. Specialized hardware pathways for common ZKML operations
-4. Parallel processing of independent proof components
-
-## Directory structure
-
-```bash
-hls
-├── primitives     # Multi-scalar multiplication implementation
-│   ├── ccs        #  compilation scripts *.tcl
-│   ├── dat        # Test data files
-│   └── src        # Source code
-│       ├── ecc.cpp          # ECC implementation
-│       ├── ecc.h            # ECC header file
-│       ├── ecc_test.cpp     # Test cases for ECC
-│       ├── ff.cpp           # Finite field operations
-│       ├── ff.h             # Finite field header file
-│       └── fp_test.cpp      # Test cases for finite field operations
-└── pcs            # Polynomial commitment scheme
-    ├── ccs        # Constraints and compilation settings
-    ├── data       # Data files for PCS testing
-    └── src        # Source code
-        ├── pcs.cpp          # PCS implementation
-        ├── pcs.h            # PCS header file
-        └── pcs_test.cpp     # Test cases for PCS
-```
+The FPGA implementation aims to achieve:

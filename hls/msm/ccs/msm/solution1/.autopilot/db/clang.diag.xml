@@ -1,0 +1,39 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/.autopilot/db/msm.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../src/msm.cpp</string>
+      <key>line</key>
+      <integer>166</integer>
+      <key>column</key>
+      <integer>61</integer>
+      <key>message</key>
+      <string>Unsupported interface port data type in &apos;#pragma HLS interface m_axi&apos;</string>
+      <key>ID</key>
+      <integer>5572</integer>
+      <key>WarningOption</key>
+      <string>ignored-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../src/msm.cpp</string>
+      <key>line</key>
+      <integer>167</integer>
+      <key>column</key>
+      <integer>61</integer>
+      <key>message</key>
+      <string>Unsupported interface port data type in &apos;#pragma HLS interface m_axi&apos;</string>
+      <key>ID</key>
+      <integer>5572</integer>
+      <key>WarningOption</key>
+      <string>ignored-hls-pragmas</string>
+    </dict>
+  </array>
+</dict>

@@ -1,0 +1,7 @@
+../src/msm.cpp:166:61: warning: Unsupported interface port data type in '#pragma HLS interface m_axi' [-Wignored-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = 3 offset = slave port = result_x bundle = result_x
+                                                            ^
+../src/msm.cpp:167:61: warning: Unsupported interface port data type in '#pragma HLS interface m_axi' [-Wignored-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = 3 offset = slave port = result_y bundle = result_y
+                                                            ^
+2 warnings generated.

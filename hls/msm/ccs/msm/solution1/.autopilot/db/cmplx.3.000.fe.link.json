@@ -1,0 +1,79 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "2 3",
+    "file": "msm.cpp",
+    "fileloc": 155,
+    "instructions": 72,
+    "loads": {
+      "L": 4,
+      "T": 5
+    },
+    "name": "msm",
+    "stores": {
+      "L": 7,
+      "T": 2
+    },
+    "total_instructions": 10210
+  },
+  "1": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 14,
+    "instructions": 221,
+    "loads": {
+      "L": 16
+    },
+    "name": "modInverse",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 1067
+  },
+  "2": {
+    "basicblocks": 9,
+    "calls": "3 4",
+    "file": "msm.cpp",
+    "fileloc": 127,
+    "instructions": 86,
+    "loads": {
+      "L": 12
+    },
+    "name": "scalar_mult_single",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 6767
+  },
+  "3": {
+    "basicblocks": 10,
+    "calls": "1",
+    "file": "msm.cpp",
+    "fileloc": 93,
+    "instructions": 286,
+    "loads": {
+      "L": 8
+    },
+    "name": "point_addition",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 3303
+  },
+  "4": {
+    "basicblocks": 4,
+    "calls": "1",
+    "file": "msm.cpp",
+    "fileloc": 56,
+    "instructions": 278,
+    "loads": {
+      "L": 6
+    },
+    "name": "point_doubling",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 3258
+  }
+}

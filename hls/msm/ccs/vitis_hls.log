@@ -1,0 +1,84 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+  **** SW Build 5238294 on Nov  8 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Wed Apr 16 04:13:13 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis/2024.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'terryadavis' on host 'terryadavis' (Linux_x86_64 version 6.12.20-amd64) on Wed Apr 16 04:13:14 IST 2025
+INFO: [HLS 200-10] On os Kali GNU/Linux Rolling
+INFO: [HLS 200-10] In directory '/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'vitis.tcl'
+INFO: [HLS 200-1510] Running: open_project msm 
+INFO: [HLS 200-10] Opening project '/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm'.
+INFO: [HLS 200-1510] Running: set_top msm 
+INFO: [HLS 200-1510] Running: add_files ../src/msm.cpp -cflags -DALLOW_EMPTY_HLS_STREAM_READS 
+INFO: [HLS 200-10] Adding design file '../src/msm.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files ../src/msm.hpp -cflags -DALLOW_EMPTY_HLS_STREAM_READS 
+INFO: [HLS 200-10] Adding design file '../src/msm.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../dat/out.gold.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '../dat/out.gold.dat' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../dat/input.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '../dat/input.dat' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../src/tb_msm.cpp -cflags -Wno-unknown-pragmas -DALLOW_EMPTY_HLS_STREAM_READS -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '../src/tb_msm.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vitis 
+INFO: [HLS 200-10] Opening solution '/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 4 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 368.477 MB.
+INFO: [HLS 200-10] Analyzing design file '../src/msm.cpp' ... 
+WARNING: [HLS 207-5572] Unsupported interface port data type in '#pragma HLS interface m_axi' (../src/msm.cpp:166:61)
+WARNING: [HLS 207-5572] Unsupported interface port data type in '#pragma HLS interface m_axi' (../src/msm.cpp:167:61)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.69 seconds. CPU system time: 0.35 seconds. Elapsed time: 3.05 seconds; current allocated memory: 369.672 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 10,210 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62,122 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55,435 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 51,339 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 48,260 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47,749 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47,749 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47,749 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47,749 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 48,782 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 48,779 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 48,266 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47,753 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47,753 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47,768 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 46,745 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'SCALAR_MULT_LOOP' is marked as complete unroll implied by the pipeline pragma (../src/msm.cpp:136:3)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_25_1' is marked as complete unroll implied by the pipeline pragma (../src/msm.cpp:25:20)
+INFO: [HLS 214-186] Unrolling loop 'SCALAR_MULT_LOOP' (../src/msm.cpp:136:3) in function 'scalar_mult_single' completely with a factor of 256 (../src/msm.cpp:128:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'SCALAR_MULT_LOOP' (../src/msm.cpp:136:3) in function 'scalar_mult_single' has been removed because the loop is unrolled completely (../src/msm.cpp:128:0)
+INFO: [HLS 214-178] Inlining function 'modInverse(ap_uint<384>, ap_uint<384>)' into 'point_addition(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>, ap_uint<384>)' (../src/msm.cpp:94:0)
+INFO: [HLS 214-178] Inlining function 'modInverse(ap_uint<384>, ap_uint<384>)' into 'point_doubling(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>)' (../src/msm.cpp:57:0)
+INFO: [HLS 214-178] Inlining function 'point_addition(ap_uint<384>&, ap_uint<384>&, ap_uint<384>, ap_uint<384>, ap_uint<384>, ap_uint<384>)' into 'msm(ap_uint<384>*, ap_uint<384>*, ap_uint<384>*, ap_uint<384>&, ap_uint<384>&, int)' (../src/msm.cpp:162:0)
+INFO: [HLS 214-437] Automatically disabling loop flattening for loop 'COMPUTE_LOOP'. (../src/msm.cpp:178:3)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 in loop 'COMPUTE_LOOP'(../src/msm.cpp:178:3) has been inferred on bundle 'x_array'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../src/msm.cpp:178:3)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 in loop 'COMPUTE_LOOP'(../src/msm.cpp:178:3) has been inferred on bundle 'y_array'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../src/msm.cpp:178:3)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 in loop 'COMPUTE_LOOP'(../src/msm.cpp:178:3) has been inferred on bundle 'scalar_array'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../src/msm.cpp:178:3)
+WARNING: [HLS 214-187] Cannot unroll loop 'VITIS_LOOP_25_1' (../src/msm.cpp:25:20) in function 'msm' as it has a variable trip count (../src/msm.cpp:25:20)
+WARNING: [HLS 214-187] Cannot unroll loop 'VITIS_LOOP_25_1' (../src/msm.cpp:25:20) in function 'point_doubling' as it has a variable trip count (../src/msm.cpp:25:20)
+WARNING: [HLS 214-187] Cannot unroll loop 'VITIS_LOOP_25_1' (../src/msm.cpp:25:20) in function 'point_addition' as it has a variable trip count (../src/msm.cpp:25:20)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.94 seconds. CPU system time: 0.29 seconds. Elapsed time: 7.29 seconds; current allocated memory: 380.000 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 380.000 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 59.55 seconds. CPU system time: 0.4 seconds. Elapsed time: 59.99 seconds; current allocated memory: 1.380 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 43.03 seconds. CPU system time: 0.36 seconds. Elapsed time: 43.43 seconds; current allocated memory: 1.956 GB.

@@ -1,0 +1,10 @@
+02:27:28 INFO  : updated workspace path: 
+02:27:28 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+02:27:30 INFO  : Successfully created repository data at /tmp/rigel_lopper_terryadavis6476448283725597087
+02:27:30 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_terryadavis16043542181542247299 -r /tmp/rigel_lopper_terryadavis6476448283725597087/.repo.yaml && deactivate
+02:27:30 INFO  : Embedded Template List generated successfully
+02:28:09 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+02:28:10 INFO  : Successfully created repository data at /tmp/rigel_lopper_terryadavis14296624958048723080
+02:28:10 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_terryadavis16692181727026532203 -r /tmp/rigel_lopper_terryadavis14296624958048723080/.repo.yaml && deactivate
+02:28:10 INFO  : Embedded Template List generated successfully
+02:28:16 INFO  : created .gitignore file for the project /home/terryadavis/new_msm_sim
