@@ -1,0 +1,91 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="msm" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="rw" src_name="x_array" src_type="ap_uint&lt;256&gt;*" src_isptr="1" src_bitwidth="256" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem0" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" channel_id="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="256" final_bitwidth="256"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16"/>
+        </hw>
+      </arg>
+      <arg id="1" access_type="rw" src_name="y_array" src_type="ap_uint&lt;256&gt;*" src_isptr="1" src_bitwidth="256" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem1" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" channel_id="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="256" final_bitwidth="256"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="28"/>
+        </hw>
+      </arg>
+      <arg id="2" access_type="rw" src_name="z_array" src_type="ap_uint&lt;256&gt;*" src_isptr="1" src_bitwidth="256" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem2" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" channel_id="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="256" final_bitwidth="256"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40"/>
+        </hw>
+      </arg>
+      <arg id="3" access_type="rw" src_name="t_array" src_type="ap_uint&lt;256&gt;*" src_isptr="1" src_bitwidth="256" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem3" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" channel_id="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="256" final_bitwidth="256"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="52"/>
+        </hw>
+      </arg>
+      <arg id="4" access_type="r" src_name="scalar_array" src_type="ap_uint&lt;256&gt;*" src_isptr="1" src_bitwidth="256" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="Register" hw_name="scalar_array" hw_bitwidth="256" hw_size_or_depth="1" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="5" access_type="rw" src_name="result_x" src_type="ap_uint&lt;256&gt;*" src_isptr="1" src_bitwidth="256" src_size_or_depth="26624">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem0" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" channel_id="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="256" final_bitwidth="256"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64"/>
+        </hw>
+      </arg>
+      <arg id="6" access_type="rw" src_name="result_y" src_type="ap_uint&lt;256&gt;*" src_isptr="1" src_bitwidth="256" src_size_or_depth="26624">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem1" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" channel_id="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="256" final_bitwidth="256"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="76"/>
+        </hw>
+      </arg>
+      <arg id="7" access_type="rw" src_name="result_z" src_type="ap_uint&lt;256&gt;*" src_isptr="1" src_bitwidth="256" src_size_or_depth="26624">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem2" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" channel_id="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="256" final_bitwidth="256"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="88"/>
+        </hw>
+      </arg>
+      <arg id="8" access_type="rw" src_name="result_t" src_type="ap_uint&lt;256&gt;*" src_isptr="1" src_bitwidth="256" src_size_or_depth="26624">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem3" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" channel_id="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="256" final_bitwidth="256"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="256" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="100"/>
+        </hw>
+      </arg>
+      <arg id="9" access_type="r" src_name="degree" src_type="int" src_isptr="0" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="Register" hw_name="degree" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
+        </hw>
+      </arg>
+    </args>
+    <return src_type="void" src_bitwidth="0" offset="0x0">
+      <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0" hw_kernel_support="true"/>
+    </return>
+  </kernel>
+</root>

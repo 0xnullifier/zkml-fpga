@@ -1,0 +1,494 @@
+
+
+================================================================
+== Vitis HLS Report for 'add_point_to_bucket'
+================================================================
+* Date:           Thu Apr 24 05:02:34 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        msm_2
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.850 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       22|       22|  88.000 ns|  88.000 ns|   22|   22|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 23
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.75>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%bucket_point_t_read_1 = read i256 @_ssdm_op_Read.ap_auto.i256, i256 %bucket_point_t_read" [../src/msm.cpp:474]   --->   Operation 24 'read' 'bucket_point_t_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%bucket_point_y_read_1 = read i256 @_ssdm_op_Read.ap_auto.i256, i256 %bucket_point_y_read" [../src/msm.cpp:474]   --->   Operation 25 'read' 'bucket_point_y_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%bucket_point_x_read_1 = read i256 @_ssdm_op_Read.ap_auto.i256, i256 %bucket_point_x_read" [../src/msm.cpp:474]   --->   Operation 26 'read' 'bucket_point_x_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (1.95ns)   --->   "%icmp_ln479 = icmp_eq  i256 %bucket_point_x_read_1, i256 0" [../src/msm.cpp:479]   --->   Operation 27 'icmp' 'icmp_ln479' <Predicate = true> <Delay = 1.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (1.95ns)   --->   "%icmp_ln479_1 = icmp_eq  i256 %bucket_point_y_read_1, i256 1" [../src/msm.cpp:479]   --->   Operation 28 'icmp' 'icmp_ln479_1' <Predicate = true> <Delay = 1.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.28ns)   --->   "%and_ln479 = and i1 %icmp_ln479, i1 %icmp_ln479_1" [../src/msm.cpp:479]   --->   Operation 29 'and' 'and_ln479' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (0.51ns)   --->   "%T1 = select i1 %and_ln479, i256 0, i256 %bucket_point_t_read_1" [../src/msm.cpp:479]   --->   Operation 30 'select' 'T1' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 2.61>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%t_read = read i256 @_ssdm_op_Read.ap_auto.i256, i256 %t" [../src/msm.cpp:474]   --->   Operation 31 'read' 't_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln302 = zext i256 %T1" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 32 'zext' 'zext_ln302' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln302_1 = zext i256 %t_read" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 33 'zext' 'zext_ln302_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [5/5] (2.61ns)   --->   "%mul_ln302 = mul i512 %zext_ln302_1, i512 %zext_ln302" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 34 'mul' 'mul_ln302' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [5/5] (2.61ns)   --->   "%T1_T2_1 = mul i256 %T1, i256 %t_read" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 35 'mul' 'T1_T2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.61>
+ST_3 : Operation 36 [4/5] (2.61ns)   --->   "%mul_ln302 = mul i512 %zext_ln302_1, i512 %zext_ln302" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 36 'mul' 'mul_ln302' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 37 [4/5] (2.61ns)   --->   "%T1_T2_1 = mul i256 %T1, i256 %t_read" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 37 'mul' 'T1_T2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.61>
+ST_4 : Operation 38 [3/5] (2.61ns)   --->   "%mul_ln302 = mul i512 %zext_ln302_1, i512 %zext_ln302" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 38 'mul' 'mul_ln302' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 39 [3/5] (2.61ns)   --->   "%T1_T2_1 = mul i256 %T1, i256 %t_read" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 39 'mul' 'T1_T2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.61>
+ST_5 : Operation 40 [1/1] (0.51ns)   --->   "%Y1 = select i1 %and_ln479, i256 1, i256 %bucket_point_y_read_1" [../src/msm.cpp:479]   --->   Operation 40 'select' 'Y1' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 41 [1/1] (0.51ns)   --->   "%X1 = select i1 %and_ln479, i256 0, i256 %bucket_point_x_read_1" [../src/msm.cpp:479]   --->   Operation 41 'select' 'X1' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 42 [2/5] (2.61ns)   --->   "%mul_ln302 = mul i512 %zext_ln302_1, i512 %zext_ln302" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 42 'mul' 'mul_ln302' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 43 [2/5] (2.61ns)   --->   "%T1_T2_1 = mul i256 %T1, i256 %t_read" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 43 'mul' 'T1_T2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.61>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%y_read = read i256 @_ssdm_op_Read.ap_auto.i256, i256 %y" [../src/msm.cpp:474]   --->   Operation 44 'read' 'y_read' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%x_read = read i256 @_ssdm_op_Read.ap_auto.i256, i256 %x" [../src/msm.cpp:474]   --->   Operation 45 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%zext_ln297 = zext i256 %X1" [../src/msm.cpp:297->../src/msm.cpp:488]   --->   Operation 46 'zext' 'zext_ln297' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln297_1 = zext i256 %Y1" [../src/msm.cpp:297->../src/msm.cpp:488]   --->   Operation 47 'zext' 'zext_ln297_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 48 [1/1] (1.95ns)   --->   "%add_ln297 = add i257 %zext_ln297_1, i257 %zext_ln297" [../src/msm.cpp:297->../src/msm.cpp:488]   --->   Operation 48 'add' 'add_ln297' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 49 [1/1] (1.95ns)   --->   "%X1_plus_Y1_1 = add i256 %Y1, i256 %X1" [../src/msm.cpp:297->../src/msm.cpp:488]   --->   Operation 49 'add' 'X1_plus_Y1_1' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%zext_ln298 = zext i256 %x_read" [../src/msm.cpp:298->../src/msm.cpp:488]   --->   Operation 50 'zext' 'zext_ln298' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%zext_ln298_1 = zext i256 %y_read" [../src/msm.cpp:298->../src/msm.cpp:488]   --->   Operation 51 'zext' 'zext_ln298_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (1.95ns)   --->   "%add_ln298 = add i257 %zext_ln298_1, i257 %zext_ln298" [../src/msm.cpp:298->../src/msm.cpp:488]   --->   Operation 52 'add' 'add_ln298' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 53 [1/1] (1.95ns)   --->   "%X2_plus_Y2_1 = add i256 %y_read, i256 %x_read" [../src/msm.cpp:298->../src/msm.cpp:488]   --->   Operation 53 'add' 'X2_plus_Y2_1' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%zext_ln299 = zext i256 %X1" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 54 'zext' 'zext_ln299' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln299_1 = zext i256 %x_read" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 55 'zext' 'zext_ln299_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 56 [5/5] (2.61ns)   --->   "%mul_ln299 = mul i512 %zext_ln299_1, i512 %zext_ln299" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 56 'mul' 'mul_ln299' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 57 [5/5] (2.61ns)   --->   "%X1_X2_1 = mul i256 %X1, i256 %x_read" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 57 'mul' 'X1_X2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%zext_ln300 = zext i256 %Y1" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 58 'zext' 'zext_ln300' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%zext_ln300_1 = zext i256 %y_read" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 59 'zext' 'zext_ln300_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 60 [5/5] (2.61ns)   --->   "%mul_ln300 = mul i512 %zext_ln300_1, i512 %zext_ln300" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 60 'mul' 'mul_ln300' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 61 [5/5] (2.61ns)   --->   "%Y1_Y2_1 = mul i256 %Y1, i256 %y_read" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 61 'mul' 'Y1_Y2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 62 [1/5] (2.61ns)   --->   "%mul_ln302 = mul i512 %zext_ln302_1, i512 %zext_ln302" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 62 'mul' 'mul_ln302' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 63 [1/5] (2.61ns)   --->   "%T1_T2_1 = mul i256 %T1, i256 %t_read" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 63 'mul' 'T1_T2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.85>
+ST_7 : Operation 64 [1/1] (0.00ns)   --->   "%bucket_point_z_read_1 = read i256 @_ssdm_op_Read.ap_auto.i256, i256 %bucket_point_z_read" [../src/msm.cpp:474]   --->   Operation 64 'read' 'bucket_point_z_read_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 65 [1/1] (0.51ns)   --->   "%Z1 = select i1 %and_ln479, i256 1, i256 %bucket_point_z_read_1" [../src/msm.cpp:479]   --->   Operation 65 'select' 'Z1' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 66 [1/1] (1.95ns)   --->   "%icmp_ln297 = icmp_ugt  i257 %add_ln297, i257 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:297->../src/msm.cpp:488]   --->   Operation 66 'icmp' 'icmp_ln297' <Predicate = true> <Delay = 1.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 67 [1/1] (1.95ns)   --->   "%X1_plus_Y1 = add i256 %X1_plus_Y1_1, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:297->../src/msm.cpp:488]   --->   Operation 67 'add' 'X1_plus_Y1' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 68 [1/1] (0.51ns)   --->   "%X1_plus_Y1_2 = select i1 %icmp_ln297, i256 %X1_plus_Y1, i256 %X1_plus_Y1_1" [../src/msm.cpp:297->../src/msm.cpp:488]   --->   Operation 68 'select' 'X1_plus_Y1_2' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 69 [1/1] (1.95ns)   --->   "%icmp_ln298 = icmp_ugt  i257 %add_ln298, i257 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:298->../src/msm.cpp:488]   --->   Operation 69 'icmp' 'icmp_ln298' <Predicate = true> <Delay = 1.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 70 [1/1] (1.95ns)   --->   "%X2_plus_Y2 = add i256 %X2_plus_Y2_1, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:298->../src/msm.cpp:488]   --->   Operation 70 'add' 'X2_plus_Y2' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 71 [1/1] (0.51ns)   --->   "%X2_plus_Y2_2 = select i1 %icmp_ln298, i256 %X2_plus_Y2, i256 %X2_plus_Y2_1" [../src/msm.cpp:298->../src/msm.cpp:488]   --->   Operation 71 'select' 'X2_plus_Y2_2' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 72 [4/5] (2.61ns)   --->   "%mul_ln299 = mul i512 %zext_ln299_1, i512 %zext_ln299" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 72 'mul' 'mul_ln299' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 73 [4/5] (2.61ns)   --->   "%X1_X2_1 = mul i256 %X1, i256 %x_read" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 73 'mul' 'X1_X2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 74 [4/5] (2.61ns)   --->   "%mul_ln300 = mul i512 %zext_ln300_1, i512 %zext_ln300" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 74 'mul' 'mul_ln300' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 75 [4/5] (2.61ns)   --->   "%Y1_Y2_1 = mul i256 %Y1, i256 %y_read" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 75 'mul' 'Y1_Y2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 76 [1/1] (2.85ns)   --->   "%icmp_ln302 = icmp_ugt  i512 %mul_ln302, i512 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 76 'icmp' 'icmp_ln302' <Predicate = true> <Delay = 2.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.85> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.61>
+ST_8 : Operation 77 [1/1] (0.00ns)   --->   "%z_read = read i256 @_ssdm_op_Read.ap_auto.i256, i256 %z" [../src/msm.cpp:474]   --->   Operation 77 'read' 'z_read' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 78 [3/5] (2.61ns)   --->   "%mul_ln299 = mul i512 %zext_ln299_1, i512 %zext_ln299" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 78 'mul' 'mul_ln299' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 79 [3/5] (2.61ns)   --->   "%X1_X2_1 = mul i256 %X1, i256 %x_read" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 79 'mul' 'X1_X2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 80 [3/5] (2.61ns)   --->   "%mul_ln300 = mul i512 %zext_ln300_1, i512 %zext_ln300" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 80 'mul' 'mul_ln300' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 81 [3/5] (2.61ns)   --->   "%Y1_Y2_1 = mul i256 %Y1, i256 %y_read" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 81 'mul' 'Y1_Y2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 82 [1/1] (0.00ns)   --->   "%zext_ln301 = zext i256 %Z1" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 82 'zext' 'zext_ln301' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 83 [1/1] (0.00ns)   --->   "%zext_ln301_1 = zext i256 %z_read" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 83 'zext' 'zext_ln301_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 84 [5/5] (2.61ns)   --->   "%mul_ln301 = mul i512 %zext_ln301_1, i512 %zext_ln301" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 84 'mul' 'mul_ln301' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 85 [5/5] (2.61ns)   --->   "%Z1_Z2_1 = mul i256 %Z1, i256 %z_read" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 85 'mul' 'Z1_Z2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 86 [1/1] (1.95ns)   --->   "%T1_T2 = add i256 %T1_T2_1, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 86 'add' 'T1_T2' <Predicate = (icmp_ln302)> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 87 [1/1] (0.51ns)   --->   "%T1_T2_2 = select i1 %icmp_ln302, i256 %T1_T2, i256 %T1_T2_1" [../src/msm.cpp:302->../src/msm.cpp:488]   --->   Operation 87 'select' 'T1_T2_2' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%zext_ln305 = zext i256 %X1_plus_Y1_2" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 88 'zext' 'zext_ln305' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 89 [1/1] (0.00ns)   --->   "%zext_ln305_1 = zext i256 %X2_plus_Y2_2" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 89 'zext' 'zext_ln305_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 90 [5/5] (2.61ns)   --->   "%mul_ln305 = mul i512 %zext_ln305_1, i512 %zext_ln305" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 90 'mul' 'mul_ln305' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 91 [5/5] (2.61ns)   --->   "%term1_1 = mul i256 %X2_plus_Y2_2, i256 %X1_plus_Y1_2" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 91 'mul' 'term1_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 2.61>
+ST_9 : Operation 92 [2/5] (2.61ns)   --->   "%mul_ln299 = mul i512 %zext_ln299_1, i512 %zext_ln299" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 92 'mul' 'mul_ln299' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 93 [2/5] (2.61ns)   --->   "%X1_X2_1 = mul i256 %X1, i256 %x_read" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 93 'mul' 'X1_X2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 94 [2/5] (2.61ns)   --->   "%mul_ln300 = mul i512 %zext_ln300_1, i512 %zext_ln300" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 94 'mul' 'mul_ln300' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 95 [2/5] (2.61ns)   --->   "%Y1_Y2_1 = mul i256 %Y1, i256 %y_read" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 95 'mul' 'Y1_Y2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 96 [4/5] (2.61ns)   --->   "%mul_ln301 = mul i512 %zext_ln301_1, i512 %zext_ln301" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 96 'mul' 'mul_ln301' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 97 [4/5] (2.61ns)   --->   "%Z1_Z2_1 = mul i256 %Z1, i256 %z_read" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 97 'mul' 'Z1_Z2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 98 [1/1] (0.00ns)   --->   "%zext_ln303 = zext i256 %T1_T2_2" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 98 'zext' 'zext_ln303' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 99 [5/5] (2.61ns)   --->   "%mul_ln303 = mul i509 %zext_ln303, i509 9706598848417545097372247223557719406784115219466060233080913168975159366771" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 99 'mul' 'mul_ln303' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 100 [5/5] (2.61ns)   --->   "%curve_d_T1_T2_1 = mul i256 %T1_T2_2, i256 9706598848417545097372247223557719406784115219466060233080913168975159366771" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 100 'mul' 'curve_d_T1_T2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 101 [4/5] (2.61ns)   --->   "%mul_ln305 = mul i512 %zext_ln305_1, i512 %zext_ln305" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 101 'mul' 'mul_ln305' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 102 [4/5] (2.61ns)   --->   "%term1_1 = mul i256 %X2_plus_Y2_2, i256 %X1_plus_Y1_2" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 102 'mul' 'term1_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 2.61>
+ST_10 : Operation 103 [1/5] (2.61ns)   --->   "%mul_ln299 = mul i512 %zext_ln299_1, i512 %zext_ln299" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 103 'mul' 'mul_ln299' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 104 [1/5] (2.61ns)   --->   "%X1_X2_1 = mul i256 %X1, i256 %x_read" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 104 'mul' 'X1_X2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 105 [1/5] (2.61ns)   --->   "%mul_ln300 = mul i512 %zext_ln300_1, i512 %zext_ln300" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 105 'mul' 'mul_ln300' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 106 [1/5] (2.61ns)   --->   "%Y1_Y2_1 = mul i256 %Y1, i256 %y_read" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 106 'mul' 'Y1_Y2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 107 [3/5] (2.61ns)   --->   "%mul_ln301 = mul i512 %zext_ln301_1, i512 %zext_ln301" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 107 'mul' 'mul_ln301' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 108 [3/5] (2.61ns)   --->   "%Z1_Z2_1 = mul i256 %Z1, i256 %z_read" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 108 'mul' 'Z1_Z2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 109 [4/5] (2.61ns)   --->   "%mul_ln303 = mul i509 %zext_ln303, i509 9706598848417545097372247223557719406784115219466060233080913168975159366771" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 109 'mul' 'mul_ln303' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 110 [4/5] (2.61ns)   --->   "%curve_d_T1_T2_1 = mul i256 %T1_T2_2, i256 9706598848417545097372247223557719406784115219466060233080913168975159366771" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 110 'mul' 'curve_d_T1_T2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 111 [3/5] (2.61ns)   --->   "%mul_ln305 = mul i512 %zext_ln305_1, i512 %zext_ln305" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 111 'mul' 'mul_ln305' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 112 [3/5] (2.61ns)   --->   "%term1_1 = mul i256 %X2_plus_Y2_2, i256 %X1_plus_Y1_2" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 112 'mul' 'term1_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 2.85>
+ST_11 : Operation 113 [1/1] (2.85ns)   --->   "%icmp_ln299 = icmp_ugt  i512 %mul_ln299, i512 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 113 'icmp' 'icmp_ln299' <Predicate = true> <Delay = 2.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.85> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 114 [1/1] (2.85ns)   --->   "%icmp_ln300 = icmp_ugt  i512 %mul_ln300, i512 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 114 'icmp' 'icmp_ln300' <Predicate = true> <Delay = 2.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.85> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 115 [2/5] (2.61ns)   --->   "%mul_ln301 = mul i512 %zext_ln301_1, i512 %zext_ln301" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 115 'mul' 'mul_ln301' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 116 [2/5] (2.61ns)   --->   "%Z1_Z2_1 = mul i256 %Z1, i256 %z_read" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 116 'mul' 'Z1_Z2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 117 [3/5] (2.61ns)   --->   "%mul_ln303 = mul i509 %zext_ln303, i509 9706598848417545097372247223557719406784115219466060233080913168975159366771" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 117 'mul' 'mul_ln303' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 118 [3/5] (2.61ns)   --->   "%curve_d_T1_T2_1 = mul i256 %T1_T2_2, i256 9706598848417545097372247223557719406784115219466060233080913168975159366771" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 118 'mul' 'curve_d_T1_T2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 119 [2/5] (2.61ns)   --->   "%mul_ln305 = mul i512 %zext_ln305_1, i512 %zext_ln305" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 119 'mul' 'mul_ln305' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 120 [2/5] (2.61ns)   --->   "%term1_1 = mul i256 %X2_plus_Y2_2, i256 %X1_plus_Y1_2" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 120 'mul' 'term1_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 2.61>
+ST_12 : Operation 121 [1/1] (1.95ns)   --->   "%X1_X2 = add i256 %X1_X2_1, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 121 'add' 'X1_X2' <Predicate = (icmp_ln299)> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 122 [1/1] (0.51ns)   --->   "%X1_X2_2 = select i1 %icmp_ln299, i256 %X1_X2, i256 %X1_X2_1" [../src/msm.cpp:299->../src/msm.cpp:488]   --->   Operation 122 'select' 'X1_X2_2' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 123 [1/1] (1.95ns)   --->   "%Y1_Y2 = add i256 %Y1_Y2_1, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 123 'add' 'Y1_Y2' <Predicate = (icmp_ln300)> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 124 [1/1] (0.51ns)   --->   "%Y1_Y2_2 = select i1 %icmp_ln300, i256 %Y1_Y2, i256 %Y1_Y2_1" [../src/msm.cpp:300->../src/msm.cpp:488]   --->   Operation 124 'select' 'Y1_Y2_2' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 125 [1/5] (2.61ns)   --->   "%mul_ln301 = mul i512 %zext_ln301_1, i512 %zext_ln301" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 125 'mul' 'mul_ln301' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 126 [1/5] (2.61ns)   --->   "%Z1_Z2_1 = mul i256 %Z1, i256 %z_read" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 126 'mul' 'Z1_Z2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 127 [2/5] (2.61ns)   --->   "%mul_ln303 = mul i509 %zext_ln303, i509 9706598848417545097372247223557719406784115219466060233080913168975159366771" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 127 'mul' 'mul_ln303' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 128 [2/5] (2.61ns)   --->   "%curve_d_T1_T2_1 = mul i256 %T1_T2_2, i256 9706598848417545097372247223557719406784115219466060233080913168975159366771" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 128 'mul' 'curve_d_T1_T2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 129 [1/5] (2.61ns)   --->   "%mul_ln305 = mul i512 %zext_ln305_1, i512 %zext_ln305" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 129 'mul' 'mul_ln305' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 130 [1/5] (2.61ns)   --->   "%term1_1 = mul i256 %X2_plus_Y2_2, i256 %X1_plus_Y1_2" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 130 'mul' 'term1_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 2.85>
+ST_13 : Operation 131 [1/1] (2.85ns)   --->   "%icmp_ln301 = icmp_ugt  i512 %mul_ln301, i512 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 131 'icmp' 'icmp_ln301' <Predicate = true> <Delay = 2.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.85> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 132 [1/5] (2.61ns)   --->   "%mul_ln303 = mul i509 %zext_ln303, i509 9706598848417545097372247223557719406784115219466060233080913168975159366771" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 132 'mul' 'mul_ln303' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 133 [1/5] (2.61ns)   --->   "%curve_d_T1_T2_1 = mul i256 %T1_T2_2, i256 9706598848417545097372247223557719406784115219466060233080913168975159366771" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 133 'mul' 'curve_d_T1_T2_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 134 [1/1] (2.85ns)   --->   "%icmp_ln305 = icmp_ugt  i512 %mul_ln305, i512 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 134 'icmp' 'icmp_ln305' <Predicate = true> <Delay = 2.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.85> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 2.83>
+ST_14 : Operation 135 [1/1] (1.95ns)   --->   "%Z1_Z2 = add i256 %Z1_Z2_1, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 135 'add' 'Z1_Z2' <Predicate = (icmp_ln301)> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 136 [1/1] (0.51ns)   --->   "%Z1_Z2_2 = select i1 %icmp_ln301, i256 %Z1_Z2, i256 %Z1_Z2_1" [../src/msm.cpp:301->../src/msm.cpp:488]   --->   Operation 136 'select' 'Z1_Z2_2' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 137 [1/1] (2.83ns)   --->   "%icmp_ln303 = icmp_ugt  i509 %mul_ln303, i509 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 137 'icmp' 'icmp_ln303' <Predicate = true> <Delay = 2.83> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.83> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 138 [1/1] (1.95ns)   --->   "%curve_d_T1_T2 = add i256 %curve_d_T1_T2_1, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 138 'add' 'curve_d_T1_T2' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 139 [1/1] (1.95ns)   --->   "%term1 = add i256 %term1_1, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 139 'add' 'term1' <Predicate = (icmp_ln305)> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 140 [1/1] (0.51ns)   --->   "%term1_2 = select i1 %icmp_ln305, i256 %term1, i256 %term1_1" [../src/msm.cpp:305->../src/msm.cpp:488]   --->   Operation 140 'select' 'term1_2' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 141 [1/1] (0.00ns)   --->   "%zext_ln311 = zext i256 %X1_X2_2" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 141 'zext' 'zext_ln311' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 142 [1/1] (0.00ns)   --->   "%zext_ln311_1 = zext i256 %Y1_Y2_2" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 142 'zext' 'zext_ln311_1' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 143 [1/1] (1.95ns)   --->   "%add_ln311 = add i257 %zext_ln311_1, i257 %zext_ln311" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 143 'add' 'add_ln311' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 2.46>
+ST_15 : Operation 144 [1/1] (0.51ns)   --->   "%curve_d_T1_T2_2 = select i1 %icmp_ln303, i256 %curve_d_T1_T2, i256 %curve_d_T1_T2_1" [../src/msm.cpp:303->../src/msm.cpp:488]   --->   Operation 144 'select' 'curve_d_T1_T2_2' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 145 [1/1] (1.95ns)   --->   "%icmp_ln306 = icmp_ult  i256 %Z1_Z2_2, i256 %curve_d_T1_T2_2" [../src/msm.cpp:306->../src/msm.cpp:488]   --->   Operation 145 'icmp' 'icmp_ln306' <Predicate = true> <Delay = 1.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 146 [1/1] (1.95ns)   --->   "%term2 = sub i256 %Z1_Z2_2, i256 %curve_d_T1_T2_2" [../src/msm.cpp:306->../src/msm.cpp:488]   --->   Operation 146 'sub' 'term2' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 147 [1/1] (0.00ns)   --->   "%zext_ln307 = zext i256 %Z1_Z2_2" [../src/msm.cpp:307->../src/msm.cpp:488]   --->   Operation 147 'zext' 'zext_ln307' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 148 [1/1] (0.00ns)   --->   "%zext_ln307_1 = zext i256 %curve_d_T1_T2_2" [../src/msm.cpp:307->../src/msm.cpp:488]   --->   Operation 148 'zext' 'zext_ln307_1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 149 [1/1] (1.95ns)   --->   "%add_ln307 = add i257 %zext_ln307_1, i257 %zext_ln307" [../src/msm.cpp:307->../src/msm.cpp:488]   --->   Operation 149 'add' 'add_ln307' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 150 [1/1] (1.95ns)   --->   "%term3_1 = add i256 %curve_d_T1_T2_2, i256 %Z1_Z2_2" [../src/msm.cpp:307->../src/msm.cpp:488]   --->   Operation 150 'add' 'term3_1' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 151 [1/1] (1.95ns)   --->   "%icmp_ln308 = icmp_ult  i256 %Y1_Y2_2, i256 %X1_X2_2" [../src/msm.cpp:308->../src/msm.cpp:488]   --->   Operation 151 'icmp' 'icmp_ln308' <Predicate = true> <Delay = 1.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 152 [1/1] (1.95ns)   --->   "%term4 = sub i256 %Y1_Y2_2, i256 %X1_X2_2" [../src/msm.cpp:308->../src/msm.cpp:488]   --->   Operation 152 'sub' 'term4' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 153 [1/1] (0.00ns)   --->   "%zext_ln311_2 = zext i256 %term1_2" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 153 'zext' 'zext_ln311_2' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 154 [1/1] (1.95ns)   --->   "%icmp_ln311 = icmp_ult  i257 %zext_ln311_2, i257 %add_ln311" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 154 'icmp' 'icmp_ln311' <Predicate = true> <Delay = 1.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 155 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln311 = sub i256 %term1_2, i256 %X1_X2_2" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 155 'sub' 'sub_ln311' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.69> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_15 : Operation 156 [1/1] (1.39ns) (root node of TernaryAdder)   --->   "%sub_ln311_1 = sub i256 %sub_ln311, i256 %Y1_Y2_2" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 156 'sub' 'sub_ln311_1' <Predicate = true> <Delay = 1.39> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.69> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 16 <SV = 15> <Delay = 2.46>
+ST_16 : Operation 157 [1/1] (0.00ns) (grouped into LUT with out node term2_2)   --->   "%xor_ln306 = xor i1 %icmp_ln306, i1 1" [../src/msm.cpp:306->../src/msm.cpp:488]   --->   Operation 157 'xor' 'xor_ln306' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 158 [1/1] (1.95ns)   --->   "%term2_1 = add i256 %term2, i256 21888242871839275222246405745257275088548364400416034343698204186575808495617" [../src/msm.cpp:306->../src/msm.cpp:488]   --->   Operation 158 'add' 'term2_1' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 159 [1/1] (0.51ns) (out node of the LUT)   --->   "%term2_2 = select i1 %xor_ln306, i256 %term2, i256 %term2_1" [../src/msm.cpp:306->../src/msm.cpp:488]   --->   Operation 159 'select' 'term2_2' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 160 [1/1] (1.95ns)   --->   "%icmp_ln307 = icmp_ugt  i257 %add_ln307, i257 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:307->../src/msm.cpp:488]   --->   Operation 160 'icmp' 'icmp_ln307' <Predicate = true> <Delay = 1.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 161 [1/1] (1.95ns)   --->   "%term3 = add i256 %term3_1, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:307->../src/msm.cpp:488]   --->   Operation 161 'add' 'term3' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 162 [1/1] (0.51ns)   --->   "%term3_2 = select i1 %icmp_ln307, i256 %term3, i256 %term3_1" [../src/msm.cpp:307->../src/msm.cpp:488]   --->   Operation 162 'select' 'term3_2' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 163 [1/1] (0.00ns) (grouped into LUT with out node term4_2)   --->   "%xor_ln308 = xor i1 %icmp_ln308, i1 1" [../src/msm.cpp:308->../src/msm.cpp:488]   --->   Operation 163 'xor' 'xor_ln308' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 164 [1/1] (1.95ns)   --->   "%term4_1 = add i256 %term4, i256 21888242871839275222246405745257275088548364400416034343698204186575808495617" [../src/msm.cpp:308->../src/msm.cpp:488]   --->   Operation 164 'add' 'term4_1' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 165 [1/1] (0.51ns) (out node of the LUT)   --->   "%term4_2 = select i1 %xor_ln308, i256 %term4, i256 %term4_1" [../src/msm.cpp:308->../src/msm.cpp:488]   --->   Operation 165 'select' 'term4_2' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 166 [1/1] (0.00ns) (grouped into LUT with out node select_ln311)   --->   "%xor_ln311 = xor i1 %icmp_ln311, i1 1" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 166 'xor' 'xor_ln311' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 167 [1/1] (1.95ns)   --->   "%add_ln311_1 = add i256 %sub_ln311_1, i256 43776485743678550444492811490514550177096728800832068687396408373151616991234" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 167 'add' 'add_ln311_1' <Predicate = true> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 168 [1/1] (0.51ns) (out node of the LUT)   --->   "%select_ln311 = select i1 %xor_ln311, i256 %sub_ln311_1, i256 %add_ln311_1" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 168 'select' 'select_ln311' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 2.61>
+ST_17 : Operation 169 [1/1] (0.00ns)   --->   "%zext_ln311_3 = zext i256 %select_ln311" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 169 'zext' 'zext_ln311_3' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 170 [1/1] (0.00ns)   --->   "%zext_ln311_4 = zext i256 %term2_2" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 170 'zext' 'zext_ln311_4' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 171 [5/5] (2.61ns)   --->   "%mul_ln311 = mul i512 %zext_ln311_4, i512 %zext_ln311_3" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 171 'mul' 'mul_ln311' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 172 [1/1] (0.00ns)   --->   "%zext_ln314 = zext i256 %term3_2" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 172 'zext' 'zext_ln314' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 173 [1/1] (0.00ns)   --->   "%zext_ln314_1 = zext i256 %term4_2" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 173 'zext' 'zext_ln314_1' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 174 [5/5] (2.61ns)   --->   "%mul_ln314 = mul i512 %zext_ln314, i512 %zext_ln314_1" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 174 'mul' 'mul_ln314' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 175 [5/5] (2.61ns)   --->   "%mul_ln315 = mul i512 %zext_ln311_3, i512 %zext_ln314_1" [../src/msm.cpp:315->../src/msm.cpp:488]   --->   Operation 175 'mul' 'mul_ln315' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 176 [5/5] (2.61ns)   --->   "%mul_ln318 = mul i512 %zext_ln314, i512 %zext_ln311_4" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 176 'mul' 'mul_ln318' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 2.61>
+ST_18 : Operation 177 [4/5] (2.61ns)   --->   "%mul_ln311 = mul i512 %zext_ln311_4, i512 %zext_ln311_3" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 177 'mul' 'mul_ln311' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 178 [5/5] (2.61ns)   --->   "%mul_ln312 = mul i256 %term2_2, i256 %select_ln311" [../src/msm.cpp:312->../src/msm.cpp:488]   --->   Operation 178 'mul' 'mul_ln312' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 179 [4/5] (2.61ns)   --->   "%mul_ln314 = mul i512 %zext_ln314, i512 %zext_ln314_1" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 179 'mul' 'mul_ln314' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 180 [5/5] (2.61ns)   --->   "%mul_ln314_1 = mul i256 %term3_2, i256 %term4_2" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 180 'mul' 'mul_ln314_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 181 [4/5] (2.61ns)   --->   "%mul_ln315 = mul i512 %zext_ln311_3, i512 %zext_ln314_1" [../src/msm.cpp:315->../src/msm.cpp:488]   --->   Operation 181 'mul' 'mul_ln315' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 182 [5/5] (2.61ns)   --->   "%mul_ln316 = mul i256 %select_ln311, i256 %term4_2" [../src/msm.cpp:316->../src/msm.cpp:488]   --->   Operation 182 'mul' 'mul_ln316' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 183 [4/5] (2.61ns)   --->   "%mul_ln318 = mul i512 %zext_ln314, i512 %zext_ln311_4" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 183 'mul' 'mul_ln318' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 184 [5/5] (2.61ns)   --->   "%mul_ln318_1 = mul i256 %term3_2, i256 %term2_2" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 184 'mul' 'mul_ln318_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 2.61>
+ST_19 : Operation 185 [3/5] (2.61ns)   --->   "%mul_ln311 = mul i512 %zext_ln311_4, i512 %zext_ln311_3" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 185 'mul' 'mul_ln311' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 186 [4/5] (2.61ns)   --->   "%mul_ln312 = mul i256 %term2_2, i256 %select_ln311" [../src/msm.cpp:312->../src/msm.cpp:488]   --->   Operation 186 'mul' 'mul_ln312' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 187 [3/5] (2.61ns)   --->   "%mul_ln314 = mul i512 %zext_ln314, i512 %zext_ln314_1" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 187 'mul' 'mul_ln314' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 188 [4/5] (2.61ns)   --->   "%mul_ln314_1 = mul i256 %term3_2, i256 %term4_2" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 188 'mul' 'mul_ln314_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 189 [3/5] (2.61ns)   --->   "%mul_ln315 = mul i512 %zext_ln311_3, i512 %zext_ln314_1" [../src/msm.cpp:315->../src/msm.cpp:488]   --->   Operation 189 'mul' 'mul_ln315' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 190 [4/5] (2.61ns)   --->   "%mul_ln316 = mul i256 %select_ln311, i256 %term4_2" [../src/msm.cpp:316->../src/msm.cpp:488]   --->   Operation 190 'mul' 'mul_ln316' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 191 [3/5] (2.61ns)   --->   "%mul_ln318 = mul i512 %zext_ln314, i512 %zext_ln311_4" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 191 'mul' 'mul_ln318' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 192 [4/5] (2.61ns)   --->   "%mul_ln318_1 = mul i256 %term3_2, i256 %term2_2" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 192 'mul' 'mul_ln318_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 2.61>
+ST_20 : Operation 193 [2/5] (2.61ns)   --->   "%mul_ln311 = mul i512 %zext_ln311_4, i512 %zext_ln311_3" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 193 'mul' 'mul_ln311' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 194 [3/5] (2.61ns)   --->   "%mul_ln312 = mul i256 %term2_2, i256 %select_ln311" [../src/msm.cpp:312->../src/msm.cpp:488]   --->   Operation 194 'mul' 'mul_ln312' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 195 [2/5] (2.61ns)   --->   "%mul_ln314 = mul i512 %zext_ln314, i512 %zext_ln314_1" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 195 'mul' 'mul_ln314' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 196 [3/5] (2.61ns)   --->   "%mul_ln314_1 = mul i256 %term3_2, i256 %term4_2" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 196 'mul' 'mul_ln314_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 197 [2/5] (2.61ns)   --->   "%mul_ln315 = mul i512 %zext_ln311_3, i512 %zext_ln314_1" [../src/msm.cpp:315->../src/msm.cpp:488]   --->   Operation 197 'mul' 'mul_ln315' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 198 [3/5] (2.61ns)   --->   "%mul_ln316 = mul i256 %select_ln311, i256 %term4_2" [../src/msm.cpp:316->../src/msm.cpp:488]   --->   Operation 198 'mul' 'mul_ln316' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 199 [2/5] (2.61ns)   --->   "%mul_ln318 = mul i512 %zext_ln314, i512 %zext_ln311_4" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 199 'mul' 'mul_ln318' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 200 [3/5] (2.61ns)   --->   "%mul_ln318_1 = mul i256 %term3_2, i256 %term2_2" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 200 'mul' 'mul_ln318_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 2.61>
+ST_21 : Operation 201 [1/5] (2.61ns)   --->   "%mul_ln311 = mul i512 %zext_ln311_4, i512 %zext_ln311_3" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 201 'mul' 'mul_ln311' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 202 [2/5] (2.61ns)   --->   "%mul_ln312 = mul i256 %term2_2, i256 %select_ln311" [../src/msm.cpp:312->../src/msm.cpp:488]   --->   Operation 202 'mul' 'mul_ln312' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 203 [1/5] (2.61ns)   --->   "%mul_ln314 = mul i512 %zext_ln314, i512 %zext_ln314_1" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 203 'mul' 'mul_ln314' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 204 [2/5] (2.61ns)   --->   "%mul_ln314_1 = mul i256 %term3_2, i256 %term4_2" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 204 'mul' 'mul_ln314_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 205 [1/5] (2.61ns)   --->   "%mul_ln315 = mul i512 %zext_ln311_3, i512 %zext_ln314_1" [../src/msm.cpp:315->../src/msm.cpp:488]   --->   Operation 205 'mul' 'mul_ln315' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 206 [2/5] (2.61ns)   --->   "%mul_ln316 = mul i256 %select_ln311, i256 %term4_2" [../src/msm.cpp:316->../src/msm.cpp:488]   --->   Operation 206 'mul' 'mul_ln316' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 207 [1/5] (2.61ns)   --->   "%mul_ln318 = mul i512 %zext_ln314, i512 %zext_ln311_4" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 207 'mul' 'mul_ln318' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 208 [2/5] (2.61ns)   --->   "%mul_ln318_1 = mul i256 %term3_2, i256 %term2_2" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 208 'mul' 'mul_ln318_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 2.85>
+ST_22 : Operation 209 [1/1] (2.85ns)   --->   "%icmp_ln311_1 = icmp_ugt  i512 %mul_ln311, i512 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 209 'icmp' 'icmp_ln311_1' <Predicate = true> <Delay = 2.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.85> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 210 [1/5] (2.61ns)   --->   "%mul_ln312 = mul i256 %term2_2, i256 %select_ln311" [../src/msm.cpp:312->../src/msm.cpp:488]   --->   Operation 210 'mul' 'mul_ln312' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 211 [1/1] (2.85ns)   --->   "%icmp_ln314 = icmp_ugt  i512 %mul_ln314, i512 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 211 'icmp' 'icmp_ln314' <Predicate = true> <Delay = 2.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.85> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 212 [1/5] (2.61ns)   --->   "%mul_ln314_1 = mul i256 %term3_2, i256 %term4_2" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 212 'mul' 'mul_ln314_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 213 [1/1] (2.85ns)   --->   "%icmp_ln315 = icmp_ugt  i512 %mul_ln315, i512 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:315->../src/msm.cpp:488]   --->   Operation 213 'icmp' 'icmp_ln315' <Predicate = true> <Delay = 2.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.85> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 214 [1/5] (2.61ns)   --->   "%mul_ln316 = mul i256 %select_ln311, i256 %term4_2" [../src/msm.cpp:316->../src/msm.cpp:488]   --->   Operation 214 'mul' 'mul_ln316' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 215 [1/1] (2.85ns)   --->   "%icmp_ln318 = icmp_ugt  i512 %mul_ln318, i512 21888242871839275222246405745257275088548364400416034343698204186575808495616" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 215 'icmp' 'icmp_ln318' <Predicate = true> <Delay = 2.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.85> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 216 [1/5] (2.61ns)   --->   "%mul_ln318_1 = mul i256 %term3_2, i256 %term2_2" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 216 'mul' 'mul_ln318_1' <Predicate = true> <Delay = 2.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 2.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 2.46>
+ST_23 : Operation 217 [1/1] (1.95ns)   --->   "%add_ln312 = add i256 %mul_ln312, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:312->../src/msm.cpp:488]   --->   Operation 217 'add' 'add_ln312' <Predicate = (icmp_ln311_1)> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 218 [1/1] (0.51ns)   --->   "%new_bucket_point_x = select i1 %icmp_ln311_1, i256 %add_ln312, i256 %mul_ln312" [../src/msm.cpp:311->../src/msm.cpp:488]   --->   Operation 218 'select' 'new_bucket_point_x' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_23 : Operation 219 [1/1] (1.95ns)   --->   "%add_ln314 = add i256 %mul_ln314_1, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 219 'add' 'add_ln314' <Predicate = (icmp_ln314)> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 220 [1/1] (0.51ns)   --->   "%new_bucket_point_y = select i1 %icmp_ln314, i256 %add_ln314, i256 %mul_ln314_1" [../src/msm.cpp:314->../src/msm.cpp:488]   --->   Operation 220 'select' 'new_bucket_point_y' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_23 : Operation 221 [1/1] (1.95ns)   --->   "%add_ln316 = add i256 %mul_ln316, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:316->../src/msm.cpp:488]   --->   Operation 221 'add' 'add_ln316' <Predicate = (icmp_ln315)> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 222 [1/1] (0.51ns)   --->   "%new_bucket_point_t = select i1 %icmp_ln315, i256 %add_ln316, i256 %mul_ln316" [../src/msm.cpp:315->../src/msm.cpp:488]   --->   Operation 222 'select' 'new_bucket_point_t' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_23 : Operation 223 [1/1] (1.95ns)   --->   "%add_ln318 = add i256 %mul_ln318_1, i256 93903846365476920201324579263430632764721620265224529695759379821337321144319" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 223 'add' 'add_ln318' <Predicate = (icmp_ln318)> <Delay = 1.95> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 224 [1/1] (0.51ns)   --->   "%new_bucket_point_z = select i1 %icmp_ln318, i256 %add_ln318, i256 %mul_ln318_1" [../src/msm.cpp:318->../src/msm.cpp:488]   --->   Operation 224 'select' 'new_bucket_point_z' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_23 : Operation 225 [1/1] (0.00ns)   --->   "%mrv_s = insertvalue i1024 <undef>, i256 %new_bucket_point_z" [../src/msm.cpp:497]   --->   Operation 225 'insertvalue' 'mrv_s' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 226 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i1024 %mrv_s, i256 %new_bucket_point_t" [../src/msm.cpp:497]   --->   Operation 226 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 227 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i1024 %mrv_1, i256 %new_bucket_point_x" [../src/msm.cpp:497]   --->   Operation 227 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 228 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i1024 %mrv_2, i256 %new_bucket_point_y" [../src/msm.cpp:497]   --->   Operation 228 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 229 [1/1] (0.00ns)   --->   "%ret_ln497 = ret i1024 %mrv_3" [../src/msm.cpp:497]   --->   Operation 229 'ret' 'ret_ln497' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4.000ns, clock uncertainty: 1.080ns.
+
+ <State 1>: 2.754ns
+The critical path consists of the following:
+	wire read operation ('bucket_point.y', ../src/msm.cpp:474) on port 'bucket_point_y_read' (../src/msm.cpp:474) [15]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln479_1', ../src/msm.cpp:479) [18]  (1.955 ns)
+	'and' operation 1 bit ('and_ln479', ../src/msm.cpp:479) [19]  (0.287 ns)
+	'select' operation 256 bit ('T1', ../src/msm.cpp:479) [21]  (0.512 ns)
+
+ <State 2>: 2.611ns
+The critical path consists of the following:
+	wire read operation ('t_read', ../src/msm.cpp:474) on port 't' (../src/msm.cpp:474) [9]  (0.000 ns)
+	'mul' operation 512 bit ('mul_ln302', ../src/msm.cpp:302->../src/msm.cpp:488) [61]  (2.611 ns)
+
+ <State 3>: 2.611ns
+The critical path consists of the following:
+	'mul' operation 512 bit ('mul_ln302', ../src/msm.cpp:302->../src/msm.cpp:488) [61]  (2.611 ns)
+
+ <State 4>: 2.611ns
+The critical path consists of the following:
+	'mul' operation 512 bit ('mul_ln302', ../src/msm.cpp:302->../src/msm.cpp:488) [61]  (2.611 ns)
+
+ <State 5>: 2.611ns
+The critical path consists of the following:
+	'mul' operation 512 bit ('mul_ln302', ../src/msm.cpp:302->../src/msm.cpp:488) [61]  (2.611 ns)
+
+ <State 6>: 2.611ns
+The critical path consists of the following:
+	wire read operation ('x_read', ../src/msm.cpp:474) on port 'x' (../src/msm.cpp:474) [12]  (0.000 ns)
+	'mul' operation 512 bit ('mul_ln299', ../src/msm.cpp:299->../src/msm.cpp:488) [40]  (2.611 ns)
+
+ <State 7>: 2.850ns
+The critical path consists of the following:
+	'icmp' operation 1 bit ('icmp_ln302', ../src/msm.cpp:302->../src/msm.cpp:488) [62]  (2.850 ns)
+
+ <State 8>: 2.611ns
+The critical path consists of the following:
+	'mul' operation 512 bit ('mul_ln299', ../src/msm.cpp:299->../src/msm.cpp:488) [40]  (2.611 ns)
+
+ <State 9>: 2.611ns
+The critical path consists of the following:
+	'mul' operation 512 bit ('mul_ln299', ../src/msm.cpp:299->../src/msm.cpp:488) [40]  (2.611 ns)
+
+ <State 10>: 2.611ns
+The critical path consists of the following:
+	'mul' operation 512 bit ('mul_ln299', ../src/msm.cpp:299->../src/msm.cpp:488) [40]  (2.611 ns)
+
+ <State 11>: 2.850ns
+The critical path consists of the following:
+	'icmp' operation 1 bit ('icmp_ln299', ../src/msm.cpp:299->../src/msm.cpp:488) [41]  (2.850 ns)
+
+ <State 12>: 2.611ns
+The critical path consists of the following:
+	'mul' operation 512 bit ('mul_ln301', ../src/msm.cpp:301->../src/msm.cpp:488) [54]  (2.611 ns)
+
+ <State 13>: 2.850ns
+The critical path consists of the following:
+	'icmp' operation 1 bit ('icmp_ln301', ../src/msm.cpp:301->../src/msm.cpp:488) [55]  (2.850 ns)
+
+ <State 14>: 2.837ns
+The critical path consists of the following:
+	'icmp' operation 1 bit ('icmp_ln303', ../src/msm.cpp:303->../src/msm.cpp:488) [68]  (2.837 ns)
+
+ <State 15>: 2.467ns
+The critical path consists of the following:
+	'select' operation 256 bit ('curve_d_T1_T2', ../src/msm.cpp:303->../src/msm.cpp:488) [71]  (0.512 ns)
+	'icmp' operation 1 bit ('icmp_ln306', ../src/msm.cpp:306->../src/msm.cpp:488) [79]  (1.955 ns)
+
+ <State 16>: 2.469ns
+The critical path consists of the following:
+	'icmp' operation 1 bit ('icmp_ln307', ../src/msm.cpp:307->../src/msm.cpp:488) [87]  (1.957 ns)
+	'select' operation 256 bit ('term3', ../src/msm.cpp:307->../src/msm.cpp:488) [90]  (0.512 ns)
+
+ <State 17>: 2.611ns
+The critical path consists of the following:
+	'mul' operation 512 bit ('mul_ln311', ../src/msm.cpp:311->../src/msm.cpp:488) [108]  (2.611 ns)
+
+ <State 18>: 2.611ns
+The critical path consists of the following:
+	'mul' operation 512 bit ('mul_ln311', ../src/msm.cpp:311->../src/msm.cpp:488) [108]  (2.611 ns)
+
+ <State 19>: 2.611ns
+The critical path consists of the following:
+	'mul' operation 512 bit ('mul_ln311', ../src/msm.cpp:311->../src/msm.cpp:488) [108]  (2.611 ns)
+
+ <State 20>: 2.611ns
+The critical path consists of the following:
+	'mul' operation 512 bit ('mul_ln311', ../src/msm.cpp:311->../src/msm.cpp:488) [108]  (2.611 ns)
+
+ <State 21>: 2.611ns
+The critical path consists of the following:
+	'mul' operation 512 bit ('mul_ln311', ../src/msm.cpp:311->../src/msm.cpp:488) [108]  (2.611 ns)
+
+ <State 22>: 2.850ns
+The critical path consists of the following:
+	'icmp' operation 1 bit ('icmp_ln311_1', ../src/msm.cpp:311->../src/msm.cpp:488) [109]  (2.850 ns)
+
+ <State 23>: 2.467ns
+The critical path consists of the following:
+	'add' operation 256 bit ('add_ln312', ../src/msm.cpp:312->../src/msm.cpp:488) [111]  (1.955 ns)
+	'select' operation 256 bit ('X3', ../src/msm.cpp:311->../src/msm.cpp:488) [112]  (0.512 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

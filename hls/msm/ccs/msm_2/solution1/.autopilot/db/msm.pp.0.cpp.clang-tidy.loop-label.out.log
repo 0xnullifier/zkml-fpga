@@ -1,0 +1,166 @@
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:5320:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:5320:5: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:5334:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:5334:5: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:5348:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:5348:5: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:6982:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:6982:7: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26797:5: warning: Added loop label VITIS_LOOP_127_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < N; ++i) {
+    ^~~
+    VITIS_LOOP_127_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26797:5: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26813:5: warning: Added loop label VITIS_LOOP_143_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < N; ++i) {
+    ^~~
+    VITIS_LOOP_143_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26813:5: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26829:75: warning: Added loop label VITIS_LOOP_169_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator ++() { pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                          ^~~
+                                                                          VITIS_LOOP_169_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26829:75: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26834:75: warning: Added loop label VITIS_LOOP_170_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator --() { pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                          ^~~
+                                                                          VITIS_LOOP_170_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26834:75: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26843:106: warning: Added loop label VITIS_LOOP_198_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator +=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_198_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26843:106: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26848:106: warning: Added loop label VITIS_LOOP_199_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator -=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_199_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26848:106: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26853:106: warning: Added loop label VITIS_LOOP_200_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator *=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_200_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26853:106: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26858:106: warning: Added loop label VITIS_LOOP_201_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator /=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_201_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26858:106: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26863:106: warning: Added loop label VITIS_LOOP_202_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator %=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_202_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26863:106: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26868:106: warning: Added loop label VITIS_LOOP_203_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator &=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_203_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26868:106: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26873:106: warning: Added loop label VITIS_LOOP_204_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator |=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_204_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26873:106: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26878:106: warning: Added loop label VITIS_LOOP_205_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator ^=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_205_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26878:106: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26883:107: warning: Added loop label VITIS_LOOP_206_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator <<=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                          ^~~
+                                                                                                          VITIS_LOOP_206_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26883:107: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26888:107: warning: Added loop label VITIS_LOOP_207_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator >>=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                          ^~~
+                                                                                                          VITIS_LOOP_207_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26888:107: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26894:91: warning: Added loop label VITIS_LOOP_222_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_add() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_222_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26894:91: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26899:92: warning: Added loop label VITIS_LOOP_223_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_mult() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                           ^~~
+                                                                                           VITIS_LOOP_223_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26899:92: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26904:91: warning: Added loop label VITIS_LOOP_224_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_and() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_224_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26904:91: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26909:90: warning: Added loop label VITIS_LOOP_225_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_or() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                         ^~~
+                                                                                         VITIS_LOOP_225_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26909:90: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26914:91: warning: Added loop label VITIS_LOOP_226_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_xor() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_226_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26914:91: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26920:132: warning: Added loop label VITIS_LOOP_256_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator <(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                   ^~~
+                                                                                                                                   VITIS_LOOP_256_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26920:132: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26925:133: warning: Added loop label VITIS_LOOP_257_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator <=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_257_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26925:133: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26930:133: warning: Added loop label VITIS_LOOP_258_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator ==(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_258_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26930:133: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26935:133: warning: Added loop label VITIS_LOOP_259_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator !=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_259_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26935:133: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26940:133: warning: Added loop label VITIS_LOOP_260_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator >=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_260_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26940:133: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26945:132: warning: Added loop label VITIS_LOOP_261_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator >(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                   ^~~
+                                                                                                                                   VITIS_LOOP_261_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:26945:132: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:27243:68: error: Invalid Directive: for current device, RAM_T2P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable = scalar_partition_buffer type = RAM_T2P impl = BRAM
+                                                                   ^
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:27274:2: warning: Added loop label VITIS_LOOP_545_1:   [xilinx-label-all-loops]
+ for (int j = 0; j < BUCKET_SIZE; j++)
+ ^~~
+ VITIS_LOOP_545_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:27274:2: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:27298:52: error: Invalid Directive: for current device, RAM_T2P + URAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable = buckets type = RAM_T2P impl = URAM
+                                                   ^
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:27315:3: warning: Added loop label VITIS_LOOP_586_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < NUM_WINDOWS; i++)
+  ^~~
+  VITIS_LOOP_586_1: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:27315:3: note: FIX-IT applied suggested code changes
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:27317:5: warning: Added loop label VITIS_LOOP_588_2:   [xilinx-label-all-loops]
+    for (int j = 0; j < BUCKET_SIZE; j++)
+    ^~~
+    VITIS_LOOP_588_2: 
+/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp:27317:5: note: FIX-IT applied suggested code changes

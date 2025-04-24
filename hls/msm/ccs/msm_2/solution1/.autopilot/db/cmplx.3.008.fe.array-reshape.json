@@ -1,0 +1,74 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "3 1 2",
+    "file": "msm.cpp",
+    "fileloc": 602,
+    "instructions": 35,
+    "name": "msm",
+    "total_instructions": 13703
+  },
+  "1": {
+    "basicblocks": 19,
+    "calls": "4 5",
+    "file": "msm.cpp",
+    "fileloc": 553,
+    "instructions": 190,
+    "loads": {
+      "L": 14
+    },
+    "name": "pippenger_control",
+    "stores": {
+      "L": 23
+    },
+    "total_instructions": 13612
+  },
+  "2": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 579,
+    "instructions": 28,
+    "name": "WriteBack",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 32
+  },
+  "3": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 377,
+    "instructions": 24,
+    "loads": {
+      "L": 5
+    },
+    "name": "data_loader",
+    "total_instructions": 24
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 289,
+    "instructions": 104,
+    "name": "edwards_point_add",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 104
+  },
+  "5": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 538,
+    "instructions": 13318,
+    "loads": {
+      "L": 4096
+    },
+    "name": "aggregate_and_output_results",
+    "total_instructions": 13318
+  }
+}

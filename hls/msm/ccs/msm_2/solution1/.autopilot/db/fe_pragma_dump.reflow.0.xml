@@ -1,0 +1,101 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<513, true>::ap_int_base<512, false>(ap_int_base<512, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<513, true>::ap_int_base<256, false>(ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::ap_int_base<512, false>(ap_int_base<512, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::ap_int_base<513, true>(ap_int_base<513, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<EdwardsPoint, 0>::stream(char const*)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="../src/msm.cpp" line="636" pragmaType="dataflow" parentfunction="msm" disable_start_propagation="0"/>
+<pragma file="../src/msm.cpp" line="614" pragmaType="interface" parentfunction="msm" mode="m_axi" port="x_array" bundle="gmem0" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="../src/msm.cpp" line="615" pragmaType="interface" parentfunction="msm" mode="m_axi" port="y_array" bundle="gmem1" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="../src/msm.cpp" line="616" pragmaType="interface" parentfunction="msm" mode="m_axi" port="z_array" bundle="gmem2" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="../src/msm.cpp" line="617" pragmaType="interface" parentfunction="msm" mode="m_axi" port="t_array" bundle="gmem3" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="../src/msm.cpp" line="618" pragmaType="interface" parentfunction="msm" mode="m_axi" port="result_x" bundle="gmem0" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="../src/msm.cpp" line="619" pragmaType="interface" parentfunction="msm" mode="m_axi" port="result_y" bundle="gmem1" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="../src/msm.cpp" line="620" pragmaType="interface" parentfunction="msm" mode="m_axi" port="result_z" bundle="gmem2" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="../src/msm.cpp" line="621" pragmaType="interface" parentfunction="msm" mode="m_axi" port="result_t" bundle="gmem3" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="../src/msm.cpp" line="631" pragmaType="stream" parentfunction="msm" depth="64" type="fifo" variable="_ZZ3msmE14x_point_stream"/>
+<pragma file="../src/msm.cpp" line="632" pragmaType="stream" parentfunction="msm" depth="64" type="fifo" variable="_ZZ3msmE14y_point_stream"/>
+<pragma file="../src/msm.cpp" line="633" pragmaType="stream" parentfunction="msm" depth="64" type="fifo" variable="_ZZ3msmE14z_point_stream"/>
+<pragma file="../src/msm.cpp" line="634" pragmaType="stream" parentfunction="msm" depth="64" type="fifo" variable="_ZZ3msmE19scalar_point_stream"/>
+<pragma file="../src/msm.cpp" line="635" pragmaType="stream" parentfunction="msm" depth="64" type="fifo" variable="_ZZ3msmE19point_result_stream"/>
+<pragma file="../src/msm.cpp" line="569" pragmaType="bind_storage" parentfunction="pippenger_control" op="666" impl="31" latency="-1" variable="buckets"/>
+<pragma file="../src/msm.cpp" line="570" pragmaType="array_partition" parentfunction="pippenger_control" dim="2" factor="2" mode="cyclic" dynamic="0" variable="buckets"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="../src/msm.cpp" line="544" pragmaType="pipeline" parentfunction="aggregate_and_output_results" off="0" ii="1" rewind="0" style=""/>
+<pragma file="../src/msm.cpp" line="547" pragmaType="pipeline" parentfunction="aggregate_and_output_results" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<ap_uint<256>, 0>::stream(char const*)" off="0" region="0" recursive="0"/>
+<pragma file="../src/msm.cpp" line="518" pragmaType="loop_tripcount" parentfunction="process_points" min="1" max="16777216" avg="8388608"/>
+<pragma file="../src/msm.cpp" line="530" pragmaType="pipeline" parentfunction="process_points" off="0" ii="1" rewind="0" style=""/>
+<pragma file="../src/msm.cpp" line="513" pragmaType="array_partition" parentfunction="process_points" dim="1" factor="2" mode="cyclic" dynamic="0" variable="scalar_partition_buffer"/>
+<pragma file="../src/msm.cpp" line="514" pragmaType="bind_storage" parentfunction="process_points" op="666" impl="30" latency="-1" variable="scalar_partition_buffer"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<256, false>::operator==<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator==<256, false>(ap_int_base<256, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<256, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_uint64" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<256, false>::ap_range_ref(ap_int_base<256, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="../src/msm.cpp" line="467" pragmaType="pipeline" parentfunction="partition_scalar" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="../src/msm.cpp" line="401" pragmaType="pipeline" parentfunction="data_loader" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::ap_int_base<256, 256, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<257, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<257>::ap_uint<257, false>(ap_int_base<257, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi257ELb0EEC2EDq257_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsimFix" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<258, true>::ap_int_base<257, false>(ap_int_base<257, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<257, false>::ap_int_base<256, false>(ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi512ELb0EEC2EDq512_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::ap_int_base<257, false>(ap_int_base<257, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::ap_int_base<258, true>(ap_int_base<258, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<257, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<257>::ap_int<257, true>(ap_int_base<257, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="_ZN8ssdm_intILi257ELb1EEC2EDq257_i" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base<256, false>(ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<512>::ap_uint<512, false>(ap_int_base<512, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<513, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<513>::ap_int<513, true>(ap_int_base<513, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="_ZN8ssdm_intILi513ELb1EEC2EDq513_i" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi256ELb0EEC2EDq256_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<257, true>::ap_int_base<256, false>(ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<258>::ap_int<258, true>(ap_int_base<258, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="_ZN8ssdm_intILi258ELb1EEC2EDq258_i" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::ap_int_base<257, true>(ap_int_base<257, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<258, true>::ap_int_base<257, true>(ap_int_base<257, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<258, true>::ap_int_base<256, false>(ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<258, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::RType<256, false>::minus operator-<256, false, 256, false>(ap_int_base<256, false> const&, ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint<257>(ap_int<257> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<257, true>::RType<256, false>::plus operator+<257, true, 256, false>(ap_int_base<257, true> const&, ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint<513>(ap_int<513> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<256, false>::operator>=<256, false>(ap_int_base<256, false> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint<257>(ap_uint<257> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::RType<256, false>::mult operator*<256, false, 256, false>(ap_int_base<256, false> const&, ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<512, false>::operator>=<256, false>(ap_int_base<256, false> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<512, false>::RType<256, false>::minus operator-<512, false, 256, false>(ap_int_base<512, false> const&, ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint<512>(ap_uint<512> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<257, false>::operator>=<256, false>(ap_int_base<256, false> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<257, false>::RType<256, false>::minus operator-<257, false, 256, false>(ap_int_base<257, false> const&, ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint<258>(ap_int<258> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_ufixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::RType<256, false>::plus operator+<256, false, 256, false>(ap_int_base<256, false> const&, ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="../src/msm.cpp" line="294" pragmaType="inline" parentfunction="edwards_point_add" off="1" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_ufixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed(char const*)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<256, 256, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(char const*)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+</pragmas>

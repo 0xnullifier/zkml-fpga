@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vitis HLS Report for 'process_points_Loop_MAIN_LOOP_proc_Pipeline_PARTITION_SCALAR'
+================================================================
+* Date:           Thu Apr 24 01:53:14 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        msm_2
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.649 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       28|       28|  0.112 us|  0.112 us|   26|   26|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- PARTITION_SCALAR  |       26|       26|         3|          1|          1|    25|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.26>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [../src/msm.cpp:445->../src/msm.cpp:509]   --->   Operation 6 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %scalar_partition_stream, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%scalar_read = read i256 @_ssdm_op_Read.ap_auto.i256, i256 %scalar"   --->   Operation 8 'read' 'scalar_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.42ns)   --->   "%store_ln445 = store i5 0, i5 %i" [../src/msm.cpp:445->../src/msm.cpp:509]   --->   Operation 9 'store' 'store_ln445' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i.i"   --->   Operation 10 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%i_1 = load i5 %i" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 11 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.78ns)   --->   "%icmp_ln445 = icmp_eq  i5 %i_1, i5 25" [../src/msm.cpp:445->../src/msm.cpp:509]   --->   Operation 12 'icmp' 'icmp_ln445' <Predicate = true> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.78ns)   --->   "%i_2 = add i5 %i_1, i5 1" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 13 'add' 'i_2' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln445 = br i1 %icmp_ln445, void %for.inc.i.i.split, void %_Z16partition_scalarRN3hls6streamI7ap_uintILi256EELi0EEERNS0_IiLi0EEE.exit.i.exitStub" [../src/msm.cpp:445->../src/msm.cpp:509]   --->   Operation 14 'br' 'br_ln445' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_shl = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %i_2, i3 0" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 15 'bitconcatenate' 'p_shl' <Predicate = (!icmp_ln445)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %i_2, i1 0" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 16 'bitconcatenate' 'tmp' <Predicate = (!icmp_ln445)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln448 = zext i6 %tmp" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 17 'zext' 'zext_ln448' <Predicate = (!icmp_ln445)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln448_2 = add i8 %p_shl, i8 %zext_ln448" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 18 'add' 'add_ln448_2' <Predicate = (!icmp_ln445)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.52> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 19 [1/1] (1.05ns) (root node of TernaryAdder)   --->   "%add_ln448_1 = add i8 %add_ln448_2, i8 255" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 19 'add' 'add_ln448_1' <Predicate = (!icmp_ln445)> <Delay = 1.05> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.52> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %i_1, i3 0" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 20 'bitconcatenate' 'tmp_1' <Predicate = (!icmp_ln445)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_2 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %i_1, i1 0" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 21 'bitconcatenate' 'tmp_2' <Predicate = (!icmp_ln445)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln448_1 = zext i6 %tmp_2" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 22 'zext' 'zext_ln448_1' <Predicate = (!icmp_ln445)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.76ns)   --->   "%add_ln448_3 = add i8 %tmp_1, i8 %zext_ln448_1" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 23 'add' 'add_ln448_3' <Predicate = (!icmp_ln445)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.42ns)   --->   "%store_ln445 = store i5 %i_2, i5 %i" [../src/msm.cpp:445->../src/msm.cpp:509]   --->   Operation 24 'store' 'store_ln445' <Predicate = (!icmp_ln445)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 2.64>
+ST_2 : Operation 25 [1/1] (0.76ns)   --->   "%icmp_ln448 = icmp_ugt  i8 %add_ln448_3, i8 %add_ln448_1" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 25 'icmp' 'icmp_ln448' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln448)   --->   "%tmp_3 = partselect i256 @llvm.part.select.i256, i256 %scalar_read, i32 255, i32 0" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 26 'partselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.76ns)   --->   "%sub_ln448 = sub i8 %add_ln448_3, i8 %add_ln448_1" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 27 'sub' 'sub_ln448' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln448)   --->   "%xor_ln448 = xor i8 %add_ln448_3, i8 255" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 28 'xor' 'xor_ln448' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.76ns)   --->   "%sub_ln448_1 = sub i8 %add_ln448_1, i8 %add_ln448_3" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 29 'sub' 'sub_ln448_1' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln448_1)   --->   "%select_ln448 = select i1 %icmp_ln448, i8 %sub_ln448, i8 %sub_ln448_1" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 30 'select' 'select_ln448' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln448)   --->   "%select_ln448_1 = select i1 %icmp_ln448, i256 %tmp_3, i256 %scalar_read" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 31 'select' 'select_ln448_1' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln448)   --->   "%select_ln448_2 = select i1 %icmp_ln448, i8 %xor_ln448, i8 %add_ln448_3" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 32 'select' 'select_ln448_2' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln448_1)   --->   "%xor_ln448_1 = xor i8 %select_ln448, i8 255" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 33 'xor' 'xor_ln448_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln448)   --->   "%zext_ln448_2 = zext i8 %select_ln448_2" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 34 'zext' 'zext_ln448_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln448_1)   --->   "%zext_ln448_3 = zext i8 %xor_ln448_1" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 35 'zext' 'zext_ln448_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (1.53ns) (out node of the LUT)   --->   "%lshr_ln448 = lshr i256 %select_ln448_1, i256 %zext_ln448_2" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 36 'lshr' 'lshr_ln448' <Predicate = true> <Delay = 1.53> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%trunc_ln448 = trunc i256 %lshr_ln448" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 37 'trunc' 'trunc_ln448' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.74ns) (out node of the LUT)   --->   "%lshr_ln448_1 = lshr i256 115792089237316195423570985008687907853269984665640564039457584007913129639935, i256 %zext_ln448_3" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 38 'lshr' 'lshr_ln448_1' <Predicate = true> <Delay = 0.74> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 0.74> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%trunc_ln448_1 = trunc i256 %lshr_ln448_1" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 39 'trunc' 'trunc_ln448_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.35ns)   --->   "%partition = and i32 %trunc_ln448, i32 %trunc_ln448_1" [../src/msm.cpp:448->../src/msm.cpp:509]   --->   Operation 40 'and' 'partition' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 46 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 46 'ret' 'ret_ln0' <Predicate = (icmp_ln445)> <Delay = 0.42>
+
+State 3 <SV = 2> <Delay = 1.46>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%specpipeline_ln447 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty" [../src/msm.cpp:447->../src/msm.cpp:509]   --->   Operation 41 'specpipeline' 'specpipeline_ln447' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%speclooptripcount_ln445 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 25, i64 25, i64 25" [../src/msm.cpp:445->../src/msm.cpp:509]   --->   Operation 42 'speclooptripcount' 'speclooptripcount_ln445' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%specloopname_ln445 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [../src/msm.cpp:445->../src/msm.cpp:509]   --->   Operation 43 'specloopname' 'specloopname_ln445' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] ( I:1.46ns O:1.46ns )   --->   "%write_ln449 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %scalar_partition_stream, i32 %partition" [../src/msm.cpp:449->../src/msm.cpp:509]   --->   Operation 44 'write' 'write_ln449' <Predicate = true> <Delay = 1.46> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 20> <FIFO>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln445 = br void %for.inc.i.i" [../src/msm.cpp:445->../src/msm.cpp:509]   --->   Operation 45 'br' 'br_ln445' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4.000ns, clock uncertainty: 1.080ns.
+
+ <State 1>: 2.267ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln445', ../src/msm.cpp:445->../src/msm.cpp:509) of constant 0 on local variable 'i', ../src/msm.cpp:445->../src/msm.cpp:509 [6]  (0.427 ns)
+	'load' operation 5 bit ('i', ../src/msm.cpp:448->../src/msm.cpp:509) on local variable 'i', ../src/msm.cpp:445->../src/msm.cpp:509 [9]  (0.000 ns)
+	'add' operation 5 bit ('i', ../src/msm.cpp:448->../src/msm.cpp:509) [11]  (0.789 ns)
+	'add' operation 8 bit ('add_ln448_2', ../src/msm.cpp:448->../src/msm.cpp:509) [20]  (0.000 ns)
+	'add' operation 8 bit ('add_ln448_1', ../src/msm.cpp:448->../src/msm.cpp:509) [21]  (1.051 ns)
+
+ <State 2>: 2.649ns
+The critical path consists of the following:
+	'icmp' operation 1 bit ('icmp_ln448', ../src/msm.cpp:448->../src/msm.cpp:509) [26]  (0.765 ns)
+	'select' operation 256 bit ('select_ln448_1', ../src/msm.cpp:448->../src/msm.cpp:509) [32]  (0.000 ns)
+	'lshr' operation 256 bit ('lshr_ln448', ../src/msm.cpp:448->../src/msm.cpp:509) [37]  (1.533 ns)
+	'and' operation 32 bit ('partition', ../src/msm.cpp:448->../src/msm.cpp:509) [41]  (0.351 ns)
+
+ <State 3>: 1.460ns
+The critical path consists of the following:
+	fifo write operation ('write_ln449', ../src/msm.cpp:449->../src/msm.cpp:509) on port 'scalar_partition_stream' (../src/msm.cpp:449->../src/msm.cpp:509) [42]  (1.460 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

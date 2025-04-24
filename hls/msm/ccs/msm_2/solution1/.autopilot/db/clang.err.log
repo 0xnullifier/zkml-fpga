@@ -1,0 +1,19 @@
+../src/msm.cpp:561:63: warning: unexpected pragma parameter 'bundle' [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE mode = ap_fifo port = x_stream bundle = gmem0
+                                                              ^
+../src/msm.cpp:562:63: warning: unexpected pragma parameter 'bundle' [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE mode = ap_fifo port = y_stream bundle = gmem1
+                                                              ^
+../src/msm.cpp:563:63: warning: unexpected pragma parameter 'bundle' [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE mode = ap_fifo port = z_stream bundle = gmem2
+                                                              ^
+../src/msm.cpp:564:63: warning: unexpected pragma parameter 'bundle' [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE mode = ap_fifo port = t_stream bundle = gmem2
+                                                              ^
+../src/msm.cpp:565:68: warning: unexpected pragma parameter 'bundle' [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE mode = ap_fifo port = scalar_stream bundle = gmem3
+                                                                   ^
+../src/msm.cpp:566:65: warning: unexpected pragma parameter 'bundle' [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE mode = ap_fifo port = out_stream bundle = gmem4
+                                                                ^
+6 warnings generated.

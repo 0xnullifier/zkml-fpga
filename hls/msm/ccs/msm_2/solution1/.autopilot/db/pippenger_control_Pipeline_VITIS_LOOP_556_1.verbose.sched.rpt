@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vitis HLS Report for 'pippenger_control_Pipeline_VITIS_LOOP_556_1'
+================================================================
+* Date:           Thu Apr 24 06:01:22 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        msm_2
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  1.749 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_556_1  |        ?|        ?|         3|          1|          1|   inf|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 0
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%j = alloca i32 1" [../src/msm.cpp:556->../src/msm.cpp:590]   --->   Operation 5 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_t, i64 666, i64 31, i64 18446744073709551615"   --->   Operation 6 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_t_1, i64 666, i64 31, i64 18446744073709551615"   --->   Operation 7 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_z, i64 666, i64 31, i64 18446744073709551615"   --->   Operation 8 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_z_1, i64 666, i64 31, i64 18446744073709551615"   --->   Operation 9 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_y, i64 666, i64 31, i64 18446744073709551615"   --->   Operation 10 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_y_1, i64 666, i64 31, i64 18446744073709551615"   --->   Operation 11 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_x, i64 666, i64 31, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_x_1, i64 666, i64 31, i64 18446744073709551615"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %out_stream, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.42ns)   --->   "%store_ln556 = store i64 0, i64 %j" [../src/msm.cpp:556->../src/msm.cpp:590]   --->   Operation 15 'store' 'store_ln556' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i3"   --->   Operation 16 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.51>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%j_1 = load i64 %j" [../src/msm.cpp:558->../src/msm.cpp:590]   --->   Operation 17 'load' 'j_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%trunc_ln558 = trunc i64 %j_1" [../src/msm.cpp:558->../src/msm.cpp:590]   --->   Operation 18 'trunc' 'trunc_ln558' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i14 @_ssdm_op_PartSelect.i14.i64.i32.i32, i64 %j_1, i32 1, i32 14" [../src/msm.cpp:556->../src/msm.cpp:590]   --->   Operation 19 'partselect' 'lshr_ln' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln556 = zext i14 %lshr_ln" [../src/msm.cpp:556->../src/msm.cpp:590]   --->   Operation 20 'zext' 'zext_ln556' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%buckets_x_addr = getelementptr i256 %buckets_x, i64 0, i64 %zext_ln556" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 21 'getelementptr' 'buckets_x_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%buckets_x_1_addr = getelementptr i256 %buckets_x_1, i64 0, i64 %zext_ln556" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 22 'getelementptr' 'buckets_x_1_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%buckets_y_addr = getelementptr i256 %buckets_y, i64 0, i64 %zext_ln556" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 23 'getelementptr' 'buckets_y_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%buckets_y_1_addr = getelementptr i256 %buckets_y_1, i64 0, i64 %zext_ln556" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 24 'getelementptr' 'buckets_y_1_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%buckets_z_addr = getelementptr i256 %buckets_z, i64 0, i64 %zext_ln556" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 25 'getelementptr' 'buckets_z_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%buckets_z_1_addr = getelementptr i256 %buckets_z_1, i64 0, i64 %zext_ln556" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 26 'getelementptr' 'buckets_z_1_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%buckets_t_addr = getelementptr i256 %buckets_t, i64 0, i64 %zext_ln556" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 27 'getelementptr' 'buckets_t_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%buckets_t_1_addr = getelementptr i256 %buckets_t_1, i64 0, i64 %zext_ln556" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 28 'getelementptr' 'buckets_t_1_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [2/2] (1.23ns)   --->   "%buckets_x_load = load i14 %buckets_x_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 29 'load' 'buckets_x_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_2 : Operation 30 [2/2] (1.23ns)   --->   "%buckets_x_1_load = load i14 %buckets_x_1_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 30 'load' 'buckets_x_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_2 : Operation 31 [2/2] (1.23ns)   --->   "%buckets_y_load = load i14 %buckets_y_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 31 'load' 'buckets_y_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_2 : Operation 32 [2/2] (1.23ns)   --->   "%buckets_y_1_load = load i14 %buckets_y_1_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 32 'load' 'buckets_y_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_2 : Operation 33 [2/2] (1.23ns)   --->   "%buckets_z_load = load i14 %buckets_z_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 33 'load' 'buckets_z_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_2 : Operation 34 [2/2] (1.23ns)   --->   "%buckets_z_1_load = load i14 %buckets_z_1_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 34 'load' 'buckets_z_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_2 : Operation 35 [2/2] (1.23ns)   --->   "%buckets_t_load = load i14 %buckets_t_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 35 'load' 'buckets_t_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_2 : Operation 36 [2/2] (1.23ns)   --->   "%buckets_t_1_load = load i14 %buckets_t_1_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 36 'load' 'buckets_t_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_2 : Operation 37 [1/1] (1.08ns)   --->   "%add_ln556 = add i64 %j_1, i64 1" [../src/msm.cpp:556->../src/msm.cpp:590]   --->   Operation 37 'add' 'add_ln556' <Predicate = true> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.42ns)   --->   "%store_ln556 = store i64 %add_ln556, i64 %j" [../src/msm.cpp:556->../src/msm.cpp:590]   --->   Operation 38 'store' 'store_ln556' <Predicate = true> <Delay = 0.42>
+
+State 3 <SV = 2> <Delay = 1.74>
+ST_3 : Operation 39 [1/2] ( I:1.23ns O:1.23ns )   --->   "%buckets_x_load = load i14 %buckets_x_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 39 'load' 'buckets_x_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_3 : Operation 40 [1/2] ( I:1.23ns O:1.23ns )   --->   "%buckets_x_1_load = load i14 %buckets_x_1_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 40 'load' 'buckets_x_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_3 : Operation 41 [1/1] (0.51ns)   --->   "%select_ln559 = select i1 %trunc_ln558, i256 %buckets_x_1_load, i256 %buckets_x_load" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 41 'select' 'select_ln559' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 42 [1/2] ( I:1.23ns O:1.23ns )   --->   "%buckets_y_load = load i14 %buckets_y_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 42 'load' 'buckets_y_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_3 : Operation 43 [1/2] ( I:1.23ns O:1.23ns )   --->   "%buckets_y_1_load = load i14 %buckets_y_1_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 43 'load' 'buckets_y_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_3 : Operation 44 [1/1] (0.51ns)   --->   "%select_ln559_1 = select i1 %trunc_ln558, i256 %buckets_y_1_load, i256 %buckets_y_load" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 44 'select' 'select_ln559_1' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 45 [1/2] ( I:1.23ns O:1.23ns )   --->   "%buckets_z_load = load i14 %buckets_z_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 45 'load' 'buckets_z_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_3 : Operation 46 [1/2] ( I:1.23ns O:1.23ns )   --->   "%buckets_z_1_load = load i14 %buckets_z_1_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 46 'load' 'buckets_z_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_3 : Operation 47 [1/1] (0.51ns)   --->   "%select_ln559_2 = select i1 %trunc_ln558, i256 %buckets_z_1_load, i256 %buckets_z_load" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 47 'select' 'select_ln559_2' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 48 [1/2] ( I:1.23ns O:1.23ns )   --->   "%buckets_t_load = load i14 %buckets_t_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 48 'load' 'buckets_t_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_3 : Operation 49 [1/2] ( I:1.23ns O:1.23ns )   --->   "%buckets_t_1_load = load i14 %buckets_t_1_addr" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 49 'load' 'buckets_t_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_3 : Operation 50 [1/1] (0.51ns)   --->   "%select_ln559_3 = select i1 %trunc_ln558, i256 %buckets_t_1_load, i256 %buckets_t_load" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 50 'select' 'select_ln559_3' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 1.46>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%specpipeline_ln558 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty" [../src/msm.cpp:558->../src/msm.cpp:590]   --->   Operation 51 'specpipeline' 'specpipeline_ln558' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%specloopname_ln556 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [../src/msm.cpp:556->../src/msm.cpp:590]   --->   Operation 52 'specloopname' 'specloopname_ln556' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i1024 @_ssdm_op_BitConcatenate.i1024.i256.i256.i256.i256, i256 %select_ln559_3, i256 %select_ln559_2, i256 %select_ln559_1, i256 %select_ln559" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 53 'bitconcatenate' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] ( I:1.46ns O:1.46ns )   --->   "%write_ln559 = write void @_ssdm_op_Write.ap_fifo.volatile.i1024P0A, i1024 %out_stream, i1024 %p_0" [../src/msm.cpp:559->../src/msm.cpp:590]   --->   Operation 54 'write' 'write_ln559' <Predicate = true> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln556 = br void %for.inc.i3" [../src/msm.cpp:556->../src/msm.cpp:590]   --->   Operation 55 'br' 'br_ln556' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4.000ns, clock uncertainty: 1.080ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	'alloca' operation 64 bit ('j', ../src/msm.cpp:556->../src/msm.cpp:590) [10]  (0.000 ns)
+	'store' operation 0 bit ('store_ln556', ../src/msm.cpp:556->../src/msm.cpp:590) of constant 0 on local variable 'j', ../src/msm.cpp:556->../src/msm.cpp:590 [20]  (0.427 ns)
+
+ <State 2>: 1.512ns
+The critical path consists of the following:
+	'load' operation 64 bit ('j', ../src/msm.cpp:558->../src/msm.cpp:590) on local variable 'j', ../src/msm.cpp:556->../src/msm.cpp:590 [23]  (0.000 ns)
+	'add' operation 64 bit ('add_ln556', ../src/msm.cpp:556->../src/msm.cpp:590) [51]  (1.085 ns)
+	'store' operation 0 bit ('store_ln556', ../src/msm.cpp:556->../src/msm.cpp:590) of variable 'add_ln556', ../src/msm.cpp:556->../src/msm.cpp:590 on local variable 'j', ../src/msm.cpp:556->../src/msm.cpp:590 [52]  (0.427 ns)
+
+ <State 3>: 1.749ns
+The critical path consists of the following:
+	'load' operation 256 bit ('buckets_x_load', ../src/msm.cpp:559->../src/msm.cpp:590) on array 'buckets_x' [37]  (1.237 ns)
+	'select' operation 256 bit ('select_ln559', ../src/msm.cpp:559->../src/msm.cpp:590) [39]  (0.512 ns)
+
+ <State 4>: 1.460ns
+The critical path consists of the following:
+	fifo write operation ('write_ln559', ../src/msm.cpp:559->../src/msm.cpp:590) on port 'out_stream' (../src/msm.cpp:559->../src/msm.cpp:590) [50]  (1.460 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

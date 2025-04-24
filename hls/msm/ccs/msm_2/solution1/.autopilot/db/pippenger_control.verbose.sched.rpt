@@ -1,0 +1,219 @@
+
+
+================================================================
+== Vitis HLS Report for 'pippenger_control'
+================================================================
+* Date:           Tue Apr 29 06:14:30 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        msm_2
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.850 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+------------+----------+-----------+-------+------------+---------+
+    |   Latency (cycles)   |  Latency (absolute)  |      Interval      | Pipeline|
+    |   min   |     max    |    min   |    max    |  min  |     max    |   Type  |
+    +---------+------------+----------+-----------+-------+------------+---------+
+    |    26769|  1946183709|  0.107 ms|  7.785 sec|  26769|  1946183709|       no|
+    +---------+------------+----------+-----------+-------+------------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+------------+----------+-----------+-----------+--------------+----------+
+        |             |   Latency (cycles)   | Iteration|  Initiation Interval  |     Trip     |          |
+        |  Loop Name  |   min   |     max    |  Latency |  achieved |   target  |     Count    | Pipelined|
+        +-------------+---------+------------+----------+-----------+-----------+--------------+----------+
+        |- MAIN_LOOP  |      116|  1946157056|       116|          -|          -|  1 ~ 16777216|        no|
+        +-------------+---------+------------+----------+-----------+-----------+--------------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 7 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 2 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%scalar_partition_buffer = alloca i64 1" [../src/msm.cpp:512->../src/msm.cpp:573]   --->   Operation 8 'alloca' 'scalar_partition_buffer' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 98 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 13> <RAM>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%scalar_partition_buffer_2 = alloca i64 1" [../src/msm.cpp:512->../src/msm.cpp:573]   --->   Operation 9 'alloca' 'scalar_partition_buffer_2' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 98 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 13> <RAM>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%buckets_x = alloca i64 1" [../src/msm.cpp:568]   --->   Operation 10 'alloca' 'buckets_x' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%buckets_x_1 = alloca i64 1" [../src/msm.cpp:568]   --->   Operation 11 'alloca' 'buckets_x_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%buckets_y = alloca i64 1" [../src/msm.cpp:568]   --->   Operation 12 'alloca' 'buckets_y' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%buckets_y_1 = alloca i64 1" [../src/msm.cpp:568]   --->   Operation 13 'alloca' 'buckets_y_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%buckets_z = alloca i64 1" [../src/msm.cpp:568]   --->   Operation 14 'alloca' 'buckets_z' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%buckets_z_1 = alloca i64 1" [../src/msm.cpp:568]   --->   Operation 15 'alloca' 'buckets_z_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%buckets_t = alloca i64 1" [../src/msm.cpp:568]   --->   Operation 16 'alloca' 'buckets_t' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%buckets_t_1 = alloca i64 1" [../src/msm.cpp:568]   --->   Operation 17 'alloca' 'buckets_t_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_URAM">   --->   Core 99 'RAM_T2P_URAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 13312> <RAM>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %point_result_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %point_result_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %point_result_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %scalar_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %scalar_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %scalar_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %t_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %t_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %t_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %x_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %x_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %x_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %y_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %y_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %y_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %z_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %z_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %z_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %scalar_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %t_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %z_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %y_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %x_point_stream, void @empty_3, i32 0, i32 0, void @empty_15, i32 0, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%specmemcore_ln569 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_x_1, i64 666, i64 31, i64 18446744073709551615" [../src/msm.cpp:569]   --->   Operation 41 'specmemcore' 'specmemcore_ln569' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%specmemcore_ln569 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_x, i64 666, i64 31, i64 18446744073709551615" [../src/msm.cpp:569]   --->   Operation 42 'specmemcore' 'specmemcore_ln569' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%specmemcore_ln569 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_y_1, i64 666, i64 31, i64 18446744073709551615" [../src/msm.cpp:569]   --->   Operation 43 'specmemcore' 'specmemcore_ln569' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%specmemcore_ln569 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_y, i64 666, i64 31, i64 18446744073709551615" [../src/msm.cpp:569]   --->   Operation 44 'specmemcore' 'specmemcore_ln569' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%specmemcore_ln569 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_z_1, i64 666, i64 31, i64 18446744073709551615" [../src/msm.cpp:569]   --->   Operation 45 'specmemcore' 'specmemcore_ln569' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%specmemcore_ln569 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_z, i64 666, i64 31, i64 18446744073709551615" [../src/msm.cpp:569]   --->   Operation 46 'specmemcore' 'specmemcore_ln569' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%specmemcore_ln569 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_t_1, i64 666, i64 31, i64 18446744073709551615" [../src/msm.cpp:569]   --->   Operation 47 'specmemcore' 'specmemcore_ln569' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%specmemcore_ln569 = specmemcore void @_ssdm_op_SpecMemCore, i256 %buckets_t, i64 666, i64 31, i64 18446744073709551615" [../src/msm.cpp:569]   --->   Operation 48 'specmemcore' 'specmemcore_ln569' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%specmemcore_ln514 = specmemcore void @_ssdm_op_SpecMemCore, i15 %scalar_partition_buffer_2, i64 666, i64 30, i64 18446744073709551615" [../src/msm.cpp:514->../src/msm.cpp:573]   --->   Operation 49 'specmemcore' 'specmemcore_ln514' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%specmemcore_ln514 = specmemcore void @_ssdm_op_SpecMemCore, i15 %scalar_partition_buffer, i64 666, i64 30, i64 18446744073709551615" [../src/msm.cpp:514->../src/msm.cpp:573]   --->   Operation 50 'specmemcore' 'specmemcore_ln514' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%scalar_partition_buffer_1_addr = getelementptr i15 %scalar_partition_buffer_2, i64 0, i64 12"   --->   Operation 51 'getelementptr' 'scalar_partition_buffer_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln516 = br void %while.cond.i.i" [../src/msm.cpp:516->../src/msm.cpp:573]   --->   Operation 52 'br' 'br_ln516' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.46>
+ST_2 : Operation 53 [1/1] ( I:0.00ns O:0.00ns )   --->   "%tmp_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i256P0A, i256 %x_point_stream, i32 1" [../src/msm.cpp:516->../src/msm.cpp:573]   --->   Operation 53 'nbreadreq' 'tmp_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 64> <FIFO>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln516 = br i1 %tmp_i, void %pippenger_control.exit, void %PUT_INTO_BUCKETS_LOOP.i.i" [../src/msm.cpp:516->../src/msm.cpp:573]   --->   Operation 54 'br' 'br_ln516' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] ( I:1.46ns O:1.46ns )   --->   "%x_point_stream_read = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %x_point_stream" [../src/msm.cpp:519->../src/msm.cpp:573]   --->   Operation 55 'read' 'x_point_stream_read' <Predicate = (tmp_i)> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 64> <FIFO>
+ST_2 : Operation 56 [1/1] ( I:1.46ns O:1.46ns )   --->   "%y_point_stream_read = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %y_point_stream" [../src/msm.cpp:520->../src/msm.cpp:573]   --->   Operation 56 'read' 'y_point_stream_read' <Predicate = (tmp_i)> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 64> <FIFO>
+ST_2 : Operation 57 [1/1] ( I:1.46ns O:1.46ns )   --->   "%z_point_stream_read = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %z_point_stream" [../src/msm.cpp:521->../src/msm.cpp:573]   --->   Operation 57 'read' 'z_point_stream_read' <Predicate = (tmp_i)> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 64> <FIFO>
+ST_2 : Operation 58 [1/1] ( I:1.46ns O:1.46ns )   --->   "%t_point_stream_read = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %t_point_stream" [../src/msm.cpp:522->../src/msm.cpp:573]   --->   Operation 58 'read' 't_point_stream_read' <Predicate = (tmp_i)> <Delay = 1.46> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 2> <FIFO>
+ST_2 : Operation 59 [1/1] ( I:1.46ns O:1.46ns )   --->   "%scalar = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %scalar_point_stream" [../src/msm.cpp:463->../src/msm.cpp:525->../src/msm.cpp:573]   --->   Operation 59 'read' 'scalar' <Predicate = (tmp_i)> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 64> <FIFO>
+ST_2 : Operation 60 [2/2] (0.00ns)   --->   "%call_ln463 = call void @pippenger_control_Pipeline_PARTITION_SCALAR, i15 %scalar_partition_buffer_2, i15 %scalar_partition_buffer, i256 %scalar" [../src/msm.cpp:463->../src/msm.cpp:525->../src/msm.cpp:573]   --->   Operation 60 'call' 'call_ln463' <Predicate = (tmp_i)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_1_i = partselect i6 @_ssdm_op_PartSelect.i6.i256.i32, i256 %scalar, i32 250" [../src/msm.cpp:471->../src/msm.cpp:525->../src/msm.cpp:573]   --->   Operation 61 'partselect' 'tmp_1_i' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_2 : Operation 62 [2/2] (0.00ns)   --->   "%call_ln576 = call void @aggregate_and_output_results, i256 %buckets_x, i256 %buckets_x_1, i256 %buckets_y, i256 %buckets_y_1, i256 %buckets_z, i256 %buckets_z_1, i256 %buckets_t, i256 %buckets_t_1, i1024 %point_result_stream" [../src/msm.cpp:576]   --->   Operation 62 'call' 'call_ln576' <Predicate = (!tmp_i)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 63 [1/2] (0.00ns)   --->   "%call_ln463 = call void @pippenger_control_Pipeline_PARTITION_SCALAR, i15 %scalar_partition_buffer_2, i15 %scalar_partition_buffer, i256 %scalar" [../src/msm.cpp:463->../src/msm.cpp:525->../src/msm.cpp:573]   --->   Operation 63 'call' 'call_ln463' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 1.23>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln471 = zext i6 %tmp_1_i" [../src/msm.cpp:471->../src/msm.cpp:525->../src/msm.cpp:573]   --->   Operation 64 'zext' 'zext_ln471' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln471 = store i15 %zext_ln471, i4 %scalar_partition_buffer_1_addr" [../src/msm.cpp:471->../src/msm.cpp:525->../src/msm.cpp:573]   --->   Operation 65 'store' 'store_ln471' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 98 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 13> <RAM>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 66 [2/2] (0.00ns)   --->   "%call_ln519 = call void @pippenger_control_Pipeline_PUT_INTO_BUCKETS_LOOP, i256 %x_point_stream_read, i256 %y_point_stream_read, i256 %z_point_stream_read, i256 %t_point_stream_read, i15 %scalar_partition_buffer, i15 %scalar_partition_buffer_2, i256 %buckets_x, i256 %buckets_x_1, i256 %buckets_y, i256 %buckets_y_1, i256 %buckets_z, i256 %buckets_z_1, i256 %buckets_t, i256 %buckets_t_1" [../src/msm.cpp:519->../src/msm.cpp:573]   --->   Operation 66 'call' 'call_ln519' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%speclooptripcount_ln518 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 16777216, i64 8388608" [../src/msm.cpp:518->../src/msm.cpp:573]   --->   Operation 67 'speclooptripcount' 'speclooptripcount_ln518' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 68 [1/1] (0.00ns)   --->   "%specloopname_ln516 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [../src/msm.cpp:516->../src/msm.cpp:573]   --->   Operation 68 'specloopname' 'specloopname_ln516' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 69 [1/2] (0.00ns)   --->   "%call_ln519 = call void @pippenger_control_Pipeline_PUT_INTO_BUCKETS_LOOP, i256 %x_point_stream_read, i256 %y_point_stream_read, i256 %z_point_stream_read, i256 %t_point_stream_read, i15 %scalar_partition_buffer, i15 %scalar_partition_buffer_2, i256 %buckets_x, i256 %buckets_x_1, i256 %buckets_y, i256 %buckets_y_1, i256 %buckets_z, i256 %buckets_z_1, i256 %buckets_t, i256 %buckets_t_1" [../src/msm.cpp:519->../src/msm.cpp:573]   --->   Operation 69 'call' 'call_ln519' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_6 : Operation 70 [1/1] (0.00ns)   --->   "%br_ln516 = br void %while.cond.i.i" [../src/msm.cpp:516->../src/msm.cpp:573]   --->   Operation 70 'br' 'br_ln516' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 2> <Delay = 1.21>
+ST_7 : Operation 71 [1/2] (1.21ns)   --->   "%call_ln576 = call void @aggregate_and_output_results, i256 %buckets_x, i256 %buckets_x_1, i256 %buckets_y, i256 %buckets_y_1, i256 %buckets_z, i256 %buckets_z_1, i256 %buckets_t, i256 %buckets_t_1, i1024 %point_result_stream" [../src/msm.cpp:576]   --->   Operation 71 'call' 'call_ln576' <Predicate = true> <Delay = 1.21> <CoreType = "Generic">   --->   Generic Core
+ST_7 : Operation 72 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 72 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4.000ns, clock uncertainty: 1.080ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 1.460ns
+The critical path consists of the following:
+	fifo request operation ('tmp_i', ../src/msm.cpp:516->../src/msm.cpp:573) on port 'x_point_stream' (../src/msm.cpp:516->../src/msm.cpp:573) [53]  (0.000 ns)
+	fifo read operation ('x_point_stream_read', ../src/msm.cpp:519->../src/msm.cpp:573) on port 'x_point_stream' (../src/msm.cpp:519->../src/msm.cpp:573) [58]  (1.460 ns)
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 1.237ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln471', ../src/msm.cpp:471->../src/msm.cpp:525->../src/msm.cpp:573) of variable 'zext_ln471', ../src/msm.cpp:471->../src/msm.cpp:525->../src/msm.cpp:573 on array 'scalar_partition_buffer', ../src/msm.cpp:512->../src/msm.cpp:573 [66]  (1.237 ns)
+
+ <State 5>: 0.000ns
+The critical path consists of the following:
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+ <State 7>: 1.216ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln576', ../src/msm.cpp:576) to 'aggregate_and_output_results' [70]  (1.216 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

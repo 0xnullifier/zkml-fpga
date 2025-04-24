@@ -1,0 +1,113 @@
+{
+  "0": {
+    "basicblocks": 11,
+    "calls": "2 8 3",
+    "file": "msm.cpp",
+    "fileloc": 602,
+    "instructions": 48,
+    "loads": {
+      "G": 5
+    },
+    "name": "msm",
+    "stores": {
+      "G": 5
+    },
+    "total_instructions": 13616
+  },
+  "1": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 538,
+    "instructions": 13319,
+    "loads": {
+      "L": 4096
+    },
+    "name": "aggregate_and_output_results",
+    "total_instructions": 13319
+  },
+  "2": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 377,
+    "instructions": 24,
+    "loads": {
+      "L": 5
+    },
+    "name": "data_loader",
+    "total_instructions": 24
+  },
+  "3": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 579,
+    "instructions": 26,
+    "name": "WriteBack",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 26
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 289,
+    "instructions": 104,
+    "name": "edwards_point_add",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 104
+  },
+  "5": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 459,
+    "instructions": 19,
+    "name": "partition_scalar",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 19
+  },
+  "6": {
+    "basicblocks": 3,
+    "calls": "4",
+    "file": "msm.cpp",
+    "fileloc": 475,
+    "instructions": 33,
+    "loads": {
+      "L": 8
+    },
+    "name": "add_point_to_bucket",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 137
+  },
+  "7": {
+    "basicblocks": 6,
+    "calls": "5 6",
+    "file": "msm.cpp",
+    "fileloc": 503,
+    "instructions": 28,
+    "loads": {
+      "L": 1
+    },
+    "name": "process_points",
+    "total_instructions": 184
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "7 1",
+    "file": "msm.cpp",
+    "fileloc": 553,
+    "instructions": 15,
+    "name": "pippenger_control",
+    "total_instructions": 13518
+  }
+}

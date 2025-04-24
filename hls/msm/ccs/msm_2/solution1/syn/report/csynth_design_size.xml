@@ -1,0 +1,60 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">,  7905, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll, 13860, user unroll pragmas are applied</column>
+            <column name="">(2) simplification, 13616, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline, 13611, user inline pragmas are applied</column>
+            <column name="">(4) simplification, 13605, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition, 17843, user array partition pragmas are applied</column>
+            <column name="">(2) simplification, 13695, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate , 13699, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape, 13703, apply array reshape pragmas</column>
+            <column name="">(5) access patterns, 13718, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification, 13710, loop and instruction simplification</column>
+            <column name="">(2) parallelization, 13710, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition, 13710, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification, 13710, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering, 14759, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations, 21948, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="msm" col1="msm.cpp:602" col2="7905" col3="13605" col4="13718" col5="13710" col6="21948">
+                    <row id="1" col0="data_loader" col1="msm.cpp:377" col2="45" col3="25" col4="29" col5="29" col6="45"/>
+                    <row id="4" col0="pippenger_control" col1="msm.cpp:553" col2="7742" col3="13525" col4="13612" col5="13612" col6="21811">
+                        <row id="5" col0="process_points" col1="msm.cpp:503" col2="7704" col3="" col4="" col5="" col6="">
+                            <row id="2" col0="partition_scalar" col1="msm.cpp:459" col2="109" col3="" col4="" col5="" col6=""/>
+                            <row id="3" col0="add_point_to_bucket" col1="msm.cpp:475" col2="7498" col3="" col4="" col5="" col6="">
+                                <row id="8" col0="edwards_point_add" col1="msm.cpp:289" col2="7199" col3="" col4="" col5="" col6=""/>
+                            </row>
+                        </row>
+                        <row id="10" col0="aggregate_and_output_results" col1="msm.cpp:538" col2="28" col3="13318" col4="13318" col5="13318" col6="21514"/>
+                        <row id="8" col0="edwards_point_add" col1="msm.cpp:289" col2="" col3="104" col4="104" col5="104" col6="105"/>
+                    </row>
+                    <row id="7" col0="WriteBack" col1="msm.cpp:579" col2="59" col3="24" col4="42" col5="34" col6="45"/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

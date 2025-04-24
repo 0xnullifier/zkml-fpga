@@ -1,0 +1,1492 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_msm.pp.0.cpp
+Args:            
+  - Callee:          __cxx_global_var_init
+    DebugLoc:        { File: ../src/msm.hpp, Line: 40, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_msm.pp.0.cpp
+    DebugLoc:        { File: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_msm.pp.0.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1
+    DebugLoc:        { File: ../src/msm.hpp, Line: 41, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_msm.pp.0.cpp
+    DebugLoc:        { File: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_msm.pp.0.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.3
+    DebugLoc:        { File: ../src/msm.hpp, Line: 42, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_msm.pp.0.cpp
+    DebugLoc:        { File: /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 491, Column: 3 }
+Function:        _Z19add_point_to_bucketR12EdwardsPoint7ap_uintILi256EES2_S2_S2_
+Args:            
+  - Callee:          'edwards_point_add(ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>&, ap_uint<256>&, ap_uint<256>&, ap_uint<256>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 293, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'add_point_to_bucket(EdwardsPoint&, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 478, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 532, Column: 7 }
+Function:        _Z14process_pointsRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RA26_A1024_12EdwardsPoint
+Args:            
+  - Callee:          'add_point_to_bucket(EdwardsPoint&, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 478, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'process_points(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, EdwardsPoint (&) [26][1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 510, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 525, Column: 5 }
+Function:        _Z14process_pointsRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RA26_A1024_12EdwardsPoint
+Args:            
+  - Callee:          'partition_scalar(hls::stream<ap_uint<256>, 0>&, int*)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 462, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'process_points(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, EdwardsPoint (&) [26][1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 510, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 573, Column: 2 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE
+Args:            
+  - Callee:          'process_points(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, EdwardsPoint (&) [26][1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 510, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'pippenger_control(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<EdwardsPoint, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 560, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 576, Column: 3 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE
+Args:            
+  - Callee:          'aggregate_and_output_results(EdwardsPoint (&) [26][1024], hls::stream<EdwardsPoint, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 539, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'pippenger_control(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<EdwardsPoint, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 560, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 637, Column: 2 }
+Function:        msm
+Args:            
+  - Callee:          'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          msm
+    DebugLoc:        { File: ../src/msm.cpp, Line: 613, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 639, Column: 5 }
+Function:        msm
+Args:            
+  - Callee:          'pippenger_control(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<EdwardsPoint, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 560, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          msm
+    DebugLoc:        { File: ../src/msm.cpp, Line: 613, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 647, Column: 5 }
+Function:        msm
+Args:            
+  - Callee:          'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          msm
+    DebugLoc:        { File: ../src/msm.cpp, Line: 613, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 545, Column: 20 }
+Function:        _Z28aggregate_and_output_resultsRA26_A1024_12EdwardsPointRN3hls6streamIS_Li0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_545_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 539, Column: 0 }
+Function:        _Z28aggregate_and_output_resultsRA26_A1024_12EdwardsPointRN3hls6streamIS_Li0EEE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_545_1
+  - String:          ''' ('
+  - LoopLoc:         '../src/msm.cpp:545:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          aggregate_and_output_results
+  - String:          ''' completely with a factor of '
+  - Factor:          '1024'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: ../src/msm.cpp, Line: 539, Column: 0 }
+Function:        _Z28aggregate_and_output_resultsRA26_A1024_12EdwardsPointRN3hls6streamIS_Li0EEE
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        VITIS_LOOP_545_1
+  - String:          ''' ('
+  - LoopLoc:         '../src/msm.cpp:545:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          aggregate_and_output_results
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 491, Column: 3 }
+Function:        _Z19add_point_to_bucketR12EdwardsPoint7ap_uintILi256EES2_S2_S2_
+Args:            
+  - Callee:          'edwards_point_add(ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>&, ap_uint<256>&, ap_uint<256>&, ap_uint<256>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 293, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'add_point_to_bucket(EdwardsPoint&, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 478, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 525, Column: 5 }
+Function:        _Z14process_pointsRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RA26_A1024_12EdwardsPoint
+Args:            
+  - Callee:          'partition_scalar(hls::stream<ap_uint<256>, 0>&, int*)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 462, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'process_points(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, EdwardsPoint (&) [26][1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 510, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 532, Column: 7 }
+Function:        _Z14process_pointsRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RA26_A1024_12EdwardsPoint
+Args:            
+  - Callee:          'add_point_to_bucket(EdwardsPoint&, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 478, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'process_points(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, EdwardsPoint (&) [26][1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 510, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 573, Column: 2 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE
+Args:            
+  - Callee:          'process_points(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, EdwardsPoint (&) [26][1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 510, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'pippenger_control(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<EdwardsPoint, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 560, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 576, Column: 3 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE
+Args:            
+  - Callee:          'aggregate_and_output_results(EdwardsPoint (&) [26][1024], hls::stream<EdwardsPoint, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 539, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'pippenger_control(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<EdwardsPoint, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 560, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 637, Column: 2 }
+Function:        msm
+Args:            
+  - Callee:          'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          msm
+    DebugLoc:        { File: ../src/msm.cpp, Line: 613, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 639, Column: 5 }
+Function:        msm
+Args:            
+  - Callee:          'pippenger_control(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<EdwardsPoint, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 560, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          msm
+    DebugLoc:        { File: ../src/msm.cpp, Line: 613, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 647, Column: 5 }
+Function:        msm
+Args:            
+  - Callee:          'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          msm
+    DebugLoc:        { File: ../src/msm.cpp, Line: 613, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_msm_ir
+Args:            
+  - Callee:          msm
+    DebugLoc:        { File: ../src/msm.cpp, Line: 613, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_msm_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../src/msm.cpp, Line: 510, Column: 0 }
+Function:        _Z14process_pointsRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RA26_A1024_12EdwardsPoint
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'partition_scalar(hls::stream<ap_uint<256>, 0>&, int*)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 462, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'process_points(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, EdwardsPoint (&) [26][1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 510, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../src/msm.cpp, Line: 510, Column: 0 }
+Function:        _Z14process_pointsRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RA26_A1024_12EdwardsPoint
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'add_point_to_bucket(EdwardsPoint&, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 478, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'process_points(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, EdwardsPoint (&) [26][1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 510, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../src/msm.cpp, Line: 560, Column: 0 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'process_points(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, EdwardsPoint (&) [26][1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 510, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'pippenger_control(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<EdwardsPoint, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 560, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: ../src/msm.cpp, Line: 406, Column: 19 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          scalar_array
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../src/msm.cpp, Line: 512, Column: 7 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          scalar_partition_buffer.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../src/msm.cpp, Line: 568, Column: 15 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          buckets.x
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../src/msm.cpp, Line: 568, Column: 15 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          buckets.y
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../src/msm.cpp, Line: 568, Column: 15 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          buckets.z
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../src/msm.cpp, Line: 568, Column: 15 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          buckets.t
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_msm_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            result_t
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '256'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_msm_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            result_z
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '256'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_msm_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            result_y
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '256'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_msm_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            result_x
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '256'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        x_arrayseq
+  - ArrayName:       x_array
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ' '
+  - Function:        'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/msm.cpp, Line: 402, Column: 11 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        y_arrayseq
+  - ArrayName:       y_array
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ' '
+  - Function:        'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/msm.cpp, Line: 403, Column: 14 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        z_arrayseq
+  - ArrayName:       z_array
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ' '
+  - Function:        'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/msm.cpp, Line: 404, Column: 14 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.18
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        t_arrayseq
+  - ArrayName:       t_array
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ' '
+  - Function:        'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/msm.cpp, Line: 405, Column: 14 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.24
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../src/msm.cpp, Line: 516, Column: 3 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        MAIN_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:516:3'
+  - String:          ' '
+  - Function:        'pippenger_control(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<EdwardsPoint, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 560, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '26624'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        result_x1seq
+  - ArrayName:       result_x
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_586_1
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:586:21'
+  - String:          ' '
+  - Function:        'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../src/msm.cpp, Line: 591, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.store.15
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '26624'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        result_y2seq
+  - ArrayName:       result_y
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_586_1
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:586:21'
+  - String:          ' '
+  - Function:        'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../src/msm.cpp, Line: 592, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.store.20
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '26624'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        result_z3seq
+  - ArrayName:       result_z
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_586_1
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:586:21'
+  - String:          ' '
+  - Function:        'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../src/msm.cpp, Line: 593, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.store.25
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '26624'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        result_t4seq
+  - ArrayName:       result_t
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_586_1
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:586:21'
+  - String:          ' '
+  - Function:        'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../src/msm.cpp, Line: 594, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.store.30
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i256
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+  - OrigDirection:   read
+  - OrigID:          x_arrayseq
+  - ArrayName:       x_array
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ' '
+  - Function:        'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i256
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+  - OrigDirection:   read
+  - OrigID:          y_arrayseq
+  - ArrayName:       y_array
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ' '
+  - Function:        'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i256
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+  - OrigDirection:   read
+  - OrigID:          z_arrayseq
+  - ArrayName:       z_array
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ' '
+  - Function:        'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i256
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+  - OrigDirection:   read
+  - OrigID:          t_arrayseq
+  - ArrayName:       t_array
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ' '
+  - Function:        'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i256
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          result_x1seq
+  - ArrayName:       result_x
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_588_2
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:588:23'
+  - String:          ' '
+  - Function:        'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i256
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          result_y2seq
+  - ArrayName:       result_y
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_588_2
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:588:23'
+  - String:          ' '
+  - Function:        'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i256
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          result_z3seq
+  - ArrayName:       result_z
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_588_2
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:588:23'
+  - String:          ' '
+  - Function:        'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i256
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          result_t4seq
+  - ArrayName:       result_t
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_588_2
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:588:23'
+  - String:          ' '
+  - Function:        'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024])'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: ../src/msm.cpp, Line: 406, Column: 19 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          scalar_array
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ../src/msm.cpp, Line: 516, Column: 3 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        MAIN_LOOP
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:516:3'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_588_2
+  - String:          '> at '
+  - LoopLoc:         '../src/msm.cpp:588:23'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '256'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ' '
+  - Function:        'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '256'
+  - String:          ' in loop '''
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '256'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ' '
+  - Function:        'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '256'
+  - String:          ' in loop '''
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '256'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ' '
+  - Function:        'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '256'
+  - String:          ' in loop '''
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '256'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ' '
+  - Function:        'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 399, Column: 3 }
+Function:        _Z11data_loaderP7ap_uintILi256EES1_S1_S1_S1_iRN3hls6streamIS0_Li0EEES5_S5_S5_S5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '256'
+  - String:          ' in loop '''
+  - LoopName:        DATA_LOAD_LOOP
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:399:3'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem3
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '26624'
+  - String:          ' and bit width '
+  - Width:           '256'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_586_1
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:586:21'
+  - String:          ' '
+  - Function:        'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024]) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '26624'
+  - String:          ' and bit width '
+  - Width:           '256'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_586_1
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:586:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '26624'
+  - String:          ' and bit width '
+  - Width:           '256'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_586_1
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:586:21'
+  - String:          ' '
+  - Function:        'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024]) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '26624'
+  - String:          ' and bit width '
+  - Width:           '256'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_586_1
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:586:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '26624'
+  - String:          ' and bit width '
+  - Width:           '256'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_586_1
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:586:21'
+  - String:          ' '
+  - Function:        'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024]) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '26624'
+  - String:          ' and bit width '
+  - Width:           '256'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_586_1
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:586:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '26624'
+  - String:          ' and bit width '
+  - Width:           '256'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_586_1
+  - String:          ' '
+  - LoopLoc:         '../src/msm.cpp:586:21'
+  - String:          ' '
+  - Function:        'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024]) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/msm.cpp, Line: 586, Column: 21 }
+Function:        _Z9WriteBackRN3hls6streamI12EdwardsPointLi0EEEPA1024_7ap_uintILi256EES7_S7_S7_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '26624'
+  - String:          ' and bit width '
+  - Width:           '256'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_586_1
+  - String:          '''('
+  - LoopLoc:         '../src/msm.cpp:586:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem3
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 491, Column: 3 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE.1
+Args:            
+  - Callee:          'edwards_point_add(ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>, ap_uint<256>&, ap_uint<256>&, ap_uint<256>&, ap_uint<256>&)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 293, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'pippenger_control(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<EdwardsPoint, 0>&) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 560, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 576, Column: 3 }
+Function:        _Z17pippenger_controlRN3hls6streamI7ap_uintILi256EELi0EEES4_S4_S4_S4_RNS0_I12EdwardsPointLi0EEE.1
+Args:            
+  - Callee:          'aggregate_and_output_results(EdwardsPoint (&) [26][1024], hls::stream<EdwardsPoint, 0>&) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 539, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'pippenger_control(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<EdwardsPoint, 0>&) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 560, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 637, Column: 2 }
+Function:        msm
+Args:            
+  - Callee:          'data_loader(ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, ap_uint<256>*, int, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 389, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          msm
+    DebugLoc:        { File: ../src/msm.cpp, Line: 613, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 639, Column: 5 }
+Function:        msm
+Args:            
+  - Callee:          'pippenger_control(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<EdwardsPoint, 0>&) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 560, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          msm
+    DebugLoc:        { File: ../src/msm.cpp, Line: 613, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/msm.cpp, Line: 647, Column: 5 }
+Function:        msm
+Args:            
+  - Callee:          'WriteBack(hls::stream<EdwardsPoint, 0>&, ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024], ap_uint<256> (*) [1024]) (.1)'
+    DebugLoc:        { File: ../src/msm.cpp, Line: 585, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          msm
+    DebugLoc:        { File: ../src/msm.cpp, Line: 613, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

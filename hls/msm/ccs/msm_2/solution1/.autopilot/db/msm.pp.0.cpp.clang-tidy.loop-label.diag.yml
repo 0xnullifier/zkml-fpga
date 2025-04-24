@@ -1,0 +1,302 @@
+---
+MainSourceFile:  /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          356968
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          357434
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          357901
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          641364
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_127_1:  '
+    FileOffset:      127
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1498806
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_127_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_143_1:  '
+    FileOffset:      143
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1499253
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_143_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_169_1:  '
+    FileOffset:      169
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1499770
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_169_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_170_1:  '
+    FileOffset:      170
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1500079
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_170_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_198_1:  '
+    FileOffset:      198
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1500865
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_198_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_199_1:  '
+    FileOffset:      199
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1501212
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_199_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_200_1:  '
+    FileOffset:      200
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1501559
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_200_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_201_1:  '
+    FileOffset:      201
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1501906
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_201_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_202_1:  '
+    FileOffset:      202
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1502253
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_202_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_203_1:  '
+    FileOffset:      203
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1502600
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_203_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_204_1:  '
+    FileOffset:      204
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1502947
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_204_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_205_1:  '
+    FileOffset:      205
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1503294
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_205_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_206_1:  '
+    FileOffset:      206
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1503642
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_206_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_207_1:  '
+    FileOffset:      207
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1503991
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_222_1:  '
+    FileOffset:      222
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1504400
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_222_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_223_1:  '
+    FileOffset:      223
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1504728
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_223_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_224_1:  '
+    FileOffset:      224
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1505055
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_224_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_225_1:  '
+    FileOffset:      225
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1505381
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_225_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_226_1:  '
+    FileOffset:      226
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1505708
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_226_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_256_1:  '
+    FileOffset:      256
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1506152
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_256_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_257_1:  '
+    FileOffset:      257
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1506567
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_257_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_258_1:  '
+    FileOffset:      258
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1506984
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_258_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_259_1:  '
+    FileOffset:      259
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1507401
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_259_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_260_1:  '
+    FileOffset:      260
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1507818
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_260_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_261_1:  '
+    FileOffset:      261
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1508234
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_261_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_T2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      514
+    FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/src/msm.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_545_1:  '
+    FileOffset:      545
+    FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/src/msm.cpp
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1518885
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_545_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_T2P + URAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      569
+    FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/src/msm.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_586_1:  '
+    FileOffset:      586
+    FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/src/msm.cpp
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1520297
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_586_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_588_2:  '
+    FileOffset:      588
+    FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/src/msm.cpp
+    Replacements:    
+      - FilePath:        /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp
+        Offset:          1520343
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_588_2: '
+...

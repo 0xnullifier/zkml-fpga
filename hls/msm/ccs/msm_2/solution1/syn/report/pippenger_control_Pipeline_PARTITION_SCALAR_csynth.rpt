@@ -1,0 +1,172 @@
+
+
+================================================================
+== Vitis HLS Report for 'pippenger_control_Pipeline_PARTITION_SCALAR'
+================================================================
+* Date:           Tue Apr 29 06:14:32 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        msm_2
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.567 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       28|       28|  0.112 us|  0.112 us|   26|   26|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- PARTITION_SCALAR  |       26|       26|         3|          1|          1|    25|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|    2291|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|      63|    -|
+|Register         |        -|     -|      54|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|      54|    2354|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|       1|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+-----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+-----+------------+------------+
+    |add_ln465_fu_203_p2       |         +|   0|  0|   12|           5|           1|
+    |add_ln468_1_fu_168_p2     |         +|   0|  0|   19|           8|           2|
+    |add_ln468_2_fu_162_p2     |         +|   0|  0|   19|           8|           8|
+    |add_ln468_3_fu_194_p2     |         +|   0|  0|   15|           8|           8|
+    |add_ln468_fu_119_p2       |         +|   0|  0|   12|           5|           1|
+    |sub_ln468_1_fu_241_p2     |         -|   0|  0|   15|           8|           8|
+    |sub_ln468_fu_232_p2       |         -|   0|  0|   15|           8|           8|
+    |partition_fu_301_p2       |       and|   0|  0|   15|          15|          15|
+    |icmp_ln465_fu_113_p2      |      icmp|   0|  0|   12|           5|           4|
+    |icmp_ln468_fu_219_p2      |      icmp|   0|  0|   15|           8|           8|
+    |lshr_ln468_1_fu_291_p2    |      lshr|   0|  0|  950|           2|         256|
+    |lshr_ln468_fu_281_p2      |      lshr|   0|  0|  950|         256|         256|
+    |select_ln468_1_fu_253_p3  |    select|   0|  0|  208|           1|         256|
+    |select_ln468_2_fu_260_p3  |    select|   0|  0|    8|           1|           8|
+    |select_ln468_fu_245_p3    |    select|   0|  0|    8|           1|           8|
+    |ap_enable_pp0             |       xor|   0|  0|    2|           1|           2|
+    |xor_ln468_1_fu_267_p2     |       xor|   0|  0|    8|           8|           2|
+    |xor_ln468_fu_236_p2       |       xor|   0|  0|    8|           2|           8|
+    +--------------------------+----------+----+---+-----+------------+------------+
+    |Total                     |          |   0|  0| 2291|         350|         859|
+    +--------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_done_int                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1      |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1_load    |   9|          2|    5|         10|
+    |ap_sig_allocacmp_i_1_load_1  |   9|          2|    5|         10|
+    |ap_sig_allocacmp_i_2         |   9|          2|    5|         10|
+    |i_1_fu_60                    |   9|          2|    5|         10|
+    |i_fu_64                      |   9|          2|    5|         10|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        |  63|         14|   27|         54|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |add_ln468_1_reg_346                |   7|   0|    8|          1|
+    |add_ln468_3_reg_353                |   7|   0|    8|          1|
+    |ap_CS_fsm                          |   1|   0|    1|          0|
+    |ap_done_reg                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg   |   1|   0|    1|          0|
+    |i_1_fu_60                          |   5|   0|    5|          0|
+    |i_fu_64                            |   5|   0|    5|          0|
+    |lshr_ln_reg_341                    |   4|   0|    4|          0|
+    |lshr_ln_reg_341_pp0_iter1_reg      |   4|   0|    4|          0|
+    |partition_reg_362                  |  15|   0|   15|          0|
+    |trunc_ln465_reg_337                |   1|   0|    1|          0|
+    |trunc_ln465_reg_337_pp0_iter1_reg  |   1|   0|    1|          0|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              |  54|   0|   56|          2|
+    +-----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------+-----+-----+------------+---------------------------------------------+--------------+
+|              RTL Ports             | Dir | Bits|  Protocol  |                Source Object                |    C Type    |
++------------------------------------+-----+-----+------------+---------------------------------------------+--------------+
+|ap_clk                              |   in|    1|  ap_ctrl_hs|  pippenger_control_Pipeline_PARTITION_SCALAR|  return value|
+|ap_rst                              |   in|    1|  ap_ctrl_hs|  pippenger_control_Pipeline_PARTITION_SCALAR|  return value|
+|ap_start                            |   in|    1|  ap_ctrl_hs|  pippenger_control_Pipeline_PARTITION_SCALAR|  return value|
+|ap_done                             |  out|    1|  ap_ctrl_hs|  pippenger_control_Pipeline_PARTITION_SCALAR|  return value|
+|ap_idle                             |  out|    1|  ap_ctrl_hs|  pippenger_control_Pipeline_PARTITION_SCALAR|  return value|
+|ap_ready                            |  out|    1|  ap_ctrl_hs|  pippenger_control_Pipeline_PARTITION_SCALAR|  return value|
+|scalar_partition_buffer_2_address0  |  out|    4|   ap_memory|                    scalar_partition_buffer_2|         array|
+|scalar_partition_buffer_2_ce0       |  out|    1|   ap_memory|                    scalar_partition_buffer_2|         array|
+|scalar_partition_buffer_2_we0       |  out|    1|   ap_memory|                    scalar_partition_buffer_2|         array|
+|scalar_partition_buffer_2_d0        |  out|   15|   ap_memory|                    scalar_partition_buffer_2|         array|
+|scalar_partition_buffer_address0    |  out|    4|   ap_memory|                      scalar_partition_buffer|         array|
+|scalar_partition_buffer_ce0         |  out|    1|   ap_memory|                      scalar_partition_buffer|         array|
+|scalar_partition_buffer_we0         |  out|    1|   ap_memory|                      scalar_partition_buffer|         array|
+|scalar_partition_buffer_d0          |  out|   15|   ap_memory|                      scalar_partition_buffer|         array|
+|scalar                              |   in|  256|     ap_none|                                       scalar|        scalar|
++------------------------------------+-----+-----+------------+---------------------------------------------+--------------+
+

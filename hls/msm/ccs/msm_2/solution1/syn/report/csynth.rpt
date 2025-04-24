@@ -1,0 +1,419 @@
+
+
+================================================================
+== Synthesis Summary Report of 'msm'
+================================================================
++ General Information: 
+    * Date:           Tue Apr 29 06:14:46 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        msm_2
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------------+------+------+------------+-----------+----------+------------+----------+----------+-----------+-------------+------------+-------------+------------+
+    |                        Modules                        | Issue|      |  Latency   |  Latency  | Iteration|            |   Trip   |          |           |             |            |             |            |
+    |                        & Loops                        | Type | Slack|  (cycles)  |    (ns)   |  Latency |  Interval  |   Count  | Pipelined|   BRAM    |     DSP     |     FF     |     LUT     |    URAM    |
+    +-------------------------------------------------------+------+------+------------+-----------+----------+------------+----------+----------+-----------+-------------+------------+-------------+------------+
+    |+ msm*                                                 |     -|  0.00|           -|          -|         -|           -|         -|  dataflow|  239 (38%)|  3590 (207%)|  45661 (9%)|  60953 (26%)|  128 (133%)|
+    | + entry_proc                                          |     -|  1.46|           0|      0.000|         -|           0|         -|        no|          -|            -|     3 (~0%)|     56 (~0%)|           -|
+    | + data_loader                                         |     -|  0.00|           -|          -|         -|           -|         -|        no|          -|            -|  1760 (~0%)|    429 (~0%)|           -|
+    |  o DATA_LOAD_LOOP                                     |     -|  2.92|           -|          -|        11|           1|         -|       yes|          -|            -|           -|            -|           -|
+    | + pippenger_control                                   |     -|  0.07|  1946183709|  7.785e+09|         -|  1946183709|         -|        no|    2 (~0%)|  3590 (207%)|  35904 (7%)|  53893 (23%)|  128 (133%)|
+    |  + aggregate_and_output_results                       |     -|  0.22|       26651|  1.066e+05|         -|       26651|         -|        no|          -|            -|  3596 (~0%)|  26972 (11%)|           -|
+    |   o AGGREGATE_AND_OUT                                 |     -|  2.92|       26650|  1.066e+05|      1025|           -|        26|        no|          -|            -|           -|            -|           -|
+    |  o MAIN_LOOP                                          |     -|  2.92|  1946157056|  7.785e+09|       116|           -|  16777216|        no|          -|            -|           -|            -|           -|
+    |   + pippenger_control_Pipeline_PARTITION_SCALAR       |     -|  0.35|          28|    112.000|         -|          28|         -|        no|          -|            -|    54 (~0%)|    2354 (1%)|           -|
+    |    o PARTITION_SCALAR                                 |     -|  2.92|          26|    104.000|         3|           1|        25|       yes|          -|            -|           -|            -|           -|
+    |   + pippenger_control_Pipeline_PUT_INTO_BUCKETS_LOOP  |     -|  0.07|          83|    332.000|         -|          83|         -|        no|          -|  3590 (207%)|  30957 (6%)|  23939 (10%)|           -|
+    |    o PUT_INTO_BUCKETS_LOOP                            |    II|  2.92|          81|    324.000|        32|           2|        26|       yes|          -|            -|           -|            -|           -|
+    |     + edwards_point_add                               |     -|  0.07|          21|     84.000|         -|           1|         -|       yes|          -|  3590 (207%)|  26049 (5%)|   22007 (9%)|           -|
+    | + WriteBack                                           |     -|  0.00|       26633|  1.065e+05|         -|       26633|         -|        no|          -|            -|  1360 (~0%)|    285 (~0%)|           -|
+    |  o VITIS_LOOP_586_1_VITIS_LOOP_588_2                  |     -|  2.92|       26631|  1.065e+05|         9|           1|     26624|       yes|          -|            -|           -|            -|           -|
+    +-------------------------------------------------------+------+------+------------+-----------+----------+------------+----------+----------+-----------+-------------+------------+-------------+------------+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | READ_WRITE | 256 -> 256 | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=30           |
+| m_axi_gmem1 | READ_WRITE | 256 -> 256 | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=30           |
+| m_axi_gmem2 | READ_WRITE | 256 -> 256 | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=30           |
+| m_axi_gmem3 | READ_WRITE | 256 -> 256 | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=30           |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------+--------+-------+--------+-------------------------+
+| Interface     | Register   | Offset | Width | Access | Description             |
++---------------+------------+--------+-------+--------+-------------------------+
+| s_axi_control | x_array_1  | 0x10   | 32    | W      | Data signal of x_array  |
+| s_axi_control | x_array_2  | 0x14   | 32    | W      | Data signal of x_array  |
+| s_axi_control | y_array_1  | 0x1c   | 32    | W      | Data signal of y_array  |
+| s_axi_control | y_array_2  | 0x20   | 32    | W      | Data signal of y_array  |
+| s_axi_control | z_array_1  | 0x28   | 32    | W      | Data signal of z_array  |
+| s_axi_control | z_array_2  | 0x2c   | 32    | W      | Data signal of z_array  |
+| s_axi_control | t_array_1  | 0x34   | 32    | W      | Data signal of t_array  |
+| s_axi_control | t_array_2  | 0x38   | 32    | W      | Data signal of t_array  |
+| s_axi_control | result_x_1 | 0x40   | 32    | W      | Data signal of result_x |
+| s_axi_control | result_x_2 | 0x44   | 32    | W      | Data signal of result_x |
+| s_axi_control | result_y_1 | 0x4c   | 32    | W      | Data signal of result_y |
+| s_axi_control | result_y_2 | 0x50   | 32    | W      | Data signal of result_y |
+| s_axi_control | result_z_1 | 0x58   | 32    | W      | Data signal of result_z |
+| s_axi_control | result_z_2 | 0x5c   | 32    | W      | Data signal of result_z |
+| s_axi_control | result_t_1 | 0x64   | 32    | W      | Data signal of result_t |
+| s_axi_control | result_t_2 | 0x68   | 32    | W      | Data signal of result_t |
++---------------+------------+--------+-------+--------+-------------------------+
+
+* Other Ports
++--------------+---------+-----------+----------+
+| Port         | Mode    | Direction | Bitwidth |
++--------------+---------+-----------+----------+
+| degree       | ap_none | in        | 32       |
+| scalar_array | ap_none | in        | 256      |
++--------------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++--------------+-----------+---------------+
+| Argument     | Direction | Datatype      |
++--------------+-----------+---------------+
+| x_array      | inout     | ap_uint<256>* |
+| y_array      | inout     | ap_uint<256>* |
+| z_array      | inout     | ap_uint<256>* |
+| t_array      | inout     | ap_uint<256>* |
+| scalar_array | in        | ap_uint<256>* |
+| result_x     | inout     | ap_uint<256>* |
+| result_y     | inout     | ap_uint<256>* |
+| result_z     | inout     | ap_uint<256>* |
+| result_t     | inout     | ap_uint<256>* |
+| degree       | in        | int           |
++--------------+-----------+---------------+
+
+* SW-to-HW Mapping
++--------------+---------------+-----------+----------+--------------------------------------+
+| Argument     | HW Interface  | HW Type   | HW Usage | HW Info                              |
++--------------+---------------+-----------+----------+--------------------------------------+
+| x_array      | m_axi_gmem0   | interface |          | channel=0                            |
+| x_array      | s_axi_control | register  | offset   | name=x_array_1 offset=0x10 range=32  |
+| x_array      | s_axi_control | register  | offset   | name=x_array_2 offset=0x14 range=32  |
+| y_array      | m_axi_gmem1   | interface |          | channel=0                            |
+| y_array      | s_axi_control | register  | offset   | name=y_array_1 offset=0x1c range=32  |
+| y_array      | s_axi_control | register  | offset   | name=y_array_2 offset=0x20 range=32  |
+| z_array      | m_axi_gmem2   | interface |          | channel=0                            |
+| z_array      | s_axi_control | register  | offset   | name=z_array_1 offset=0x28 range=32  |
+| z_array      | s_axi_control | register  | offset   | name=z_array_2 offset=0x2c range=32  |
+| t_array      | m_axi_gmem3   | interface |          | channel=0                            |
+| t_array      | s_axi_control | register  | offset   | name=t_array_1 offset=0x34 range=32  |
+| t_array      | s_axi_control | register  | offset   | name=t_array_2 offset=0x38 range=32  |
+| scalar_array | scalar_array  | port      |          |                                      |
+| result_x     | m_axi_gmem0   | interface |          | channel=0                            |
+| result_x     | s_axi_control | register  | offset   | name=result_x_1 offset=0x40 range=32 |
+| result_x     | s_axi_control | register  | offset   | name=result_x_2 offset=0x44 range=32 |
+| result_y     | m_axi_gmem1   | interface |          | channel=0                            |
+| result_y     | s_axi_control | register  | offset   | name=result_y_1 offset=0x4c range=32 |
+| result_y     | s_axi_control | register  | offset   | name=result_y_2 offset=0x50 range=32 |
+| result_z     | m_axi_gmem2   | interface |          | channel=0                            |
+| result_z     | s_axi_control | register  | offset   | name=result_z_1 offset=0x58 range=32 |
+| result_z     | s_axi_control | register  | offset   | name=result_z_2 offset=0x5c range=32 |
+| result_t     | m_axi_gmem3   | interface |          | channel=0                            |
+| result_t     | s_axi_control | register  | offset   | name=result_t_1 offset=0x64 range=32 |
+| result_t     | s_axi_control | register  | offset   | name=result_t_2 offset=0x68 range=32 |
+| degree       | degree        | port      |          |                                      |
++--------------+---------------+-----------+----------+--------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+----------+-------+------------------+-----------------------+
+| HW Interface | Direction | Length   | Width | Loop             | Loop Location         |
++--------------+-----------+----------+-------+------------------+-----------------------+
+| m_axi_gmem0  | read      | variable | 256   | DATA_LOAD_LOOP   | ../src/msm.cpp:399:3  |
+| m_axi_gmem0  | write     | 26624    | 256   | VITIS_LOOP_586_1 | ../src/msm.cpp:586:21 |
+| m_axi_gmem1  | read      | variable | 256   | DATA_LOAD_LOOP   | ../src/msm.cpp:399:3  |
+| m_axi_gmem1  | write     | 26624    | 256   | VITIS_LOOP_586_1 | ../src/msm.cpp:586:21 |
+| m_axi_gmem2  | read      | variable | 256   | DATA_LOAD_LOOP   | ../src/msm.cpp:399:3  |
+| m_axi_gmem2  | write     | 26624    | 256   | VITIS_LOOP_586_1 | ../src/msm.cpp:586:21 |
+| m_axi_gmem3  | read      | variable | 256   | DATA_LOAD_LOOP   | ../src/msm.cpp:399:3  |
+| m_axi_gmem3  | write     | 26624    | 256   | VITIS_LOOP_586_1 | ../src/msm.cpp:586:21 |
++--------------+-----------+----------+-------+------------------+-----------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+-----------------------+-----------+--------------+----------+------------------+-----------------------+------------+--------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location       | Direction | Burst Status | Length   | Loop             | Loop Location         | Resolution | Problem                                                                                                |
++--------------+----------+-----------------------+-----------+--------------+----------+------------------+-----------------------+------------+--------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | x_array  | ../src/msm.cpp:402:11 | read      | Widen Fail   |          | DATA_LOAD_LOOP   | ../src/msm.cpp:399:3  | 214-353    | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | x_array  | ../src/msm.cpp:402:11 | read      | Inferred     | variable | DATA_LOAD_LOOP   | ../src/msm.cpp:399:3  |            |                                                                                                        |
+| m_axi_gmem0  | result_x | ../src/msm.cpp:591:22 | write     | Widen Fail   |          | VITIS_LOOP_588_2 | ../src/msm.cpp:588:23 | 214-353    | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | result_x | ../src/msm.cpp:591:22 | write     | Inferred     | 26624    | VITIS_LOOP_586_1 | ../src/msm.cpp:586:21 |            |                                                                                                        |
+| m_axi_gmem1  | y_array  | ../src/msm.cpp:403:14 | read      | Widen Fail   |          | DATA_LOAD_LOOP   | ../src/msm.cpp:399:3  | 214-353    | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1  | y_array  | ../src/msm.cpp:403:14 | read      | Inferred     | variable | DATA_LOAD_LOOP   | ../src/msm.cpp:399:3  |            |                                                                                                        |
+| m_axi_gmem1  | result_y | ../src/msm.cpp:592:22 | write     | Widen Fail   |          | VITIS_LOOP_588_2 | ../src/msm.cpp:588:23 | 214-353    | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1  | result_y | ../src/msm.cpp:592:22 | write     | Inferred     | 26624    | VITIS_LOOP_586_1 | ../src/msm.cpp:586:21 |            |                                                                                                        |
+| m_axi_gmem2  | z_array  | ../src/msm.cpp:404:14 | read      | Widen Fail   |          | DATA_LOAD_LOOP   | ../src/msm.cpp:399:3  | 214-353    | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem2  | z_array  | ../src/msm.cpp:404:14 | read      | Inferred     | variable | DATA_LOAD_LOOP   | ../src/msm.cpp:399:3  |            |                                                                                                        |
+| m_axi_gmem2  | result_z | ../src/msm.cpp:593:22 | write     | Widen Fail   |          | VITIS_LOOP_588_2 | ../src/msm.cpp:588:23 | 214-353    | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem2  | result_z | ../src/msm.cpp:593:22 | write     | Inferred     | 26624    | VITIS_LOOP_586_1 | ../src/msm.cpp:586:21 |            |                                                                                                        |
+| m_axi_gmem3  | t_array  | ../src/msm.cpp:405:14 | read      | Widen Fail   |          | DATA_LOAD_LOOP   | ../src/msm.cpp:399:3  | 214-353    | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem3  | t_array  | ../src/msm.cpp:405:14 | read      | Inferred     | variable | DATA_LOAD_LOOP   | ../src/msm.cpp:399:3  |            |                                                                                                        |
+| m_axi_gmem3  | result_t | ../src/msm.cpp:594:22 | write     | Widen Fail   |          | VITIS_LOOP_588_2 | ../src/msm.cpp:588:23 | 214-353    | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem3  | result_t | ../src/msm.cpp:594:22 | write     | Inferred     | 26624    | VITIS_LOOP_586_1 | ../src/msm.cpp:586:21 |            |                                                                                                        |
++--------------+----------+-----------------------+-----------+--------------+----------+------------------+-----------------------+------------+--------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------------------+------+--------+------------------+--------+-----------+---------+
+| Name                                                 | DSP  | Pragma | Variable         | Op     | Impl      | Latency |
++------------------------------------------------------+------+--------+------------------+--------+-----------+---------+
+| + msm                                                | 3590 |        |                  |        |           |         |
+|  + data_loader                                       | 0    |        |                  |        |           |         |
+|    icmp_ln399_fu_219_p2                              |      |        | icmp_ln399       | setgt  | auto      | 0       |
+|    empty_fu_229_p3                                   |      |        | empty            | select | auto_sel  | 0       |
+|    icmp_ln399_1_fu_253_p2                            |      |        | icmp_ln399_1     | setlt  | auto      | 0       |
+|    add_ln399_fu_259_p2                               |      |        | add_ln399        | add    | fabric    | 0       |
+|  + pippenger_control                                 | 3590 |        |                  |        |           |         |
+|   + pippenger_control_Pipeline_PARTITION_SCALAR      | 0    |        |                  |        |           |         |
+|     icmp_ln465_fu_113_p2                             |      |        | icmp_ln465       | seteq  | auto      | 0       |
+|     add_ln468_fu_119_p2                              |      |        | add_ln468        | add    | fabric    | 0       |
+|     add_ln468_3_fu_194_p2                            |      |        | add_ln468_3      | add    | fabric    | 0       |
+|     icmp_ln468_fu_219_p2                             |      |        | icmp_ln468       | setgt  | auto      | 0       |
+|     sub_ln468_fu_232_p2                              |      |        | sub_ln468        | sub    | fabric    | 0       |
+|     xor_ln468_fu_236_p2                              |      |        | xor_ln468        | xor    | auto      | 0       |
+|     sub_ln468_1_fu_241_p2                            |      |        | sub_ln468_1      | sub    | fabric    | 0       |
+|     select_ln468_fu_245_p3                           |      |        | select_ln468     | select | auto_sel  | 0       |
+|     select_ln468_1_fu_253_p3                         |      |        | select_ln468_1   | select | auto_sel  | 0       |
+|     select_ln468_2_fu_260_p3                         |      |        | select_ln468_2   | select | auto_sel  | 0       |
+|     xor_ln468_1_fu_267_p2                            |      |        | xor_ln468_1      | xor    | auto      | 0       |
+|     lshr_ln468_fu_281_p2                             |      |        | lshr_ln468       | lshr   | auto_pipe | 0       |
+|     lshr_ln468_1_fu_291_p2                           |      |        | lshr_ln468_1     | lshr   | auto_pipe | 0       |
+|     partition_fu_301_p2                              |      |        | partition        | and    | auto      | 0       |
+|     add_ln465_fu_203_p2                              |      |        | add_ln465        | add    | fabric    | 0       |
+|   + aggregate_and_output_results                     | 0    |        |                  |        |           |         |
+|     icmp_ln542_fu_33913_p2                           |      |        | icmp_ln542       | seteq  | auto      | 0       |
+|     add_ln542_fu_33919_p2                            |      |        | add_ln542        | add    | fabric    | 0       |
+|   + pippenger_control_Pipeline_PUT_INTO_BUCKETS_LOOP | 3590 |        |                  |        |           |         |
+|     icmp_ln528_fu_322_p2                             |      |        | icmp_ln528       | seteq  | auto      | 0       |
+|     add_ln528_fu_328_p2                              |      |        | add_ln528        | add    | fabric    | 0       |
+|     scalar_partition_fu_365_p3                       |      |        | scalar_partition | select | auto_sel  | 0       |
+|     add_ln532_fu_387_p2                              |      |        | add_ln532        | add    | fabric    | 0       |
+|     select_ln482_fu_404_p3                           |      |        | select_ln482     | select | auto_sel  | 0       |
+|     select_ln482_1_fu_411_p3                         |      |        | select_ln482_1   | select | auto_sel  | 0       |
+|     or_ln482_fu_418_p2                               |      |        | or_ln482         | or     | auto      | 0       |
+|     icmp_ln482_fu_422_p2                             |      |        | icmp_ln482       | seteq  | auto      | 0       |
+|     select_ln492_fu_428_p3                           |      |        | select_ln492     | select | auto_sel  | 0       |
+|     select_ln492_1_fu_435_p3                         |      |        | select_ln492_1   | select | auto_sel  | 0       |
+|    + edwards_point_add                               | 3590 |        |                  |        |           |         |
+|      add_ln300_fu_184_p2                             |      |        | add_ln300        | add    | fabric    | 0       |
+|      icmp_ln300_fu_256_p2                            |      |        | icmp_ln300       | setgt  | auto      | 0       |
+|      X1pY1_1_fu_190_p2                               |      |        | X1pY1_1          | add    | fabric    | 0       |
+|      X1pY1_fu_261_p2                                 |      |        | X1pY1            | add    | fabric    | 0       |
+|      X1pY1_2_fu_266_p3                               |      |        | X1pY1_2          | select | auto_sel  | 0       |
+|      add_ln301_fu_204_p2                             |      |        | add_ln301        | add    | fabric    | 0       |
+|      icmp_ln301_fu_273_p2                            |      |        | icmp_ln301       | setgt  | auto      | 0       |
+|      X2pY2_1_fu_210_p2                               |      |        | X2pY2_1          | add    | fabric    | 0       |
+|      X2pY2_fu_278_p2                                 |      |        | X2pY2            | add    | fabric    | 0       |
+|      X2pY2_2_fu_283_p3                               |      |        | X2pY2_2          | select | auto_sel  | 0       |
+|      mul_256ns_256ns_512_5_1_U27                     | 225  |        | mul_ln305        | mul    | auto      | 4       |
+|      icmp_ln305_fu_298_p2                            |      |        | icmp_ln305       | setgt  | auto      | 0       |
+|      mul_256s_256s_256_5_1_U37                       | 134  |        | mul_ln305_1      | mul    | auto      | 4       |
+|      add_ln305_fu_318_p2                             |      |        | add_ln305        | add    | fabric    | 0       |
+|      A_fu_323_p3                                     |      |        | A                | select | auto_sel  | 0       |
+|      mul_256ns_256ns_512_5_1_U28                     | 225  |        | mul_ln306        | mul    | auto      | 4       |
+|      icmp_ln306_fu_303_p2                            |      |        | icmp_ln306       | setgt  | auto      | 0       |
+|      mul_256s_256s_256_5_1_U38                       | 134  |        | mul_ln306_1      | mul    | auto      | 4       |
+|      add_ln306_fu_329_p2                             |      |        | add_ln306        | add    | fabric    | 0       |
+|      B_fu_334_p3                                     |      |        | B                | select | auto_sel  | 0       |
+|      mul_256ns_256ns_512_5_1_U29                     | 225  |        | mul_ln307        | mul    | auto      | 4       |
+|      icmp_ln307_fu_308_p2                            |      |        | icmp_ln307       | setgt  | auto      | 0       |
+|      mul_256s_256s_256_5_1_U39                       | 134  |        | mul_ln307_1      | mul    | auto      | 4       |
+|      add_ln307_fu_340_p2                             |      |        | add_ln307        | add    | fabric    | 0       |
+|      C_fu_345_p3                                     |      |        | C                | select | auto_sel  | 0       |
+|      mul_256ns_256ns_512_5_1_U30                     | 225  |        | mul_ln308        | mul    | auto      | 4       |
+|      icmp_ln308_fu_313_p2                            |      |        | icmp_ln308       | setgt  | auto      | 0       |
+|      mul_256s_256s_256_5_1_U40                       | 134  |        | mul_ln308_1      | mul    | auto      | 4       |
+|      add_ln308_fu_351_p2                             |      |        | add_ln308        | add    | fabric    | 0       |
+|      T1T2_fu_356_p3                                  |      |        | T1T2             | select | auto_sel  | 0       |
+|      mul_256ns_254ns_509_5_1_U36                     | 225  |        | mul_ln309        | mul    | auto      | 4       |
+|      icmp_ln309_fu_437_p2                            |      |        | icmp_ln309       | setgt  | auto      | 0       |
+|      mul_256s_254ns_256_5_1_U46                      | 134  |        | mul_ln309_1      | mul    | auto      | 4       |
+|      add_ln309_fu_442_p2                             |      |        | add_ln309        | add    | fabric    | 0       |
+|      D_fu_447_p3                                     |      |        | D                | select | auto_sel  | 0       |
+|      mul_256ns_256ns_512_5_1_U31                     | 225  |        | mul_ln311        | mul    | auto      | 4       |
+|      icmp_ln311_fu_366_p2                            |      |        | icmp_ln311       | setgt  | auto      | 0       |
+|      mul_256s_256s_256_5_1_U41                       | 134  |        | E_1              | mul    | auto      | 4       |
+|      E_fu_371_p2                                     |      |        | E                | add    | fabric    | 0       |
+|      E_2_fu_388_p3                                   |      |        | E_2              | select | auto_sel  | 0       |
+|      icmp_ln312_fu_452_p2                            |      |        | icmp_ln312       | setlt  | auto      | 0       |
+|      xor_ln312_fu_480_p2                             |      |        | xor_ln312        | xor    | auto      | 0       |
+|      F_fu_457_p2                                     |      |        | F                | sub    | fabric    | 0       |
+|      F_1_fu_485_p2                                   |      |        | F_1              | add    | fabric    | 0       |
+|      F_2_fu_490_p3                                   |      |        | F_2              | select | auto_sel  | 0       |
+|      add_ln313_fu_469_p2                             |      |        | add_ln313        | add    | fabric    | 0       |
+|      icmp_ln313_fu_497_p2                            |      |        | icmp_ln313       | setgt  | auto      | 0       |
+|      G_1_fu_475_p2                                   |      |        | G_1              | add    | fabric    | 0       |
+|      G_fu_502_p2                                     |      |        | G                | add    | fabric    | 0       |
+|      G_2_fu_507_p3                                   |      |        | G_2              | select | auto_sel  | 0       |
+|      icmp_ln314_fu_376_p2                            |      |        | icmp_ln314       | setlt  | auto      | 0       |
+|      xor_ln314_fu_393_p2                             |      |        | xor_ln314        | xor    | auto      | 0       |
+|      H_fu_380_p2                                     |      |        | H                | sub    | fabric    | 0       |
+|      H_1_fu_398_p2                                   |      |        | H_1              | add    | fabric    | 0       |
+|      H_2_fu_403_p3                                   |      |        | H_2              | select | auto_sel  | 0       |
+|      AplusB_fu_384_p2                                |      |        | AplusB           | add    | fabric    | 0       |
+|      icmp_ln317_fu_410_p2                            |      |        | icmp_ln317       | setlt  | auto      | 0       |
+|      E_geq_AplusB_fu_420_p2                          |      |        | E_geq_AplusB     | xor    | auto      | 0       |
+|      E_minus_AplusB_fu_415_p2                        |      |        | E_minus_AplusB   | sub    | fabric    | 0       |
+|      E_minus_AplusB_1_fu_425_p2                      |      |        | E_minus_AplusB_1 | add    | fabric    | 0       |
+|      E_minus_AplusB_2_fu_430_p3                      |      |        | E_minus_AplusB_2 | select | auto_sel  | 0       |
+|      mul_256ns_256ns_512_5_1_U32                     | 225  |        | mul_ln321        | mul    | auto      | 4       |
+|      icmp_ln321_fu_534_p2                            |      |        | icmp_ln321       | setgt  | auto      | 0       |
+|      mul_256s_256s_256_5_1_U42                       | 134  |        | X3_tmp_1         | mul    | auto      | 4       |
+|      X3_tmp_fu_554_p2                                |      |        | X3_tmp           | add    | fabric    | 0       |
+|      X3_tmp_2_fu_559_p3                              |      |        | X3_tmp_2         | select | auto_sel  | 0       |
+|      mul_256ns_256ns_512_5_1_U33                     | 225  |        | mul_ln322        | mul    | auto      | 4       |
+|      icmp_ln322_fu_539_p2                            |      |        | icmp_ln322       | setgt  | auto      | 0       |
+|      mul_256s_256s_256_5_1_U43                       | 134  |        | Y3_tmp_1         | mul    | auto      | 4       |
+|      Y3_tmp_fu_565_p2                                |      |        | Y3_tmp           | add    | fabric    | 0       |
+|      Y3_tmp_2_fu_570_p3                              |      |        | Y3_tmp_2         | select | auto_sel  | 0       |
+|      mul_256ns_256ns_512_5_1_U34                     | 225  |        | mul_ln323        | mul    | auto      | 4       |
+|      icmp_ln323_fu_544_p2                            |      |        | icmp_ln323       | setgt  | auto      | 0       |
+|      mul_256s_256s_256_5_1_U44                       | 134  |        | T3_tmp_1         | mul    | auto      | 4       |
+|      T3_tmp_fu_576_p2                                |      |        | T3_tmp           | add    | fabric    | 0       |
+|      T3_tmp_2_fu_581_p3                              |      |        | T3_tmp_2         | select | auto_sel  | 0       |
+|      mul_256ns_256ns_512_5_1_U35                     | 225  |        | mul_ln324        | mul    | auto      | 4       |
+|      icmp_ln324_fu_549_p2                            |      |        | icmp_ln324       | setgt  | auto      | 0       |
+|      mul_256s_256s_256_5_1_U45                       | 134  |        | Z3_tmp_1         | mul    | auto      | 4       |
+|      Z3_tmp_fu_587_p2                                |      |        | Z3_tmp           | add    | fabric    | 0       |
+|      Z3_tmp_2_fu_592_p3                              |      |        | Z3_tmp_2         | select | auto_sel  | 0       |
+|  + WriteBack                                         | 0    |        |                  |        |           |         |
+|    add_ln586_fu_246_p2                               |      |        | add_ln586        | add    | fabric    | 0       |
+|    icmp_ln586_fu_252_p2                              |      |        | icmp_ln586       | seteq  | auto      | 0       |
++------------------------------------------------------+------+--------+------------------+--------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++--------------------------------+---------------+-------------+------+------+--------+---------------------------+--------+---------+------------------+
+| Name                           | Usage         | Type        | BRAM | URAM | Pragma | Variable                  | Impl   | Latency | Bitwidth, Depth, |
+|                                |               |             |      |      |        |                           |        |         | Banks            |
++--------------------------------+---------------+-------------+------+------+--------+---------------------------+--------+---------+------------------+
+| + msm                          |               |             | 239  | 128  |        |                           |        |         |                  |
+|   control_s_axi_U              | interface     | s_axilite   |      |      |        |                           |        |         |                  |
+|   gmem0_m_axi_U                | interface     | m_axi       | 30   |      |        |                           |        |         |                  |
+|   gmem1_m_axi_U                | interface     | m_axi       | 30   |      |        |                           |        |         |                  |
+|   gmem2_m_axi_U                | interface     | m_axi       | 30   |      |        |                           |        |         |                  |
+|   gmem3_m_axi_U                | interface     | m_axi       | 30   |      |        |                           |        |         |                  |
+|   result_x_c_U                 | fifo channel  | scalar prop |      |      |        | result_x_c                | srl    | 0       | 64, 4, 1         |
+|   result_y_c_U                 | fifo channel  | scalar prop |      |      |        | result_y_c                | srl    | 0       | 64, 4, 1         |
+|   result_z_c_U                 | fifo channel  | scalar prop |      |      |        | result_z_c                | srl    | 0       | 64, 4, 1         |
+|   result_t_c_U                 | fifo channel  | scalar prop |      |      |        | result_t_c                | srl    | 0       | 64, 4, 1         |
+|   x_point_stream_U             | fifo channel  | stream      | 15   |      |        | x_point_stream            | memory | 0       | 256, 64, 1       |
+|   y_point_stream_U             | fifo channel  | stream      | 15   |      |        | y_point_stream            | memory | 0       | 256, 64, 1       |
+|   z_point_stream_U             | fifo channel  | stream      | 15   |      |        | z_point_stream            | memory | 0       | 256, 64, 1       |
+|   t_point_stream_U             | fifo channel  | stream      |      |      |        | t_point_stream            | srl    | 0       | 256, 2, 1        |
+|   scalar_point_stream_U        | fifo channel  | stream      | 15   |      |        | scalar_point_stream       | memory | 0       | 256, 64, 1       |
+|   point_result_stream_U        | fifo channel  | stream      | 57   |      |        | point_result_stream       | memory | 0       | 1024, 64, 1      |
+|  + pippenger_control           |               |             | 2    | 128  |        |                           |        |         |                  |
+|    scalar_partition_buffer_U   | ram_t2p array |             | 1    |      | yes    | scalar_partition_buffer   | bram   | 1       | 15, 13, 1        |
+|    scalar_partition_buffer_2_U | ram_t2p array |             | 1    |      | yes    | scalar_partition_buffer_2 | bram   | 1       | 15, 13, 1        |
+|    buckets_x_U                 | ram_t2p array |             |      | 16   | yes    | buckets_x                 | uram   | 1       | 256, 13312, 1    |
+|    buckets_x_1_U               | ram_t2p array |             |      | 16   | yes    | buckets_x_1               | uram   | 1       | 256, 13312, 1    |
+|    buckets_y_U                 | ram_t2p array |             |      | 16   | yes    | buckets_y                 | uram   | 1       | 256, 13312, 1    |
+|    buckets_y_1_U               | ram_t2p array |             |      | 16   | yes    | buckets_y_1               | uram   | 1       | 256, 13312, 1    |
+|    buckets_z_U                 | ram_t2p array |             |      | 16   | yes    | buckets_z                 | uram   | 1       | 256, 13312, 1    |
+|    buckets_z_1_U               | ram_t2p array |             |      | 16   | yes    | buckets_z_1               | uram   | 1       | 256, 13312, 1    |
+|    buckets_t_U                 | ram_t2p array |             |      | 16   | yes    | buckets_t                 | uram   | 1       | 256, 13312, 1    |
+|    buckets_t_1_U               | ram_t2p array |             |      | 16   | yes    | buckets_t_1               | uram   | 1       | 256, 13312, 1    |
++--------------------------------+---------------+-------------+------+------+--------+---------------------------+--------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Ignored Pragmas
++-----------+----------------------------------------------------+-----------------------------------------+--------------------------------------+
+| Type      | Options                                            | Location                                | Messages                             |
++-----------+----------------------------------------------------+-----------------------------------------+--------------------------------------+
+| interface | mode = ap_fifo port = x_stream bundle = gmem0      | ../src/msm.cpp:561 in pippenger_control | unexpected pragma parameter 'bundle' |
+| interface | mode = ap_fifo port = y_stream bundle = gmem1      | ../src/msm.cpp:562 in pippenger_control | unexpected pragma parameter 'bundle' |
+| interface | mode = ap_fifo port = z_stream bundle = gmem2      | ../src/msm.cpp:563 in pippenger_control | unexpected pragma parameter 'bundle' |
+| interface | mode = ap_fifo port = t_stream bundle = gmem2      | ../src/msm.cpp:564 in pippenger_control | unexpected pragma parameter 'bundle' |
+| interface | mode = ap_fifo port = scalar_stream bundle = gmem3 | ../src/msm.cpp:565 in pippenger_control | unexpected pragma parameter 'bundle' |
+| interface | mode = ap_fifo port = out_stream bundle = gmem4    | ../src/msm.cpp:566 in pippenger_control | unexpected pragma parameter 'bundle' |
++-----------+----------------------------------------------------+-----------------------------------------+--------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+---------------------------------------------------------------------+----------------------------------------------------+
+| Type            | Options                                                             | Location                                           |
++-----------------+---------------------------------------------------------------------+----------------------------------------------------+
+| inline          | OFF                                                                 | ../src/msm.cpp:250 in edwards_point_double         |
+| pipeline        | II = 1                                                              | ../src/msm.cpp:251 in edwards_point_double         |
+| inline          | off                                                                 | ../src/msm.cpp:294 in edwards_point_add            |
+| interface       | m_axi port = x_array depth = MAX_DEGREE bundle = gmem0              | ../src/msm.cpp:390 in data_loader                  |
+| interface       | m_axi port = y_array depth = MAX_DEGREE bundle = gmem1              | ../src/msm.cpp:391 in data_loader                  |
+| interface       | m_axi port = z_array depth = MAX_DEGREE bundle = gmem2              | ../src/msm.cpp:392 in data_loader                  |
+| interface       | m_axi port = t_array depth = MAX_DEGREE bundle = gmem2              | ../src/msm.cpp:393 in data_loader                  |
+| interface       | m_axi port = scalar_array depth = MAX_DEGREE bundle = gmem3         | ../src/msm.cpp:394 in data_loader                  |
+| interface       | s_axilite port = degree                                             | ../src/msm.cpp:395 in data_loader                  |
+| interface       | s_axilite port = return                                             | ../src/msm.cpp:396 in data_loader                  |
+| pipeline        | II = 1                                                              | ../src/msm.cpp:401 in data_loader                  |
+| pipeline        | II = 1                                                              | ../src/msm.cpp:467 in partition_scalar             |
+| array_partition | variable = scalar_partition_buffer type = cyclic factor = 2 dim = 1 | ../src/msm.cpp:513 in process_points               |
+| bind_storage    | variable = scalar_partition_buffer type = RAM_T2P impl = BRAM       | ../src/msm.cpp:514 in process_points               |
+| loop_tripcount  | min = 1 max = MAX_DEGREE                                            | ../src/msm.cpp:518 in process_points               |
+| pipeline        | II = 1                                                              | ../src/msm.cpp:530 in process_points               |
+| pipeline        | II = 1                                                              | ../src/msm.cpp:544 in aggregate_and_output_results |
+| pipeline        | II = 1                                                              | ../src/msm.cpp:547 in aggregate_and_output_results |
+| bind_storage    | variable = buckets type = RAM_T2P impl = URAM                       | ../src/msm.cpp:569 in pippenger_control            |
+| array_partition | variable = buckets type = cyclic factor = 2 dim = 2                 | ../src/msm.cpp:570 in pippenger_control            |
+| interface       | mode = m_axi port = x_array bundle = gmem0                          | ../src/msm.cpp:614 in msm                          |
+| interface       | mode = m_axi port = y_array bundle = gmem1                          | ../src/msm.cpp:615 in msm                          |
+| interface       | mode = m_axi port = z_array bundle = gmem2                          | ../src/msm.cpp:616 in msm                          |
+| interface       | mode = m_axi port = t_array bundle = gmem3                          | ../src/msm.cpp:617 in msm                          |
+| interface       | mode = m_axi port = result_x bundle = gmem0                         | ../src/msm.cpp:618 in msm                          |
+| interface       | mode = m_axi port = result_y bundle = gmem1                         | ../src/msm.cpp:619 in msm                          |
+| interface       | mode = m_axi port = result_z bundle = gmem2                         | ../src/msm.cpp:620 in msm                          |
+| interface       | mode = m_axi port = result_t bundle = gmem3                         | ../src/msm.cpp:621 in msm                          |
+| stream          | variable = x_point_stream depth = HLS_STREAM_DEPTH                  | ../src/msm.cpp:631 in msm                          |
+| stream          | variable = y_point_stream depth = HLS_STREAM_DEPTH                  | ../src/msm.cpp:632 in msm                          |
+| stream          | variable = z_point_stream depth = HLS_STREAM_DEPTH                  | ../src/msm.cpp:633 in msm                          |
+| stream          | variable = scalar_point_stream depth = HLS_STREAM_DEPTH             | ../src/msm.cpp:634 in msm                          |
+| stream          | variable = point_result_stream depth = HLS_STREAM_DEPTH             | ../src/msm.cpp:635 in msm                          |
+| dataflow        |                                                                     | ../src/msm.cpp:636 in msm                          |
++-----------------+---------------------------------------------------------------------+----------------------------------------------------+
+
+

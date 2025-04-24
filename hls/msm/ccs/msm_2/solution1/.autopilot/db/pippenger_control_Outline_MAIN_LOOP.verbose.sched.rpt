@@ -1,0 +1,145 @@
+
+
+================================================================
+== Vitis HLS Report for 'pippenger_control_Outline_MAIN_LOOP'
+================================================================
+* Date:           Wed Apr 23 16:31:26 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        msm_2
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  1.887 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+-----------+----------+-----------+-----+-----------+---------+
+    |   Latency (cycles)  |  Latency (absolute)  |     Interval    | Pipeline|
+    |   min   |    max    |    min   |    max    | min |    max    |   Type  |
+    +---------+-----------+----------+-----------+-----+-----------+---------+
+    |       31|  503316481|  0.124 us|  2.013 sec|   31|  503316481|       no|
+    +---------+-----------+----------+-----------+-----+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+-----------+----------+-----------+-----------+--------------+----------+
+        |             |   Latency (cycles)  | Iteration|  Initiation Interval  |     Trip     |          |
+        |  Loop Name  |   min   |    max    |  Latency |  achieved |   target  |     Count    | Pipelined|
+        +-------------+---------+-----------+----------+-----------+-----------+--------------+----------+
+        |- MAIN_LOOP  |       30|  503316480|        30|          -|          -|  1 ~ 16777216|        no|
+        +-------------+---------+-----------+----------+-----------+-----------+--------------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %scalar_stream, void @empty_3, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0, i32 0"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %t_stream, void @empty_3, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %z_stream, void @empty_3, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %y_stream, void @empty_3, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %x_stream, void @empty_3, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln547 = br void %while.cond.i" [../src/msm.cpp:547->../src/msm.cpp:611]   --->   Operation 9 'br' 'br_ln547' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.88>
+ST_2 : Operation 10 [1/1] ( I:0.00ns O:0.00ns )   --->   "%tmp = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i256P0A, i256 %x_stream, i32 1" [../src/msm.cpp:547->../src/msm.cpp:611]   --->   Operation 10 'nbreadreq' 'tmp' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln547 = br i1 %tmp, void %for.inc.i.preheader.exitStub, void %while.body.i" [../src/msm.cpp:547->../src/msm.cpp:611]   --->   Operation 11 'br' 'br_ln547' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] ( I:1.46ns O:1.46ns )   --->   "%p_0 = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %x_stream" [../src/msm.cpp:550->../src/msm.cpp:611]   --->   Operation 12 'read' 'p_0' <Predicate = (tmp)> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 13 [1/1] ( I:1.46ns O:1.46ns )   --->   "%p_04 = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %y_stream" [../src/msm.cpp:551->../src/msm.cpp:611]   --->   Operation 13 'read' 'p_04' <Predicate = (tmp)> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 14 [1/1] ( I:1.46ns O:1.46ns )   --->   "%p_03 = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %z_stream" [../src/msm.cpp:552->../src/msm.cpp:611]   --->   Operation 14 'read' 'p_03' <Predicate = (tmp)> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 15 [1/1] ( I:1.46ns O:1.46ns )   --->   "%p_02 = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %t_stream" [../src/msm.cpp:553->../src/msm.cpp:611]   --->   Operation 15 'read' 'p_02' <Predicate = (tmp)> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 16 [1/1] ( I:1.46ns O:1.46ns )   --->   "%scalar = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %scalar_stream" [../src/msm.cpp:474->../src/msm.cpp:556->../src/msm.cpp:611]   --->   Operation 16 'read' 'scalar' <Predicate = (tmp)> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 17 [2/2] (0.42ns)   --->   "%call_ln474 = call void @pippenger_control_Pipeline_VITIS_LOOP_476_1, i256 %scalar" [../src/msm.cpp:474->../src/msm.cpp:556->../src/msm.cpp:611]   --->   Operation 17 'call' 'call_ln474' <Predicate = (tmp)> <Delay = 0.42> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 18 'ret' 'ret_ln0' <Predicate = (!tmp)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.64>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%speclooptripcount_ln549 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 16777216, i64 8388608" [../src/msm.cpp:549->../src/msm.cpp:611]   --->   Operation 19 'speclooptripcount' 'speclooptripcount_ln549' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln547 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1" [../src/msm.cpp:547->../src/msm.cpp:611]   --->   Operation 20 'specloopname' 'specloopname_ln547' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/2] (1.64ns)   --->   "%call_ln474 = call void @pippenger_control_Pipeline_VITIS_LOOP_476_1, i256 %scalar" [../src/msm.cpp:474->../src/msm.cpp:556->../src/msm.cpp:611]   --->   Operation 21 'call' 'call_ln474' <Predicate = true> <Delay = 1.64> <CoreType = "Generic">   --->   Generic Core
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln547 = br void %while.cond.i" [../src/msm.cpp:547->../src/msm.cpp:611]   --->   Operation 22 'br' 'br_ln547' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4.000ns, clock uncertainty: 1.080ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 1.887ns
+The critical path consists of the following:
+	fifo request operation ('tmp', ../src/msm.cpp:547->../src/msm.cpp:611) on port 'x_stream' (../src/msm.cpp:547->../src/msm.cpp:611) [13]  (0.000 ns)
+	fifo read operation ('scalar', ../src/msm.cpp:474->../src/msm.cpp:556->../src/msm.cpp:611) on port 'scalar_stream' (../src/msm.cpp:474->../src/msm.cpp:556->../src/msm.cpp:611) [22]  (1.460 ns)
+	'call' operation 0 bit ('call_ln474', ../src/msm.cpp:474->../src/msm.cpp:556->../src/msm.cpp:611) to 'pippenger_control_Pipeline_VITIS_LOOP_476_1' [23]  (0.427 ns)
+
+ <State 3>: 1.643ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln474', ../src/msm.cpp:474->../src/msm.cpp:556->../src/msm.cpp:611) to 'pippenger_control_Pipeline_VITIS_LOOP_476_1' [23]  (1.643 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

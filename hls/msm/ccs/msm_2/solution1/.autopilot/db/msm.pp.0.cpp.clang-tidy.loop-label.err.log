@@ -1,0 +1,5 @@
+6 warnings and 2 errors generated.
+Error while processing /home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/msm_2/solution1/.autopilot/db/msm.pp.0.cpp.
+clang-tidy applied 32 of 32 suggested fixes.
+Suppressed 51 warnings (45 in non-user code, 6 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

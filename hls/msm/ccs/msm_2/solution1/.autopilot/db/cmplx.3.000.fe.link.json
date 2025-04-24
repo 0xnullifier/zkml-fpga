@@ -1,0 +1,152 @@
+{
+  "0": {
+    "basicblocks": 13,
+    "calls": "1 12 4",
+    "file": "msm.cpp",
+    "fileloc": 602,
+    "instructions": 53,
+    "loads": {
+      "G": 6
+    },
+    "name": "msm",
+    "stores": {
+      "G": 6
+    },
+    "total_instructions": 7905
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 377,
+    "instructions": 25,
+    "name": "data_loader",
+    "total_instructions": 45
+  },
+  "10": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 459,
+    "instructions": 35,
+    "name": "partition_scalar",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 109
+  },
+  "11": {
+    "basicblocks": 4,
+    "calls": "5",
+    "file": "msm.cpp",
+    "fileloc": 475,
+    "instructions": 111,
+    "loads": {
+      "L": 16
+    },
+    "name": "add_point_to_bucket",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 7498
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "2 7",
+    "file": "msm.cpp",
+    "fileloc": 553,
+    "instructions": 10,
+    "name": "pippenger_control",
+    "total_instructions": 7742
+  },
+  "2": {
+    "basicblocks": 11,
+    "calls": "10 11",
+    "file": "msm.cpp",
+    "fileloc": 503,
+    "instructions": 69,
+    "loads": {
+      "L": 5
+    },
+    "name": "process_points",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 7704
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "msm.hpp",
+    "fileloc": 42,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.3",
+    "total_instructions": 18
+  },
+  "4": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 579,
+    "instructions": 53,
+    "loads": {
+      "L": 4
+    },
+    "name": "WriteBack",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 59
+  },
+  "5": {
+    "basicblocks": 149,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 289,
+    "instructions": 882,
+    "loads": {
+      "L": 9
+    },
+    "name": "edwards_point_add",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 7199
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "msm.hpp",
+    "fileloc": 41,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.1",
+    "total_instructions": 18
+  },
+  "7": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "msm.cpp",
+    "fileloc": 538,
+    "instructions": 24,
+    "name": "aggregate_and_output_results",
+    "total_instructions": 28
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "9 6 3",
+    "file": "msm.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 4,
+    "name": "",
+    "total_instructions": 58
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "msm.hpp",
+    "fileloc": 40,
+    "instructions": 2,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 18
+  }
+}
