@@ -1,0 +1,37 @@
+{
+  "0": {
+    "basicblocks": 58,
+    "calls": "",
+    "file": "poseidon.cpp",
+    "fileloc": 14,
+    "instructions": 338,
+    "loads": {
+      "L": 7,
+      "T": 1
+    },
+    "name": "poseidon_hash",
+    "stores": {
+      "L": 7,
+      "T": 1
+    },
+    "total_instructions": 1531
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "2",
+    "file": "poseidon.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 2,
+    "name": "",
+    "total_instructions": 20
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "poseidon.cpp",
+    "fileloc": 10,
+    "instructions": 2,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 18
+  }
+}

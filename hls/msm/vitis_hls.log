@@ -1,0 +1,55 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+  **** SW Build 5238294 on Nov  8 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Tue Apr 22 16:13:11 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis/2024.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'terryadavis' on host 'terryadavis' (Linux_x86_64 version 6.12.20-amd64) on Tue Apr 22 16:13:13 IST 2025
+INFO: [HLS 200-10] On os Kali GNU/Linux Rolling
+INFO: [HLS 200-10] In directory '/home/terryadavis/utkarsh/zkml-fpga/hls/msm'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'ccs/run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project msm 
+INFO: [HLS 200-10] Creating and opening project '/home/terryadavis/utkarsh/zkml-fpga/hls/msm/msm'.
+INFO: [HLS 200-1510] Running: set_top msm_streaming 
+INFO: [HLS 200-1510] Running: add_files ../src/msm.cpp 
+WARNING: [HLS 200-40] Cannot find design file '../src/msm.cpp'
+INFO: [HLS 200-1510] Running: add_files ../src/msm.hpp 
+WARNING: [HLS 200-40] Cannot find design file '../src/msm.hpp'
+INFO: [HLS 200-1510] Running: add_files -tb ../dat/out.gold.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+WARNING: [HLS 200-40] Cannot find test bench file '../dat/out.gold.dat'
+INFO: [HLS 200-1510] Running: add_files -tb ../dat/input.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+WARNING: [HLS 200-40] Cannot find test bench file '../dat/input.dat'
+INFO: [HLS 200-1510] Running: add_files -tb ../src/tb_msm.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+WARNING: [HLS 200-40] Cannot find test bench file '../src/tb_msm.cpp'
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/terryadavis/utkarsh/zkml-fpga/hls/msm/msm/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 4 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-1998] cannot find relative file path '../../../dat/out.gold.dat' in directory(s): /home/terryadavis/utkarsh/zkml-fpga/hls/msm/msm/solution /home/terryadavis/utkarsh/zkml-fpga/hls/msm
+WARNING: [HLS 200-1998] cannot find relative file path '../../../dat/input.dat' in directory(s): /home/terryadavis/utkarsh/zkml-fpga/hls/msm/msm/solution /home/terryadavis/utkarsh/zkml-fpga/hls/msm
+WARNING: [HLS 200-1998] cannot find relative file path '../../../src/tb_msm.cpp' in directory(s): /home/terryadavis/utkarsh/zkml-fpga/hls/msm/msm/solution /home/terryadavis/utkarsh/zkml-fpga/hls/msm
+WARNING: [HLS 200-40] Cannot find source file ../src/msm.hpp; skipping it.
+WARNING: [HLS 200-40] Cannot find source file ../src/msm.cpp; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 312.145 MB.
+WARNING: [HLS 200-1986] Could not apply TOP directive, invalid function, label, or variable (/home/terryadavis/utkarsh/zkml-fpga/hls/msm/ccs/run_hls.tcl:14)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 312.145 MB.
+ERROR: [HLS 200-70] Cannot find any design unit to elaborate.
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:00; Allocated memory: 0.000 MB.
+Error in linking the design.
+    while executing
+"source ccs/run_hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 3.08 seconds. Total CPU system time: 0.14 seconds. Total elapsed time: 3.06 seconds; peak allocated memory: 312.145 MB.

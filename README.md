@@ -58,4 +58,6 @@ The current plan is to implement the primitives of bn254 curve for a polynomial 
 - Very large prover size
 - High bandwidth requirements
 
-## Directory structure
+## Results
+
+find the msm synthesis report [here](./hls/msm/ccs/msm_2/solution1/syn/report/csynth.rpt)

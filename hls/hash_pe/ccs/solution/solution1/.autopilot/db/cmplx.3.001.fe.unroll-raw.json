@@ -1,0 +1,19 @@
+{
+  "0": {
+    "basicblocks": 1699,
+    "calls": "",
+    "file": "poseidon.cpp",
+    "fileloc": 14,
+    "instructions": 14417,
+    "loads": {
+      "L": 2536,
+      "T": 2
+    },
+    "name": "poseidon_hash",
+    "stores": {
+      "L": 848,
+      "T": 1
+    },
+    "total_instructions": 14417
+  }
+}

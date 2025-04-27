@@ -1,0 +1,78 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/terryadavis/utkarsh/zkml-fpga/hls/hash_pe/ccs/run_hls.tcl:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="poseidon_hash" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=poseidon_hash" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/poseidon.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_hash" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = input offset = slave bundle = gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/poseidon.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_hash" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = output offset = slave bundle = gmem1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/poseidon.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_hash" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = num_blocks bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/poseidon.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_hash" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = return bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/poseidon.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_hash" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/poseidon.cpp:46:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_hash" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/poseidon.cpp:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_hash" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/poseidon.cpp:69:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_hash" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/poseidon.cpp:73:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_hash" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/poseidon.cpp:80:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_hash" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/poseidon.cpp:35:30" msg_body="Loop 'VITIS_LOOP_35_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_35_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/poseidon.cpp:42:13" msg_body="Loop 'round_loop' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="round_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/poseidon.cpp:44:34" msg_body="Loop 'VITIS_LOOP_44_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_44_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/poseidon.cpp:52:38" msg_body="Loop 'VITIS_LOOP_52_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_52_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/poseidon.cpp:67:34" msg_body="Loop 'VITIS_LOOP_67_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_67_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/poseidon.cpp:71:38" msg_body="Loop 'VITIS_LOOP_71_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_71_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/poseidon.cpp:78:34" msg_body="Loop 'VITIS_LOOP_78_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_78_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/poseidon.cpp:18:0" msg_body="Unrolling loop 'VITIS_LOOP_35_1' (../src/poseidon.cpp:35:30) in function 'poseidon_hash' completely with a factor of 2">
+        <args Factor="2" LoopLoc="../src/poseidon.cpp:35:30" LoopName="VITIS_LOOP_35_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/poseidon.cpp:18:0" msg_body="Unrolling loop 'round_loop' (../src/poseidon.cpp:42:13) in function 'poseidon_hash' completely with a factor of 65">
+        <args Factor="65" LoopLoc="../src/poseidon.cpp:42:13" LoopName="round_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/poseidon.cpp:18:0" msg_body="Unrolling loop 'VITIS_LOOP_78_6' (../src/poseidon.cpp:78:34) in function 'poseidon_hash' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/poseidon.cpp:78:34" LoopName="VITIS_LOOP_78_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/poseidon.cpp:18:0" msg_body="Unrolling loop 'VITIS_LOOP_67_4' (../src/poseidon.cpp:67:34) in function 'poseidon_hash' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/poseidon.cpp:67:34" LoopName="VITIS_LOOP_67_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/poseidon.cpp:18:0" msg_body="Unrolling loop 'VITIS_LOOP_71_5' (../src/poseidon.cpp:71:38) in function 'poseidon_hash' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/poseidon.cpp:71:38" LoopName="VITIS_LOOP_71_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/poseidon.cpp:18:0" msg_body="Unrolling loop 'VITIS_LOOP_52_3' (../src/poseidon.cpp:52:38) in function 'poseidon_hash' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/poseidon.cpp:52:38" LoopName="VITIS_LOOP_52_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/poseidon.cpp:18:0" msg_body="Unrolling loop 'VITIS_LOOP_44_2' (../src/poseidon.cpp:44:34) in function 'poseidon_hash' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/poseidon.cpp:44:34" LoopName="VITIS_LOOP_44_2"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

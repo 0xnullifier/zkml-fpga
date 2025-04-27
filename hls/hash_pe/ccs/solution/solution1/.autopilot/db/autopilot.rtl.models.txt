@@ -1,0 +1,5 @@
+poseidon_hash_gmem1_m_axi
+poseidon_hash_control_s_axi
+poseidon_hash_control_r_s_axi
+poseidon_hash_flow_control_loop_pipe
+poseidon_hash

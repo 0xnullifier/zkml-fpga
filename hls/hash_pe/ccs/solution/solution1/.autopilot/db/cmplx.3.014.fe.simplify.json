@@ -1,0 +1,11 @@
+{
+  "0": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "poseidon.cpp",
+    "fileloc": 14,
+    "instructions": 19,
+    "name": "poseidon_hash",
+    "total_instructions": 19
+  }
+}

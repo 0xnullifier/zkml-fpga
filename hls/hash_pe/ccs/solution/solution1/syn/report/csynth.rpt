@@ -1,0 +1,169 @@
+
+
+================================================================
+== Synthesis Summary Report of 'poseidon_hash'
+================================================================
++ General Information: 
+    * Date:           Tue Apr 29 23:25:37 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        solution
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------+------+------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |     Modules     | Issue|      | Latency | Latency| Iteration|         | Trip |          |         |    |            |            |     |
+    |     & Loops     | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF     |     LUT    | URAM|
+    +-----------------+------+------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |+ poseidon_hash  |     -|  0.00|        -|       -|         -|        0|     -|    rewind|  15 (2%)|   -|  1486 (~0%)|  1794 (~0%)|    -|
+    | o block_loop    |     -|  2.92|        -|       -|         8|        1|     -|       yes|        -|   -|           -|           -|    -|
+    +-----------------+------+------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | READ_ONLY  | 256 -> 256 | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |                   |
+| m_axi_gmem1 | WRITE_ONLY | 256 -> 256 | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=15           |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control   | 32         | 5             | 16     | 0        |
+| s_axi_control_r | 32         | 6             | 16     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface       | Register   | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-----------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control   | CTRL       | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control   | GIER       | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control   | IP_IER     | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control   | IP_ISR     | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control   | num_blocks | 0x10   | 32    | W      | Data signal of num_blocks        |                                                                      |
+| s_axi_control_r | input_r_1  | 0x10   | 32    | W      | Data signal of input_r           |                                                                      |
+| s_axi_control_r | input_r_2  | 0x14   | 32    | W      | Data signal of input_r           |                                                                      |
+| s_axi_control_r | output_r_1 | 0x1c   | 32    | W      | Data signal of output_r          |                                                                      |
+| s_axi_control_r | output_r_2 | 0x20   | 32    | W      | Data signal of output_r          |                                                                      |
++-----------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+----------------------+
+| Argument   | Direction | Datatype             |
++------------+-----------+----------------------+
+| input      | unused    | ap_uint<256> const * |
+| output     | out       | ap_uint<256>*        |
+| num_blocks | in        | int                  |
++------------+-----------+----------------------+
+
+* SW-to-HW Mapping
++------------+-----------------+-----------+----------+--------------------------------------+
+| Argument   | HW Interface    | HW Type   | HW Usage | HW Info                              |
++------------+-----------------+-----------+----------+--------------------------------------+
+| input      | m_axi_gmem0     | interface |          | channel=0                            |
+| input      | s_axi_control_r | register  | offset   | name=input_r_1 offset=0x10 range=32  |
+| input      | s_axi_control_r | register  | offset   | name=input_r_2 offset=0x14 range=32  |
+| output     | m_axi_gmem1     | interface |          | channel=0                            |
+| output     | s_axi_control_r | register  | offset   | name=output_r_1 offset=0x1c range=32 |
+| output     | s_axi_control_r | register  | offset   | name=output_r_2 offset=0x20 range=32 |
+| num_blocks | s_axi_control   | register  |          | name=num_blocks offset=0x10 range=32 |
++------------+-----------------+-----------+----------+--------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+----------+-------+------------+--------------------------+
+| HW Interface | Direction | Length   | Width | Loop       | Loop Location            |
++--------------+-----------+----------+-------+------------+--------------------------+
+| m_axi_gmem1  | write     | variable | 256   | block_loop | ../src/poseidon.cpp:30:9 |
++--------------+-----------+----------+-------+------------+--------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+---------------------------+-----------+--------------+----------+------------+--------------------------+------------+--------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location           | Direction | Burst Status | Length   | Loop       | Loop Location            | Resolution | Problem                                                                                                |
++--------------+----------+---------------------------+-----------+--------------+----------+------------+--------------------------+------------+--------------------------------------------------------------------------------------------------------+
+| m_axi_gmem1  | output   | ../src/poseidon.cpp:84:25 | write     | Widen Fail   |          | block_loop | ../src/poseidon.cpp:30:9 | 214-353    | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1  | output   | ../src/poseidon.cpp:84:25 | write     | Inferred     | variable | block_loop | ../src/poseidon.cpp:30:9 |            |                                                                                                        |
++--------------+----------+---------------------------+-----------+--------------+----------+------------+--------------------------+------------+--------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------+-----+--------+-------------+--------+----------+---------+
+| Name                    | DSP | Pragma | Variable    | Op     | Impl     | Latency |
++-------------------------+-----+--------+-------------+--------+----------+---------+
+| + poseidon_hash         | 0   |        |             |        |          |         |
+|   icmp_ln30_fu_128_p2   |     |        | icmp_ln30   | setgt  | auto     | 0       |
+|   empty_fu_158_p3       |     |        | empty       | select | auto_sel | 0       |
+|   icmp_ln30_1_fu_182_p2 |     |        | icmp_ln30_1 | setlt  | auto     | 0       |
+|   add_ln30_fu_188_p2    |     |        | add_ln30    | add    | fabric   | 0       |
+|   icmp_ln30_2_fu_198_p2 |     |        | icmp_ln30_2 | setlt  | auto     | 0       |
++-------------------------+-----+--------+-------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++---------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name                | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                     |           |           |      |      |        |          |      |         | Banks            |
++---------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + poseidon_hash     |           |           | 15   | 0    |        |          |      |         |                  |
+|   control_s_axi_U   | interface | s_axilite |      |      |        |          |      |         |                  |
+|   control_r_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
+|   gmem1_m_axi_U     | interface | m_axi     | 15   |      |        |          |      |         |                  |
++---------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------------------------------+-----------------------------------------+
+| Type      | Options                                           | Location                                |
++-----------+---------------------------------------------------+-----------------------------------------+
+| interface | m_axi port = input offset = slave bundle = gmem0  | ../src/poseidon.cpp:19 in poseidon_hash |
+| interface | m_axi port = output offset = slave bundle = gmem1 | ../src/poseidon.cpp:20 in poseidon_hash |
+| interface | s_axilite port = num_blocks bundle = control      | ../src/poseidon.cpp:21 in poseidon_hash |
+| interface | s_axilite port = return bundle = control          | ../src/poseidon.cpp:22 in poseidon_hash |
+| pipeline  | II = 1                                            | ../src/poseidon.cpp:32 in poseidon_hash |
+| unroll    |                                                   | ../src/poseidon.cpp:46 in poseidon_hash |
+| unroll    |                                                   | ../src/poseidon.cpp:54 in poseidon_hash |
+| unroll    |                                                   | ../src/poseidon.cpp:69 in poseidon_hash |
+| unroll    |                                                   | ../src/poseidon.cpp:73 in poseidon_hash |
+| unroll    |                                                   | ../src/poseidon.cpp:80 in poseidon_hash |
++-----------+---------------------------------------------------+-----------------------------------------+
+
+

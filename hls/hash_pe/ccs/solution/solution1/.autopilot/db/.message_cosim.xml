@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="WARNING" prefix="[HLS 200-626]" key="HLS 200-626" tag="" content="This design is unable to schedule all read ports in the first II cycle. The RTL testbench may treat the design as non-pipelined" resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-50]" key="COSIM_TCL_50_1118" tag="" content="Cannot find C test bench. Please specify test bench files using &apos;add_files -tb&apos;." resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-5]" key="COSIM_TCL_5_1075" tag="" content="*** C/RTL co-simulation file generation failed. ***" resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-4]" key="COSIM_TCL_4_1074" tag="" content="*** C/RTL co-simulation finished: FAIL ***" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-2161]" key="HLS 200-2161" tag="" content="Finished Command cosim_design Elapsed time: 00:00:00; Allocated memory: 2.543 MB." resolution=""/>
+</Messages>

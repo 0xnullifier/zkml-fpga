@@ -1,0 +1,56 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi257ELb0EEC2EDq257_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsimFix" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, true>::ap_int_base<256, 256, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<257, false>::ap_int_base<256, false>(ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<257, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<257>::ap_uint<257, false>(ap_int_base<257, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="_ZN8ssdm_intILi258ELb1EEC2EDq258_i" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::ap_int_base<257, false>(ap_int_base<257, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<258, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<258, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<258>::ap_int<258, true>(ap_int_base<258, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, true>::ap_int_base<258, true>(ap_int_base<258, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<258, true>::ap_int_base<256, false>(ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, true>::ap_int_base<256, false>(ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="_ZN8ssdm_intILi256ELb1EEC2EDq256_i" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi512ELb0EEC2EDq512_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::ap_int_base<256, true>(ap_int_base<256, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<512>::ap_uint<512, false>(ap_int_base<512, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint<256, false>(ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi256ELb0EEC2EDq256_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base<256, false>(ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::RType<256, false>::mult operator*<256, false, 256, false>(ap_int_base<256, false> const&, ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<512, false>::RType<256, true>::mod operator%<512, false, 256, true>(ap_int_base<512, false> const&, ap_int_base<256, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<256>::ap_int<258>(ap_int<258> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<256>::ap_int<256>(ap_uint<256> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint<256>(ap_int<256> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint<257>(ap_uint<257> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::RType<256, true>::mod operator%<256, false, 256, true>(ap_int_base<256, false> const&, ap_int_base<256, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<256, false>::operator>=<256, true>(ap_int_base<256, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::RType<256, true>::minus operator-<256, false, 256, true>(ap_int_base<256, false> const&, ap_int_base<256, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>::RType<256, false>::plus operator+<256, false, 256, false>(ap_int_base<256, false> const&, ap_int_base<256, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<256>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="../src/poseidon.cpp" line="32" pragmaType="pipeline" parentfunction="poseidon_hash" off="0" ii="1" rewind="0" style=""/>
+<pragma file="../src/poseidon.cpp" line="46" pragmaType="unroll" parentfunction="poseidon_hash" factor="-1" skip_exit_check="0"/>
+<pragma file="../src/poseidon.cpp" line="54" pragmaType="unroll" parentfunction="poseidon_hash" factor="-1" skip_exit_check="0"/>
+<pragma file="../src/poseidon.cpp" line="69" pragmaType="unroll" parentfunction="poseidon_hash" factor="-1" skip_exit_check="0"/>
+<pragma file="../src/poseidon.cpp" line="80" pragmaType="unroll" parentfunction="poseidon_hash" factor="-1" skip_exit_check="0"/>
+<pragma file="../src/poseidon.cpp" line="73" pragmaType="unroll" parentfunction="poseidon_hash" factor="-1" skip_exit_check="0"/>
+<pragma file="../src/poseidon.cpp" line="19" pragmaType="interface" parentfunction="poseidon_hash" mode="m_axi" port="input" bundle="gmem0" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="../src/poseidon.cpp" line="20" pragmaType="interface" parentfunction="poseidon_hash" mode="m_axi" port="output" bundle="gmem1" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="../src/poseidon.cpp" line="21" pragmaType="interface" parentfunction="poseidon_hash" mode="s_axilite" port="num_blocks" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../src/poseidon.cpp" line="22" pragmaType="interface" parentfunction="poseidon_hash" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_ufixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed(char const*)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<256, 256, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(char const*)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<256>::ap_int<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_ufixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<256, false>& ap_int_base<256, false>::operator+=<512, false>(ap_int_base<512, false> const&)" off="0" region="0" recursive="0"/>
+</pragmas>
